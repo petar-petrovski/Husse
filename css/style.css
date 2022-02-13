@@ -1,6 +1,25 @@
 /*TODO:
 - fix the clear search [x] style
 - add search icon next to the search box
+- stylize the scrollbar for firefox
+
+[mobile version]
+- fix the nav-bar (filter section)
+    a) top part needs to be squeezed
+    b) bottom part might replace the text with icons only (js)
+
+- create dropdown menu for filter, dropdown menu for sort by
+- javascript animation for:
+    a) Global - Local button (active vs non active)
+    b) Animation for dropdown menus (filter and sort)
+    c) category filter to work based on the card category 
+        (select one or more buttons and display results based on the selection. 
+        selected buttons should have active state)
+
+- different user role have different privilegies, hence there will be different views
+
+- blocks where action should be replaced based on the type of user: 
+design all buttons and hide them based on the user role
 */
 *{
     margin: 0;
@@ -13,60 +32,44 @@ body {
 }
 .wrapper {
     display: flex;
-    /* flex-wrap: wrap; */
     position: fixed;
     bottom: 30px;
     left: 70px;
-    /* right: 20%; */
     top: 30px;
-}
-.content {
-    /* background-color: red; */
 }
 .wrapper > *:nth-child(.content) {
     flex: 1 1 75%;
+    
 }
 .wrapper > *:nth-child(.sidebar) {
     flex: 1 1 25%;
+}
+.content {
+    min-width: 75vw;
 }
 h1 {
     font-size: 32px; 
     font-weight: 400;
 }
-p {
-    font-size: 14px;
-    font-weight: 400;
-    color:#4F4F4F;
-    
-}
 .top-container {
-    padding-left: 30px;
+    padding-left: 20px;
 }
+
 /* Filter */
 .nav-container {
     display: flex;
     justify-content: space-between;
-    /* align-items: flex-end; */
-    /* gap: 20px; */
-    /* justify-content: space-between; */
-    /* width: 100%; */
-    /* flex-wrap: wrap; */
     margin-top: 30px;
-    min-height: 20px;
+    min-height: 30px;
     border-bottom: 2px solid;
-    border-color: white;
-    
+    border-color: white;   
 }
-
 .nav-title {
     display: flex;
     font-size: 14px;
     /* line-height: 2px; */
     color: #8F8884;
     padding-left: 10px;
-}
-.nav-title p {
-    color: #8F8884;
 }
 /* .nav-btn {
     flex-grow: 1;
@@ -95,17 +98,14 @@ p {
     display: inline-block;  
 } */
 .search-box {
-    /* display: flex;
-    justify-content: flex-end;*/
     margin: 10px;
     height: 20px;
-    width: 230px;
-    
+    width: 240px;
+    display: flex;
 }
 .search-box input {
     background-color: transparent;
     width: 100%;
-    /* padding: 5px 2px; */
     border: none;
 }
 .search-box input:focus {
@@ -122,11 +122,101 @@ p {
     justify-content: space-between;
     padding: 5px 10px;
     font-size: 16px;
+    height: 50px;
     color: #8F8884;
 }
-    /* input::-webkit-search-cancel-button{
+.filter-container img {
+    object-fit: cover;
+}
+.filter-by {
+    display: flex;
+    padding: 8px;
+    border-bottom: 2px solid;
+    border-color: #DEDBD9 ;
+}
+.filter-by p {
+    margin: 0 50px 0 20px;
+}
+.tag-filter {
+    align-self: center;
+    /* when block will be hidden --> 
+    display: none; */ 
+}
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .dropbtn img {
+      max-width: 80%;
+      max-height: 80%;
+      margin: auto;
+  }
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: transparent;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+.tag-btn {
+    color: #8F8884;
+    background-color: transparent;
+    border: 1px solid #DEDBD9;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.sort-by {
+    display: flex;
+    padding: 8px;
+}
+.sort-by p {
+    margin-right: 20px;
+}
+.active-btn {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    color: #000000;
+}
+.hide {
+    display: none;
+}
+/* input::-webkit-search-cancel-button{
 fix the clear search [x] style 
 }*/
+
 /* GRID */
 .grid-container {
     display: grid;
@@ -170,6 +260,12 @@ fix the clear search [x] style
 }
 .card-content {
     padding: 16px;
+}
+.card-content p {
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 400;
+    color:#4F4F4F;
 }
 .card-category {
     display: flex;

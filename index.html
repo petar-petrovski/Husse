@@ -19,7 +19,6 @@
             <h1>Hello <span style="font-weight:700">Master Name</span>,</h1>
             <p>Welcome to Husse</p>
             </div>
-
             <div class="nav-container">
                 <div class="nav-title">
                 <p>TRAININGS <br>& COURSES</p>
@@ -28,21 +27,44 @@
                 </div>
                 <div class="search-box" id="search">
                     <input type="search" name="" id="search-input" placeholder="Search Trainings & Courses">
-                    <!-- <img src="img/loupe.png" alt=""> -->
+                    <img src="img/loupe.png" alt="">
                     <!-- <button id="search-btn"></button> -->
                 </div>
             </div>
 
             <div class="filter-container">
-                <div class="filter-by">Filter by category</div>
-                <div class="sort-by">Sort by</div>                
+                
+                <div class="filter-by">
+                    <img src="img/filter.png" alt="">
+                    <p>Filter by category</p>
+                    <img src="img/down-arrow.png">
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn"></button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="#">Link 1</a>
+                          <a href="#">Link 2</a>
+                          <a href="#">Link 3</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="tag-filter">
+                    <button class="tag-btn active" onclick="filterCard('all')">All</button>
+                    <button class="tag-btn" onclick="filterCard('cat')">Cat</button>
+                    <button class="tag-btn" onclick="filterCard('wetfood')">Wet Food</button>
+                    <button class="tag-btn" onclick="filterCard('dryfood')">Dry food</button>
+                    <button class="tag-btn" onclick="filterCard('dog')">Dog</button>
+                </div>
+                <div class="sort-by">
+                    <p>Sort by</p>
+                    <img src="img/down-arrow.png">
+                </div>                
             </div>
     
     <!-- Gird -->
     <div class="grid-container">
         
         <!-- Video Card - START -->
-        <div class="col">
+        <div class="col hide cat">
             <img src="img/beagle.jpg" alt="">
                       
             <div class="card-content">
@@ -51,90 +73,75 @@
                 <p class="category-text">22. 12. 2021</p>
             </div>  
             <h3 class="title">Cats diet and Husse wet food for cats longer title</h3>
-            <br>
             <p>Cats diet and Husse wet food for cats
-short description  Cats diet and Husse wet food for cats short description ...</p>
-            <br>
+short description  Cats diet and Husse wet food for cats short description ...</p>    
             <div class="card-buttons">
                 <button class="card-btn"><img src="img/attachment.png" alt=""></button>
                 <button class="card-btn reminder-btn" style="padding: 10px 36px;">Set Reminder</button>
                 <button class="card-btn"><img src="img/three-dots.png" alt=""></button>
-
             </div>
             </div>
         </div>
         <!-- Video Card - END -->
         <!-- Video Card - START -->
-                <div class="col">
-            <img src="img/german-shepard.jpg" alt="">
-                      
+                <div class="col hide wetfood">
+            <img src="img/german-shepard.jpg" alt="">         
             <div class="card-content">
             <div class="card-category">
                 <p class="category-text">SALES & MARKETING</p>
                 <p class="category-text">22. 12. 2021</p>
             </div>  
             <h3 class="title">Cats diet and Husse wet food for cats longer title</h3>
-            <br>
             <p>Cats diet and Husse wet food for cats
-short description  Cats diet and Husse wet food for cats short description ...</p>
-            <br>
+short description  Cats diet and Husse wet food for cats short description ...</p>  
             <div class="card-buttons">
                 <button class="card-btn"><img src="img/attachment.png" alt=""></button>
-                <button class="card-btn" style="padding: 10px 36px;">Set Reminder</button>
+                <button class="card-btn reminder-btn" style="padding: 10px 36px;">Set Reminder</button>
                 <button class="card-btn"><img src="img/three-dots.png" alt=""></button>
-
             </div>
             </div>
         </div>
         <!-- Video Card - END -->
         <!-- Video Card - START -->
-        <div class="col">
-            <img src="img/haskey.jpg" alt="">
-                      
+        <div class="col hide wetfood">
+            <img src="img/haskey.jpg" alt="">       
             <div class="card-content">
             <div class="card-category">
                 <p class="category-text">SALES & MARKETING</p>
                 <p class="category-text">22. 12. 2021</p>
             </div>  
             <h3 class="title">Cats diet and Husse wet food for cats longer title</h3>
-            <br>
             <p>Cats diet and Husse wet food for cats
 short description  Cats diet and Husse wet food for cats short description ...</p>
-            <br>
             <div class="card-buttons">
                 <button class="card-btn"><img src="img/attachment.png" alt=""></button>
-                <button class="card-btn" style="padding: 10px 36px;">Set Reminder</button>
+                <button class="card-btn reminder-btn" style="padding: 10px 36px;">Set Reminder</button>
                 <button class="card-btn"><img src="img/three-dots.png" alt=""></button>
-
             </div>
             </div>
         </div>
         <!-- Video Card - END -->
         <!-- Video Card - START -->
-        <div class="col">
-            <img src="img/turkish.jpg" alt="">
-                      
+        <div class="col hide dryfood">
+            <img src="img/turkish.jpg" alt="">                      
             <div class="card-content">
             <div class="card-category">
                 <p class="category-text">SALES & MARKETING</p>
                 <p class="category-text">22. 12. 2021</p>
             </div>  
-            <h3 class="title">Cats diet and Husse wet food for cats longer title</h3>
-            <br>
+            <h3 class="title">Cats diet and Husse wet food for cats longer title</h3>           
             <p>Cats diet and Husse wet food for cats
-short description  Cats diet and Husse wet food for cats short description ...</p>
-            <br>
+short description  Cats diet and Husse wet food for cats short description ...</p>       
             <div class="card-buttons">
                 <button class="card-btn"><img src="img/attachment.png" alt=""></button>
-                <button class="card-btn" style="padding: 10px 36px;">Set Reminder</button>
+                <button class="card-btn reminder-btn" style="padding: 10px 36px;">Set Reminder</button>
                 <button class="card-btn"><img src="img/three-dots.png" alt=""></button>
-
             </div>
             </div>
         </div>
         <!-- Video Card - END -->
         <!-- Video Card - START -->
-        <div class="col">
+        <div class="col hide dog">
             <img src="img/img-placeholder.png" alt="">
                       
             <div class="card-content">
@@ -143,10 +150,10 @@ short description  Cats diet and Husse wet food for cats short description ...</
                 <p class="category-text">22. 12. 2021</p>
             </div>  
             <h3 class="title">Cats diet and Husse wet food for cats longer title</h3>
-            <br>
+            
             <p>Cats diet and Husse wet food for cats
 short description  Cats diet and Husse wet food for cats short description ...</p>
-            <br>
+            
             <div class="card-buttons">
                 <button class="card-btn"><img src="img/attachment.png" alt=""></button>
                 <button class="card-btn" style="padding: 10px 36px;">Set Reminder</button>
@@ -157,7 +164,7 @@ short description  Cats diet and Husse wet food for cats short description ...</
         </div>
         <!-- Video Card - END -->
         <!-- Video Card - START -->
-        <div class="col">
+        <div class="col hide dog">
             <img src="img/img-placeholder.png" alt="">
                       
             <div class="card-content">
@@ -166,10 +173,10 @@ short description  Cats diet and Husse wet food for cats short description ...</
                 <p class="category-text">22. 12. 2021</p>
             </div>  
             <h3 class="title">Cats diet and Husse wet food for cats longer title</h3>
-            <br>
+            
             <p>Cats diet and Husse wet food for cats
 short description  Cats diet and Husse wet food for cats short description ...</p>
-            <br>
+            
             <div class="card-buttons">
                 <button class="card-btn"><img src="img/attachment.png" alt=""></button>
                 <button class="card-btn" style="padding: 10px 36px;">Set Reminder</button>
@@ -180,7 +187,7 @@ short description  Cats diet and Husse wet food for cats short description ...</
         </div>
         <!-- Video Card - END -->
         <!-- Video Card - START -->
-        <div class="col">
+        <div class="col hide dog">
             <img src="img/img-placeholder.png" alt="">
                       
             <div class="card-content">
@@ -189,10 +196,10 @@ short description  Cats diet and Husse wet food for cats short description ...</
                 <p class="category-text">22. 12. 2021</p>
             </div>  
             <h3 class="title">Cats diet and Husse wet food for cats longer title</h3>
-            <br>
+            
             <p>Cats diet and Husse wet food for cats
 short description  Cats diet and Husse wet food for cats short description ...</p>
-            <br>
+            
             <div class="card-buttons">
                 <button class="card-btn"><img src="img/attachment.png" alt=""></button>
                 <button class="card-btn" style="padding: 10px 36px;">Set Reminder</button>
@@ -203,7 +210,7 @@ short description  Cats diet and Husse wet food for cats short description ...</
         </div>
         <!-- Video Card - END -->
         <!-- Video Card - START -->
-        <div class="col">
+        <div class="col hide wetfood">
             <img src="img/img-placeholder.png" alt="">
                       
             <div class="card-content">
@@ -212,10 +219,10 @@ short description  Cats diet and Husse wet food for cats short description ...</
                 <p class="category-text">22. 12. 2021</p>
             </div>  
             <h3 class="title">Cats diet and Husse wet food for cats longer title</h3>
-            <br>
+            
             <p>Cats diet and Husse wet food for cats
 short description  Cats diet and Husse wet food for cats short description ...</p>
-            <br>
+            
             <div class="card-buttons">
                 <button class="card-btn"><img src="img/attachment.png" alt=""></button>
                 <button class="card-btn" style="padding: 10px 36px;">Set Reminder</button>
@@ -226,7 +233,7 @@ short description  Cats diet and Husse wet food for cats short description ...</
         </div>
         <!-- Video Card - END -->
         <!-- Video Card - START -->
-        <div class="col">
+        <div class="col hide">
             <img src="img/img-placeholder.png" alt="">
                       
             <div class="card-content">
@@ -235,10 +242,10 @@ short description  Cats diet and Husse wet food for cats short description ...</
                 <p class="category-text">22. 12. 2021</p>
             </div>  
             <h3 class="title">Cats diet and Husse wet food for cats longer title</h3>
-            <br>
+            
             <p>Cats diet and Husse wet food for cats
 short description  Cats diet and Husse wet food for cats short description ...</p>
-            <br>
+            
             <div class="card-buttons">
                 <button class="card-btn"><img src="img/attachment.png" alt=""></button>
                 <button class="card-btn" style="padding: 10px 36px;">Set Reminder</button>
@@ -259,5 +266,7 @@ short description  Cats diet and Husse wet food for cats short description ...</
     </div>
     
     </div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
