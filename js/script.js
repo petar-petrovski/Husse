@@ -52,3 +52,7 @@ function myFunction() {
       }
     }
   }
+  function glocalBtn() {
+    var element = document.getElementById("title");
+    element.classList.toggle("glocal-active");
+  }

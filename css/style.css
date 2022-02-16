@@ -72,6 +72,15 @@ body {
 /* .nav-btn {
     flex-grow: 1;
 } */
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    /* background-color: #fff; */
+    /* Not removed via appearance */
+    margin: 0;
+  }
 .glocal-btn {
     display: inline-block;
     background-color: white;
@@ -87,6 +96,10 @@ body {
     font-weight: 400;
     cursor: pointer;
     
+}
+.glocal-active {
+    background-color: transparent;
+    color: #8F8884;
 }
 /* .notification-circle {
     height: 20px;
