@@ -81,3 +81,21 @@ function shiftGrid(pageName, elmnt) {
 }
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+//SEARCH CARDS // search through titles
+function searchCards() {
+  var input, filter, cards, cardContainer, h5, title, i;
+  input = document.getElementById("search-input");
+  filter = input.value.toUpperCase();
+  cardContainer = document.getElementById("items");
+  cards = cardContainer.getElementsByClassName("col");
+  for (i = 0; i < cards.length; i++) {
+      title = cards[i].querySelector(".card-content h3.title");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+          cards[i].style.display = "";
+      } else {
+          cards[i].style.display = "none";
+      }
+  }
+}

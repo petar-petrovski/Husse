@@ -22,20 +22,22 @@
     <div class="wrapper">
       <div class="content">
         <div class="top-container">
+            <div class="welcome">
           <h3>Hello <span style="font-weight: 700">Master Name</span>,</h3>
           <p>Welcome to Husse</p>
+        </div>
+        <div class="notification">
+            <img src="img/notification.png" alt="">
+            <p>Next Training scaduled in: 3 days 5 h 12 min</p>
+        </div>
         </div>
         <div class="title-bar">
           <div class="title" id="title">
             <p>TRAININGS <br />& COURSES</p>
-            <button class="tablink" onclick="shiftGrid('Home', this)">
+            <button class="tablink" onclick="shiftGrid('Global', this)"  id="defaultOpen"> 
               Global
             </button>
-            <button
-              class="tablink"
-              onclick="shiftGrid('News', this)"
-              id="defaultOpen"
-            >
+            <button class="tablink" onclick="shiftGrid('Local', this)">
               Local
             </button>
           </div>
@@ -44,6 +46,7 @@
               type="search"
               name=""
               id="search-input"
+              onkeyup="searchCards()"
               placeholder="Search Trainings & Courses"
             />
             <img src="img/loupe.png" alt="" />
@@ -76,9 +79,9 @@
           </div>
         </div>
 
-        <div id="Home" class="tabcontent">
+        <div id="Global" class="tabcontent">
           <!-- Gird -->
-          <div class="grid-container">
+          <div class="grid-container"  id="items">
             <!-- Video Card - START -->
             <div class="col hide cat">
               <img src="img/beagle.jpg" alt="" />
@@ -89,7 +92,7 @@
                   <p class="category-text">22. 12. 2021</p>
                 </div>
                 <h3 class="title">
-                  Cats diet and Husse wet food for cats longer title
+                  Test test test
                 </h3>
                 <p>
                   Cats diet and Husse wet food for cats short description Cats
@@ -117,7 +120,7 @@
               <img src="img/german-shepard.jpg" alt="" />
               <div class="card-content">
                 <div class="card-category">
-                  <p class="category-text">SALES & MARKETING</p>
+                  <p class="category-text">Test</p>
                   <p class="category-text">22. 12. 2021</p>
                 </div>
                 <h3 class="title">
@@ -371,7 +374,7 @@
           </div>
         </div>
 
-        <div id="News" class="tabcontent">
+        <div id="Local" class="tabcontent">
           <!-- Gird -->
           <div class="grid-container">
             <!-- Video Card - START -->
