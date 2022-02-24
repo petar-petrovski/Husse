@@ -1,11 +1,12 @@
 /*TODO:
 - fix the clear search [x] style
 - Make the search icon clickable
-- stylize the scrollbar for firefox
+***DONE*** - stylize the scrollbar for firefox
+- test the video card with overpopulated text
 
 [mobile version]
-- fix the header-bar (filter section)
-    a) top part needs to be squeezed
+***DONE*** - fix the header-bar (filter section)
+    ***DONE*** a) top part needs to be squeezed
     b) bottom part might replace the text with icons only (js)
 
 - create dropdown menu for filter, dropdown menu for sort by
@@ -16,6 +17,7 @@
         (select one or more buttons and display results based on the selection. 
         selected buttons should have active state)
      ***DONE*** d) Filter by tags
+     e)FIX THE SEARCH
 - different user role have different privilegies, hence there will be different views
 
 - blocks where action should be replaced based on the type of user: 
@@ -40,12 +42,14 @@ body {
 .wrapper > *:nth-child(.sidebar) {
   flex: 1 1 25%;
 }
+
 .content {
   min-width: 75vw;
 }
 .top-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
@@ -54,11 +58,13 @@ body {
   font-weight: 400;
 }
 .notification {
-  margin: 0.6rem;
-  padding: 0.6rem;
-  height: 2.5rem;
+  margin: 0.6rem 0;
+  padding: 0.4rem 0.8rem;
+  align-items: center;
+  /* height: auto; */
+  max-width: max-content;
+  max-height: max-content;
   border-radius: 0.25rem;
-  width: 26rem; /*auto - not working on mozilla*/
   display: flex;
   background-color: white;
 }
@@ -67,10 +73,14 @@ body {
     margin-left: 1.25rem;
     color: #FF0000;
 }
+.notification img {
+  height: 20px;
+}
 /* Filter */
 .title-bar {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 1.9rem;
   min-height: 1.9rem;
   padding: 0 0.6rem;
@@ -83,7 +93,6 @@ body {
   color: #8f8884;
   padding-left: 0.6rem;
 }
-
 
 /* Tab links */
 .tablink {
@@ -106,7 +115,6 @@ body {
 }
 .tabcontent {
   display: none;
-  height: 100%;
 }
 /* .notification-circle {
     height: 20px;
@@ -139,18 +147,20 @@ body {
 .filter-container {
   display: flex;
   justify-content: space-between;
+  row-gap: 10px;
+  flex-wrap: wrap;
   padding: 0.3rem 0.6rem;
   margin-bottom: 0.6rem;
   font-size: 1rem;
-  height: 3.125rem;
+  height: auto;
   color: #8f8884;
 }
-/* .filter-container img {
-    object-fit: cover;
-} */
+.filter-container img {
+  height: 20px;
+}
 .filter-by {
   display: flex;
-  justify-content: space-between;
+  align-content: space-between;
   width: 16.25rem;
   padding: 0.5rem 0.5rem 0.5rem 0.6rem;
   border-bottom: 0.125rem solid #dedbd9;
@@ -158,7 +168,6 @@ body {
 .filter-by p {
   margin: 0 2.5rem 0 1.25rem;
 }
-
 .tag-filter {
   align-self: center;
   /* when block will be hidden --> 
@@ -181,7 +190,7 @@ body {
 .sort-by {
   display: flex;
   justify-content: flex-end;
-  width: 16.25rem;
+  width: auto;
   padding: 0.5rem;
 }
 .sort-by p {
@@ -338,3 +347,27 @@ fix the clear search [x] style
 }
 /* MEDIA */
 
+@media only screen and (max-width: 768px) {
+  .top-container {
+   flex-flow: column;
+  }
+  
+  .title-bar {
+    border-bottom: none;
+  }
+  .title {
+    border-bottom: 0.125rem solid;
+    border-color: white;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .notification {
+    order: 1;
+  }
+  .welcome {
+    order:2;
+  }
+}
