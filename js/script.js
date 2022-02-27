@@ -86,16 +86,16 @@ document.getElementById("defaultOpen").click();
 //SEARCH CARDS // search through titles 
 function searchCards() {
   var input, filter, cards, cardContainer, h3, title, i;
-  input = document.getElementById("search-input");
+  input = document.getElementById("searchInput");
   filter = input.value.toUpperCase();
   cardContainer = document.getElementById("items");
   cards = cardContainer.getElementsByClassName("col");
   for (i = 0; i < cards.length; i++) {
-      title = cards[i].querySelector("card-content h3.card-title");
-      if (title.innerText.toUpperCase().indexOf(input) > -1) {
-          cards[i].style.display = "";
-      } else {
-          cards[i].style.display = "none";
-      }
-  }
+      title = cards[i].querySelector("h3.card-title");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = "";
+    } else {
+        cards[i].style.display = "none";
+    }
+}
 }
