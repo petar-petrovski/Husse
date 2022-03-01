@@ -178,6 +178,9 @@ select {
   color: #8f8884;
   cursor: pointer;
 }
+select:focus {
+  outline: none;
+}
 .tag-filter {
   align-self: center;
   /* when block will be hidden --> 
