@@ -162,20 +162,27 @@ body {
 }
 .filter-by {
   display: flex;
-  align-content: space-between;
-  width: 16.25rem;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 14rem; */
   padding: 0.5rem 0.5rem 0.5rem 0.6rem;
   border-bottom: 0.125rem solid #dedbd9;
 }
-.filter-by p {
-  margin: 0 2.5rem 0 1.25rem;
+select {
+  margin-left: 20px;
+  padding: 3px;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  color: #8f8884;
+  cursor: pointer;
 }
 .tag-filter {
   align-self: center;
   /* when block will be hidden --> 
     display: none; */
 }
-
 .tag-btn {
   color: #8f8884;
   background-color: transparent;
@@ -195,16 +202,9 @@ body {
   width: auto;
   padding: 0.5rem;
 }
-.sort-by p {
-  margin-right: 1.25rem;
-}
 .hide {
   display: none;
 }
-/* input::-webkit-search-cancel-button{
-fix the clear search [x] style 
-}*/
-
 /* GRID */
 .grid-container {
   display: grid;

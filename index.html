@@ -57,8 +57,16 @@
         <div class="filter-container">
           <div class="filter-by">
             <img src="img/filter.png" alt="" />
-            <p>Filter by category</p>
-            <img src="img/down-arrow.png" alt="" />
+            <select class="filter-drop" id="subjects">
+              <option id="ops0" value="" selected="selected">Filter by category</option>
+              <option id="ops1" value="IT & Web">IT & Web</option>
+              <option id="ops2" value="Management">Management</option>
+              <option id="ops3" value="Nutrition">Nutrition</option>
+              <option id="ops4" value="Products">Products</option>
+              <option id="ops4" value="Sales & Marketing">Sales & Marketing</option>
+              <option id="ops4" value="Recruiting">Recruiting</option>
+              <option id="ops4" value="Q & A">Q & A</option>
+          </select>
           </div>
           <div class="tag-filter">
             <button class="tag-btn active" onclick="filterCard('all')">
@@ -74,8 +82,11 @@
             <button class="tag-btn" onclick="filterCard('dog')">Dog</button>
           </div>
           <div class="sort-by">
-            <p>Sort by</p>
-            <img src="img/down-arrow.png" />
+            <select class="filter-drop" id="sort">
+              <option id="ops0" value="" selected="selected">Sort By</option>
+              <option id="ops1" value="Date">Date</option>
+              <option id="ops1" value="Name">Name</option>
+              </select>
           </div>
         </div>
 
