@@ -3,6 +3,8 @@
 - Make the search icon clickable
 ***DONE*** - stylize the scrollbar for firefox
 - test the video card with overpopulated text
+- resizable video card (100% width until the next break point)
+- right side (collapsable)
 
 [mobile version]
 ***DONE*** - fix the header-bar (filter section)
@@ -17,7 +19,7 @@
         (select one or more buttons and display results based on the selection. 
         selected buttons should have active state)
      ***DONE*** d) Filter by tags
-     e)FIX THE SEARCH
+     ***DONE*** e)FIX THE SEARCH
 - different user role have different privilegies, hence there will be different views
 
 - blocks where action should be replaced based on the type of user: 
