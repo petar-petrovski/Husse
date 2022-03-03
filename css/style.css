@@ -3,6 +3,8 @@
 - Make the search icon clickable
 ***DONE*** - stylize the scrollbar for firefox
 - test the video card with overpopulated text
+- resizable video card (100% width until the next break point)
+- right side (collapsable)
 
 [mobile version]
 ***DONE*** - fix the header-bar (filter section)
@@ -17,7 +19,7 @@
         (select one or more buttons and display results based on the selection. 
         selected buttons should have active state)
      ***DONE*** d) Filter by tags
-     e)FIX THE SEARCH
+     ***DONE*** e)FIX THE SEARCH
 - different user role have different privilegies, hence there will be different views
 
 - blocks where action should be replaced based on the type of user: 
@@ -35,19 +37,20 @@ body {
   font-family: "Roboto Slab", serif;
 }
 .wrapper {
-  display: flex;
-  margin: 2rem;
+  /* display: flex; */
+  /* margin: 2rem; */
+  padding: 2rem;
 }
-.wrapper > *:nth-child(.content) {
+/* .wrapper > *:nth-child(.content) {
   flex: 1 1 75%;
-}
-.wrapper > *:nth-child(.sidebar) {
+} */
+/* .wrapper > *:nth-child(.sidebar) {
   flex: 1 1 25%;
-}
+} */
 
-.content {
+/* .content {
   min-width: 75vw;
-}
+} */
 .top-container {
   display: flex;
   justify-content: space-between;
@@ -211,7 +214,7 @@ select:focus {
 /* GRID */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 20rem);
+  grid-template-columns: repeat(4, 1fr);
   justify-content:flex-start;
   /* padding-right: 10px;
   padding-bottom: 200px; */
@@ -247,7 +250,7 @@ select:focus {
   border: none;
   border-radius: 0.3rem;
   height: 31.25rem;
-  width: 18.75rem;
+  /* width: 18.75rem; */
 }
 .upcoming {
   outline: 0.2rem solid #ff0000;
@@ -270,6 +273,7 @@ select:focus {
 .col img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: 11.25rem;
   object-fit: cover;
   border-radius: 0.3rem 0.3rem 0 0;
@@ -352,6 +356,23 @@ select:focus {
 }
 /* MEDIA */
 
+@media only screen and (max-width: 1200px) {
+  .grid-container {
+  grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+@media only screen and (max-width: 960px) {
+  .notification {
+    order: 1;
+  }
+  .welcome {
+    order:2;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
 @media only screen and (max-width: 768px) {
   .top-container {
    flex-flow: column;
@@ -367,12 +388,7 @@ select:focus {
   .sidebar {
     display: none;
   }
-}
-@media only screen and (max-width: 992px) {
-  .notification {
-    order: 1;
-  }
-  .welcome {
-    order:2;
-  }
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    }
 }
