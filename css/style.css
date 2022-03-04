@@ -1,37 +1,8 @@
-/*TODO:
-- fix the clear search [x] style
-- Make the search icon clickable
-***DONE*** - stylize the scrollbar for firefox
-- test the video card with overpopulated text
-- resizable video card (100% width until the next break point)
-- right side (collapsable)
-
-[mobile version]
-***DONE*** - fix the header-bar (filter section)
-    ***DONE*** a) top part needs to be squeezed
-    b) bottom part might replace the text with icons only (js)
-
-- create dropdown menu for filter, dropdown menu for sort by
-- javascript action events for:
-    ***DONE*** a) Global - Local button (active vs non active)
-    b) Animation for dropdown menus (filter and sort)
-    c) category filter to work based on the card category 
-        (select one or more buttons and display results based on the selection. 
-        selected buttons should have active state)
-     ***DONE*** d) Filter by tags
-     ***DONE*** e)FIX THE SEARCH
-- different user role have different privilegies, hence there will be different views
-
-- blocks where action should be replaced based on the type of user: 
-design all buttons and hide them based on the user role
-*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Test */
 body {
   background-color: #f2f1f0;
   font-family: "Roboto Slab", serif;
@@ -66,7 +37,6 @@ body {
   margin: 0.6rem 0;
   padding: 0.4rem 0.8rem;
   align-items: center;
-  /* height: auto; */
   max-width: max-content;
   max-height: max-content;
   border-radius: 0.25rem;
@@ -74,7 +44,6 @@ body {
   background-color: white;
 }
 .notification p {
-    /* font-size: auto; */
     margin-left: 1.25rem;
     color: #FF0000;
 }
@@ -98,7 +67,6 @@ body {
   color: #8f8884;
   padding-left: 0.6rem;
 }
-
 /* Tab links */
 .tablink {
   display: inline-block;
@@ -116,7 +84,7 @@ body {
   cursor: pointer;
 }
 .tablink:hover {
-  background-color: #dedbd9;
+  background-color: #EEEBE8;
 }
 .tabcontent {
   display: none;
@@ -129,26 +97,54 @@ body {
     margin-left: 10px;
     display: inline-block;  
 } */
-.search-box {
-  margin: 0.6rem;
-  height: 1.25rem;
-  width: 15rem;
-  display: flex;
+.search {
+  margin-bottom: 6px;
+
 }
-.search-box input {
-  background-color: transparent;
-  width: 100%;
+.search-box {
+  display: flex;
+  margin:auto;
+  width: 300px;
+  max-width:300px;
+  border-radius: 4px 4px 0px 0px;
+}
+form.search-box:hover {
+  background-color: white;
+  box-shadow: 0 0 0.43rem 0.125rem #00000026;
+}
+form.search-box input[type=text] {
+  padding: 10px;
+  font-family: "Roboto Slab", serif;
+  color: #8f8884;
+  font-size: 14px;
+  width: 85%;
+  background: transparent;
   border: none;
 }
-.search-box input:focus {
+form.search-box input:focus {
   outline: none;
-  color: #8f8884;
 }
-::placeholder {
+form.search-box button {
+  width: 15%;
+  background: transparent;
+  color: #8F8884;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+form.search-box button:hover {
+background-color: #EEEBE8;
+}
+form.search-box::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+form.search-box::placeholder {
   font-family: "Roboto Slab", serif;
   font-size: 1rem;
   color: #8f8884;
-}
+} 
 .filter-container {
   display: flex;
   justify-content: space-between;
@@ -197,6 +193,11 @@ select:focus {
   border-radius: 1.25rem;
   cursor: pointer;
 }
+.tag-btn:hover {
+  background-color: white;
+  color: #000000;
+  box-shadow: 0 0 0.43rem 0.125rem #00000026;
+}
 .active-btn {
     background-color: #ffffff;
     color: #000000;
@@ -220,6 +221,8 @@ select:focus {
   padding-bottom: 200px; */
   padding-top: 0.6rem;
   padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
   grid-gap: 1rem;
   height: 100vh;
   /* width: 100%; */  
@@ -336,7 +339,8 @@ select:focus {
 .reminder-btn {
   margin: 0 0.6rem 0 0.6rem;
   padding: 0.6rem 1.25rem;
-  /* width: 60%; */
+  min-width: 55%;
+  width: 70%;
 }
 .reminder-btn:hover {
   color: #ff0000;
@@ -360,15 +364,8 @@ select:focus {
   .grid-container {
   grid-template-columns: repeat(3, 1fr);
   }
-
 }
 @media only screen and (max-width: 960px) {
-  .notification {
-    order: 1;
-  }
-  .welcome {
-    order:2;
-  }
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     }
@@ -377,16 +374,14 @@ select:focus {
   .top-container {
    flex-flow: column;
   }
-  
-  .title-bar {
-    border-bottom: none;
-  }
-  .title {
-    border-bottom: 0.125rem solid;
-    border-color: white;
-  }
   .sidebar {
     display: none;
+  }
+  .notification {
+    order: 1;
+  }
+  .welcome {
+    order:2;
   }
   .grid-container {
     grid-template-columns: repeat(1, 1fr);
