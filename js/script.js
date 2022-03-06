@@ -37,25 +37,6 @@ function filterCard(value) {
   });
 }
 
-/* FILTER BY CATEGORY DROPDOW*/
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function (event) {
-  if (!event.target.matches(".dropbtn")) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
-};
-
 //GLOBAL LOCAL TABS
 function shiftGrid(pageName, elmnt) {
   // Hide all elements with class="tabcontent" by default */
@@ -82,7 +63,8 @@ function shiftGrid(pageName, elmnt) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-//FIX THE SEARCH
+
+
 //SEARCH CARDS // search through titles 
 function searchCards() {
   var input, filter, cards, cardContainer, h3, title, i;
@@ -98,4 +80,17 @@ function searchCards() {
         cards[i].style.display = "none";
     }
 }
+}
+
+function attachmentMenu() {
+  document.getElementById("dropUpAttachment").classList.add("show");
+}
+function attachmentMenuClose() {
+  document.getElementById("dropUpAttachment").classList.remove("show");
+}
+function moreMenu() {
+  document.getElementById("dropUpWishlist").classList.add("show");
+}
+function moreMenuClose() {
+  document.getElementById("dropUpWishlist").classList.remove("show");
 }
