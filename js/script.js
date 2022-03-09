@@ -85,15 +85,15 @@ function searchCards() {
 // function attachmentMenu() {
 //   document.getElementById("dropUpAttachment").classList.add("show");
 // }
-function attachmentMenuClose() {
-  document.getElementById("dropUpAttachment").classList.remove("show");
-}
-function moreMenu() {
-  document.getElementById("dropUpWishlist").classList.add("show");
-}
-function moreMenuClose() {
-  document.getElementById("dropUpWishlist").classList.remove("show");
-}
+// function attachmentMenuClose() {
+//   document.getElementById("dropUpAttachment").classList.remove("show");
+// }
+// function moreMenu() {
+//   document.getElementById("dropUpWishlist").classList.add("show");
+// }
+// function moreMenuClose() {
+//   document.getElementById("dropUpWishlist").classList.remove("show");
+// }
 // function attachmentMenu(x){
 // var menu2 = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
 // menu2[4].classList.add("show");
