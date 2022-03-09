@@ -82,9 +82,9 @@ function searchCards() {
 }
 }
 
-function attachmentMenu() {
-  document.getElementById("dropUpAttachment").classList.add("show");
-}
+// function attachmentMenu() {
+//   document.getElementById("dropUpAttachment").classList.add("show");
+// }
 function attachmentMenuClose() {
   document.getElementById("dropUpAttachment").classList.remove("show");
 }
@@ -93,4 +93,26 @@ function moreMenu() {
 }
 function moreMenuClose() {
   document.getElementById("dropUpWishlist").classList.remove("show");
+}
+// function attachmentMenu(x){
+// var menu2 = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
+// menu2[4].classList.add("show");
+// // console.log(menu2[4]);
+// }
+
+function attachmentMenu(x){
+  var parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
+  parent["dropUpAttachment"].classList.add("show");
+}
+function attachmentMenuClose(x) {
+  var parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
+  parent["dropUpAttachment"].classList.remove("show");
+}
+function moreMenu(x) {
+  var parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
+  parent["dropUpWishlist"].classList.add("show");
+}
+function moreMenuClose(x) {
+  var parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
+  parent["dropUpWishlist"].classList.remove("show");
 }

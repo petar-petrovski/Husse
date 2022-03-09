@@ -82,7 +82,7 @@
 
         <div id="Global" class="tabcontent">
           <!-- Gird -->
-          <div class="grid-container" id="items">
+          <div class="grid-container" id="card0">
             <!-- Video Card - START -->
             <div class="col hide cat upcoming">
               <div class="img-wrap">
@@ -105,7 +105,7 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu()" class="card-btn icon">
+                  <button onclick="attachmentMenu()" class="card-btn icon" id="1">
                     <img src="img/attachment.png" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
@@ -132,7 +132,8 @@
             <!-- Video Card - START -->
             <div class="col hide wetfood">
               <img src="img/german-shepard.jpg" alt="" />
-              <div class="card-content">
+              <div class="card-content" id="card1">
+                <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
                   <p class="category-text">Test</p>
                   <p class="category-text">22. 12. 2021</p>
@@ -146,24 +147,24 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu()" class="card-btn icon">
+                  <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/attachment.png" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
-                      <button onclick="moreMenu()" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/three-dots.png" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
-                  <div class="dropup-title">ATTACHMENTS<a class="dropup-close">×</a></div>
-                    <a href="#">Attachment name 55.pdf</a>
+                  <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
+                    <a href="#">Attachment name 1.pdf</a>
                     <a href="#">Atachment name 2.jpg</a>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<a class="dropup-close">×</a></div>
+                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
                     <a href="#">Add to my list</a>
                     <a href="#">Republish</a>
                 </div>
@@ -172,10 +173,11 @@
             <!-- Video Card - END -->
             <!-- Video Card - START -->
             <div class="col hide wetfood">
-              <img src="img/haskey.jpg" alt="" />
-              <div class="card-content">
+              <img src="img/german-shepard.jpg" alt="" />
+              <div class="card-content" id="card2">
+                <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
-                  <p class="category-text">SALES & MARKETING</p>
+                  <p class="category-text">Test</p>
                   <p class="category-text">22. 12. 2021</p>
                 </div>
                 <h3 class="card-title">
@@ -187,194 +189,24 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu()" class="card-btn icon">
+                  <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/attachment.png" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
-                      <button onclick="moreMenu()" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/three-dots.png" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
-                  <div class="dropup-title">ATTACHMENTS<a class="dropup-close">×</a></div>
+                  <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
                     <a href="#">Attachment name 1.pdf</a>
                     <a href="#">Atachment name 2.jpg</a>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<a class="dropup-close">×</a></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
-                </div>
-              </div>
-            </div>
-            <!-- Video Card - END -->
-            <!-- Video Card - START -->
-            <div class="col hide dryfood">
-              <img src="img/turkish.jpg" alt="" />
-              <div class="card-content">
-                <div class="card-category">
-                  <p class="category-text">SALES & MARKETING</p>
-                  <p class="category-text">22. 12. 2021</p>
-                </div>
-                <h3 class="card-title">
-                  Cats diet and Husse wet food for cats longer title
-                </h3>
-                <p class="video-description">
-                  Cats diet and Husse wet food for cats short description Cats
-                  diet and Husse wet food for cats short description ...
-                </p>
-                <div class="card-buttons">
-                  <div class="dropup">
-                  <button onclick="attachmentMenu()" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
-                  </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
-                  </div>
-                    <div class="dropup">
-                      <button onclick="moreMenu()" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
-                  </button></div>
-                </div>
-                <div id="dropUpAttachment" class="dropup-content">
-                  <div class="dropup-title">ATTACHMENTS<a class="dropup-close">×</a></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
-                </div>
-                <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<a class="dropup-close">×</a></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
-                </div>
-              </div>
-            </div>
-            <!-- Video Card - END -->
-            <!-- Video Card - START -->
-            <div class="col hide dog">
-              <img src="img/img-placeholder.png" alt="" />
-
-              <div class="card-content">
-                <div class="card-category">
-                  <p class="category-text">SALES & MARKETING</p>
-                  <p class="category-text">22. 12. 2021</p>
-                </div>
-                <h3 class="card-title">
-                  Cats diet and Husse wet food for cats longer title
-                </h3>
-
-                <p class="video-description">
-                  Cats diet and Husse wet food for cats short description Cats
-                  diet and Husse wet food for cats short description ...
-                </p>
-                <div class="card-buttons">
-                  <div class="dropup">
-                  <button onclick="attachmentMenu()" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
-                  </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
-                  </div>
-                    <div class="dropup">
-                      <button onclick="moreMenu()" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
-                  </button></div>
-                </div>
-                <div id="dropUpAttachment" class="dropup-content">
-                  <div class="dropup-title">ATTACHMENTS<a class="dropup-close">×</a></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
-                </div>
-                <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<a class="dropup-close">×</a></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
-                </div>
-              </div>
-            </div>
-            <!-- Video Card - END -->
-            <!-- Video Card - START -->
-            <div class="col hide dog">
-              <img src="img/img-placeholder.png" alt="" />
-
-              <div class="card-content">
-                <div class="card-category">
-                  <p class="category-text">SALES & MARKETING</p>
-                  <p class="category-text">22. 12. 2021</p>
-                </div>
-                <h3 class="card-title">
-                  Cats diet and Husse wet food for cats longer title
-                </h3>
-
-                <p class="video-description">
-                  Cats diet and Husse wet food for cats short description Cats
-                  diet and Husse wet food for cats short description ...
-                </p>
-                <div class="card-buttons">
-                  <div class="dropup">
-                  <button onclick="attachmentMenu()" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
-                  </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
-                  </div>
-                    <div class="dropup">
-                      <button onclick="moreMenu()" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
-                  </button></div>
-                </div>
-                <div id="dropUpAttachment" class="dropup-content">
-                  <div class="dropup-title">ATTACHMENTS<a class="dropup-close">×</a></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
-                </div>
-                <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<a class="dropup-close">×</a></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
-                </div>
-              </div>
-            </div>
-            <!-- Video Card - END -->
-            <!-- Video Card - START -->
-            <div class="col hide dog">
-              <img src="img/img-placeholder.png" alt="" />
-
-              <div class="card-content">
-                <div class="card-category">
-                  <p class="category-text">SALES & MARKETING</p>
-                  <p class="category-text">22. 12. 2021</p>
-                </div>
-                <h3 class="card-title">
-                  Cats diet and Husse wet food for cats longer title
-                </h3>
-
-                <p class="video-description">
-                  Cats diet and Husse wet food for cats short description Cats
-                  diet and Husse wet food for cats short description ...
-                </p>
-                <div class="card-buttons">
-                  <div class="dropup">
-                  <button onclick="attachmentMenu()" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
-                  </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
-                  </div>
-                    <div class="dropup">
-                      <button onclick="moreMenu()" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
-                  </button></div>
-                </div>
-                <div id="dropUpAttachment" class="dropup-content">
-                  <div class="dropup-title">ATTACHMENTS<a class="dropup-close">×</a></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
-                </div>
-                <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<a class="dropup-close">×</a></div>
+                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
                     <a href="#">Add to my list</a>
                     <a href="#">Republish</a>
                 </div>
@@ -383,41 +215,40 @@
             <!-- Video Card - END -->
             <!-- Video Card - START -->
             <div class="col hide wetfood">
-              <img src="img/img-placeholder.png" alt="" />
-
-              <div class="card-content">
+              <img src="img/german-shepard.jpg" alt="" />
+              <div class="card-content" id="card3">
+                <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
-                  <p class="category-text">SALES & MARKETING</p>
+                  <p class="category-text">Test</p>
                   <p class="category-text">22. 12. 2021</p>
                 </div>
                 <h3 class="card-title">
                   Cats diet and Husse wet food for cats longer title
                 </h3>
-
                 <p class="video-description">
                   Cats diet and Husse wet food for cats short description Cats
                   diet and Husse wet food for cats short description ...
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu()" class="card-btn icon">
+                  <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/attachment.png" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
-                      <button onclick="moreMenu()" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/three-dots.png" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
-                  <div class="dropup-title">ATTACHMENTS<a class="dropup-close">×</a></div>
+                  <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
                     <a href="#">Attachment name 1.pdf</a>
                     <a href="#">Atachment name 2.jpg</a>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<a class="dropup-close">×</a></div>
+                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
                     <a href="#">Add to my list</a>
                     <a href="#">Republish</a>
                 </div>
@@ -425,42 +256,209 @@
             </div>
             <!-- Video Card - END -->
             <!-- Video Card - START -->
-            <div class="col hide">
-              <img src="img/img-placeholder.png" alt="" />
-
-              <div class="card-content">
+            <div class="col hide wetfood">
+              <img src="img/german-shepard.jpg" alt="" />
+              <div class="card-content" id="card4">
+                <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
-                  <p class="category-text">SALES & MARKETING</p>
+                  <p class="category-text">Test</p>
                   <p class="category-text">22. 12. 2021</p>
                 </div>
                 <h3 class="card-title">
                   Cats diet and Husse wet food for cats longer title
                 </h3>
-
                 <p class="video-description">
                   Cats diet and Husse wet food for cats short description Cats
                   diet and Husse wet food for cats short description ...
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu()" class="card-btn icon">
+                  <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/attachment.png" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
-                      <button onclick="moreMenu()" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/three-dots.png" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
-                  <div class="dropup-title">ATTACHMENTS<a class="dropup-close">×</a></div>
+                  <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
                     <a href="#">Attachment name 1.pdf</a>
                     <a href="#">Atachment name 2.jpg</a>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<a class="dropup-close">×</a></div>
+                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
+                    <a href="#">Add to my list</a>
+                    <a href="#">Republish</a>
+                </div>
+              </div>
+            </div>
+            <!-- Video Card - END -->
+            <!-- Video Card - START -->
+            <div class="col hide wetfood">
+              <img src="img/german-shepard.jpg" alt="" />
+              <div class="card-content" id="card5">
+                <!-- the ID of the "card-content" should be dynamic -->
+                <div class="card-category">
+                  <p class="category-text">Test</p>
+                  <p class="category-text">22. 12. 2021</p>
+                </div>
+                <h3 class="card-title">
+                  Cats diet and Husse wet food for cats longer title
+                </h3>
+                <p class="video-description">
+                  Cats diet and Husse wet food for cats short description Cats
+                  diet and Husse wet food for cats short description ...
+                </p>
+                <div class="card-buttons">
+                  <div class="dropup">
+                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <img src="img/attachment.png" alt="" /></button>
+                  </div>
+                  <div class="reminder-btn-wrap">
+                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  </div>
+                    <div class="dropup">
+                      <button onclick="moreMenu(this)" class="card-btn icon">
+                    <img src="img/three-dots.png" alt="" />
+                  </button></div>
+                </div>
+                <div id="dropUpAttachment" class="dropup-content">
+                  <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
+                    <a href="#">Attachment name 1.pdf</a>
+                    <a href="#">Atachment name 2.jpg</a>
+                </div>
+                <div id="dropUpWishlist" class="dropup-content">
+                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
+                    <a href="#">Add to my list</a>
+                    <a href="#">Republish</a>
+                </div>
+              </div>
+            </div>
+            <!-- Video Card - END -->
+            <!-- Video Card - START -->
+            <div class="col hide wetfood">
+              <img src="img/german-shepard.jpg" alt="" />
+              <div class="card-content" id="card6">
+                <!-- the ID of the "card-content" should be dynamic -->
+                <div class="card-category">
+                  <p class="category-text">Test</p>
+                  <p class="category-text">22. 12. 2021</p>
+                </div>
+                <h3 class="card-title">
+                  Cats diet and Husse wet food for cats longer title
+                </h3>
+                <p class="video-description">
+                  Cats diet and Husse wet food for cats short description Cats
+                  diet and Husse wet food for cats short description ...
+                </p>
+                <div class="card-buttons">
+                  <div class="dropup">
+                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <img src="img/attachment.png" alt="" /></button>
+                  </div>
+                  <div class="reminder-btn-wrap">
+                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  </div>
+                    <div class="dropup">
+                      <button onclick="moreMenu(this)" class="card-btn icon">
+                    <img src="img/three-dots.png" alt="" />
+                  </button></div>
+                </div>
+                <div id="dropUpAttachment" class="dropup-content">
+                  <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
+                    <a href="#">Attachment name 1.pdf</a>
+                    <a href="#">Atachment name 2.jpg</a>
+                </div>
+                <div id="dropUpWishlist" class="dropup-content">
+                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
+                    <a href="#">Add to my list</a>
+                    <a href="#">Republish</a>
+                </div>
+              </div>
+            </div>
+            <!-- Video Card - END -->
+            <!-- Video Card - START -->
+            <div class="col hide wetfood">
+              <img src="img/german-shepard.jpg" alt="" />
+              <div class="card-content" id="card7">
+                <!-- the ID of the "card-content" should be dynamic -->
+                <div class="card-category">
+                  <p class="category-text">Test</p>
+                  <p class="category-text">22. 12. 2021</p>
+                </div>
+                <h3 class="card-title">
+                  Cats diet and Husse wet food for cats longer title
+                </h3>
+                <p class="video-description">
+                  Cats diet and Husse wet food for cats short description Cats
+                  diet and Husse wet food for cats short description ...
+                </p>
+                <div class="card-buttons">
+                  <div class="dropup">
+                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <img src="img/attachment.png" alt="" /></button>
+                  </div>
+                  <div class="reminder-btn-wrap">
+                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  </div>
+                    <div class="dropup">
+                      <button onclick="moreMenu(this)" class="card-btn icon">
+                    <img src="img/three-dots.png" alt="" />
+                  </button></div>
+                </div>
+                <div id="dropUpAttachment" class="dropup-content">
+                  <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
+                    <a href="#">Attachment name 1.pdf</a>
+                    <a href="#">Atachment name 2.jpg</a>
+                </div>
+                <div id="dropUpWishlist" class="dropup-content">
+                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
+                    <a href="#">Add to my list</a>
+                    <a href="#">Republish</a>
+                </div>
+              </div>
+            </div>
+            <!-- Video Card - END -->
+            <!-- Video Card - START -->
+            <div class="col hide wetfood">
+              <img src="img/german-shepard.jpg" alt="" />
+              <div class="card-content" id="card8">
+                <!-- the ID of the "card-content" should be dynamic -->
+                <div class="card-category">
+                  <p class="category-text">Test</p>
+                  <p class="category-text">22. 12. 2021</p>
+                </div>
+                <h3 class="card-title">
+                  Cats diet and Husse wet food for cats longer title
+                </h3>
+                <p class="video-description">
+                  Cats diet and Husse wet food for cats short description Cats
+                  diet and Husse wet food for cats short description ...
+                </p>
+                <div class="card-buttons">
+                  <div class="dropup">
+                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <img src="img/attachment.png" alt="" /></button>
+                  </div>
+                  <div class="reminder-btn-wrap">
+                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  </div>
+                    <div class="dropup">
+                      <button onclick="moreMenu(this)" class="card-btn icon">
+                    <img src="img/three-dots.png" alt="" />
+                  </button></div>
+                </div>
+                <div id="dropUpAttachment" class="dropup-content">
+                  <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
+                    <a href="#">Attachment name 1.pdf</a>
+                    <a href="#">Atachment name 2.jpg</a>
+                </div>
+                <div id="dropUpWishlist" class="dropup-content">
+                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
                     <a href="#">Add to my list</a>
                     <a href="#">Republish</a>
                 </div>
@@ -474,15 +472,15 @@
           <!-- Gird -->
           <div class="grid-container">
             <!-- Video Card - START -->
-            <div class="col hide cat">
-              <img src="img/beagle.jpg" alt="" />
-
-              <div class="card-content">
+            <div class="col hide wetfood">
+              <img src="img/german-shepard.jpg" alt="" />
+              <div class="card-content" id="card9">
+                <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
-                  <p class="category-text">SALES & MARKETING</p>
+                  <p class="category-text">Test</p>
                   <p class="category-text">22. 12. 2021</p>
                 </div>
-                <h3>
+                <h3 class="card-title">
                   Cats diet and Husse wet food for cats longer title
                 </h3>
                 <p class="video-description">
@@ -491,24 +489,24 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu()" class="card-btn icon">
+                  <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/attachment.png" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
-                      <button onclick="moreMenu()" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/three-dots.png" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
-                  <div class="dropup-title">ATTACHMENTS<a class="dropup-close">×</a></div>
+                  <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
                     <a href="#">Attachment name 1.pdf</a>
                     <a href="#">Atachment name 2.jpg</a>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<a class="dropup-close">×</a></div>
+                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
                     <a href="#">Add to my list</a>
                     <a href="#">Republish</a>
                 </div>
