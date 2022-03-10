@@ -116,3 +116,13 @@ function moreMenuClose(x) {
   var parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
   parent["dropUpWishlist"].classList.remove("show");
 }
+
+
+function openPopup(x) {
+  var parent = document.getElementById(x.parentNode.id).children;
+  parent["reminder-popup"].classList.add("active");
+}
+
+function closePopup() {
+  document.getElementById("reminder-popup").classList.remove("active");
+}

@@ -109,9 +109,28 @@
                     <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/paperclip.svg" alt="" /></button>
                   </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
+
+
+
+                  <div class="reminder-btn-wrap" id="reminder">
+                    <div class="reminder-popup" id="reminder-popup">
+                      <div class="overlay"></div>
+                      <div class="content">
+                          <div class="close-btn" onclick="closePopup()">&times;</div>
+                          <div class="reminder-title"><img src="img/bell-outline.svg" alt=""><p>Set Reminder</p></div>
+                          <div class="category-text">TRAINING DESCRIPTION</div>
+                          <div class="card-title">Test test test</div>
+                          <div class="video-description">Cats diet and Husse wet food for cats short description Cats
+                            diet</div>
+                            <div class="video-date">222</div>
+                            <div class="video-time">333</div>
+
+                      </div>
                   </div>
+                  <button onclick="openPopup(this)" class="card-btn reminder-btn">Set Reminder</button>
+                  </div>
+
+                  
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/3dot-vertical.svg" alt="" />
@@ -471,10 +490,10 @@
         <div id="Local" class="tabcontent">
           <!-- Gird -->
           <div class="grid-container">
-            <!-- Video Card - START -->
-            <div class="col hide wetfood">
+             <!-- Video Card - START -->
+             <div class="col hide wetfood">
               <img src="img/german-shepard.jpg" alt="" />
-              <div class="card-content" id="card9">
+              <div class="card-content" id="card8">
                 <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
                   <p class="category-text">Test</p>
