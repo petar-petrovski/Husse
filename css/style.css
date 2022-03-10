@@ -408,7 +408,7 @@ select:focus {
   text-decoration: none;
   display: block;
 }
-.dropup-content a:hover, span:hover{
+.dropup-content a:hover, .dropup-content span:hover{
   background-color: #F2F1F0;
   color: #FF0000;
 }

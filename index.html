@@ -20,7 +20,7 @@
           <p>Welcome to Husse</p>
         </div>
         <div class="notification">
-            <img src="img/notification.png" alt="">
+            <img src="img/bell-outline.svg" alt="">
             <p>Next Training scaduled in: <strong>3 days 5 h 12 min</strong></p>
         </div>
         </div>
@@ -39,14 +39,15 @@
           <form class="search-box" action="">
             <input type="text" placeholder="Search Trainings & Courses" id="searchInput"
             onkeyup="searchCards()">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <button type="submit"><img src="img/magnify.svg" alt="">
+            </button>
           </form>
           </div>
         </div>
 
         <div class="filter-container">
           <div class="filter-by">
-            <img src="img/filter-svgrepo-com.svg" alt="" />
+            <img src="img/filter-svgrepo-com.svg" alt="">
             <select class="filter-drop" id="subjects">
               <option id="ops0" value="" selected="selected">Filter by category</option>
               <option id="ops1" value="IT & Web">IT & Web</option>
@@ -82,7 +83,7 @@
 
         <div id="Global" class="tabcontent">
           <!-- Gird -->
-          <div class="grid-container" id="card0">
+          <div class="grid-container">
             <!-- Video Card - START -->
             <div class="col hide cat upcoming">
               <div class="img-wrap">
@@ -91,7 +92,7 @@
                 <p>UPCOMING<br />TRAINING</p>
               </div>
               </div>
-              <div class="card-content">
+              <div class="card-content"  id="card0">
                 <div class="card-category">
                   <p class="category-text">SALES & MARKETING</p>
                   <p class="category-text">22. 12. 2021</p>
@@ -105,24 +106,24 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu()" class="card-btn icon" id="1">
-                    <img src="img/attachment.png" alt="" /></button>
+                    <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <img src="img/paperclip.svg" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
-                      <button onclick="moreMenu()" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
+                      <button onclick="moreMenu(this)" class="card-btn icon">
+                    <img src="img/3dot-vertical.svg" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
-                  <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose()" class="dropup-close">&times;</span></div>
+                  <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
                     <a href="#">Attachment name 1.pdf</a>
                     <a href="#">Atachment name 2.jpg</a>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose()" class="dropup-close">&times;</span></div>
+                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
                     <a href="#">Add to my list</a>
                     <a href="#">Republish</a>
                 </div>
@@ -148,14 +149,14 @@
                 <div class="card-buttons">
                   <div class="dropup">
                   <button onclick="attachmentMenu(this)" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
+                    <img src="img/paperclip.svg" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
+                    <img src="img/3dot-vertical.svg" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
@@ -190,14 +191,14 @@
                 <div class="card-buttons">
                   <div class="dropup">
                   <button onclick="attachmentMenu(this)" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
+                    <img src="img/paperclip.svg" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
+                    <img src="img/3dot-vertical.svg" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
@@ -232,14 +233,14 @@
                 <div class="card-buttons">
                   <div class="dropup">
                   <button onclick="attachmentMenu(this)" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
+                    <img src="img/paperclip.svg" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
+                    <img src="img/3dot-vertical.svg" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
@@ -274,14 +275,14 @@
                 <div class="card-buttons">
                   <div class="dropup">
                   <button onclick="attachmentMenu(this)" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
+                    <img src="img/paperclip.svg" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
+                    <img src="img/3dot-vertical.svg" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
@@ -316,14 +317,14 @@
                 <div class="card-buttons">
                   <div class="dropup">
                   <button onclick="attachmentMenu(this)" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
+                    <img src="img/paperclip.svg" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
+                    <img src="img/3dot-vertical.svg" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
@@ -358,14 +359,14 @@
                 <div class="card-buttons">
                   <div class="dropup">
                   <button onclick="attachmentMenu(this)" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
+                    <img src="img/paperclip.svg" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
+                    <img src="img/3dot-vertical.svg" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
@@ -400,14 +401,14 @@
                 <div class="card-buttons">
                   <div class="dropup">
                   <button onclick="attachmentMenu(this)" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
+                    <img src="img/paperclip.svg" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
+                    <img src="img/3dot-vertical.svg" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
@@ -442,14 +443,14 @@
                 <div class="card-buttons">
                   <div class="dropup">
                   <button onclick="attachmentMenu(this)" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
+                    <img src="img/paperclip.svg" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
+                    <img src="img/3dot-vertical.svg" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
@@ -490,14 +491,14 @@
                 <div class="card-buttons">
                   <div class="dropup">
                   <button onclick="attachmentMenu(this)" class="card-btn icon">
-                    <img src="img/attachment.png" alt="" /></button>
+                    <img src="img/paperclip.svg" alt="" /></button>
                   </div>
                   <div class="reminder-btn-wrap">
                     <button class="card-btn reminder-btn">Set Reminder</button>
                   </div>
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
-                    <img src="img/three-dots.png" alt="" />
+                    <img src="img/3dot-vertical.svg" alt="" />
                   </button></div>
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
