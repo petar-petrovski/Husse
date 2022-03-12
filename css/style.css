@@ -50,6 +50,10 @@ body {
 .notification img {
   height: 20px;
 }
+.notification svg {
+  fill: #FF0000;
+
+}
 /* Filter */
 .title-bar {
   display: flex;
@@ -99,7 +103,6 @@ body {
 } */
 .search {
   margin-bottom: 6px;
-
 }
 form.search-box {
   display: flex;
@@ -284,7 +287,7 @@ select:focus {
   padding-right: 10px;
   border-right: 1px solid white;
 }
-.col img {
+.col .img-placeholder {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -312,19 +315,14 @@ select:focus {
 .category-text {
   font-size: 0.7rem;
   min-width: 5rem;
-  color: #4f4f4f;
+  color: #8F8884;
 
 }
-.col h3 {
+.col .card-title {
   font-size: 1.25rem;
   font-weight: 700;
   color: #333333;
   height: 3.75rem;
-}
-.col .card-content .video-description {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #4f4f4f;
 }
 .card-buttons {
   display: flex;
@@ -351,10 +349,14 @@ select:focus {
 .card-btn:active {
   box-shadow: none;
 }
+.card-btn img {
+  width: 42px;
+  object-fit: contain;
+  padding: 10px;
+}
 .reminder-btn-wrap {
   width: 60%;
 }
-
 .reminder-btn-wrap .overlay {
   position:fixed;
   top:0;
@@ -365,33 +367,38 @@ select:focus {
   z-index:1;
   display: none;
 }
-
+.reminder-btn {
+  padding: 0.6rem 1.5rem;
+  width: 100%;
+}
+.reminder-btn:hover {
+  color: #ff0000;
+}
+/* SET REMINDER POPUP */
 .reminder-popup .content {
   position: fixed;
   top:50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
+  transition:all 300ms ease-in-out;
   background: #fff;
   width: 500px;
-  height: 400px;
+  height: auto;
   z-index: 2;
-  text-align: center;
+  text-align: left;
   padding:20px;
   box-shadow: 0 0 0.43rem 0.125rem #00000026;
   box-sizing: border-box;
-  
 }
 .reminder-popup .reminder-title {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   margin-top: 15px;
-  margin-bottom: 15px;
   padding: 15px;
   width: 100%;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 2px solid #ff0000;
 }
-
 .reminder-popup .reminder-title img {
   height: 20px;
   width: 20px;
@@ -408,9 +415,45 @@ select:focus {
   width: 30px;
   height: 30px;
   color: #8F8884;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 300;
+  text-align: center;
   cursor: pointer;
+}
+.reminder-popup .close-btn:hover {
+  color: black;
+}
+.reminder-popup .calendar-text{
+  font-size: 0.7rem;
+  color: #8F8884;
+  margin: 20px 0;
+}
+.reminder-popup .card-title {
+  height: auto;
+}
+.reminder-popup .video-description {
+  margin: 10px 0;
+}
+.reminder-popup .video-date-time {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.reminder-popup .video-date-time img{
+  height: 15px;
+}
+.reminder-popup .video-date-time p {
+  margin-left: 10px;
+  color: #ff0000;
+}
+.reminder-popup .card-btn {
+  padding: 0.6rem 3.5rem;
+  margin-right: 20px;
+}
+.reminder-popup .card-btn:hover {
+  box-shadow: none;
+  background-color: #ff0000;
+  color: #FFFFFF;
 }
 .reminder-popup.active .overlay {
   display: block;
@@ -419,22 +462,6 @@ select:focus {
   transition:all 300ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);
 }
-
-
-
-.reminder-btn {
-  padding: 0.6rem 1.5rem;
-  width: 100%;
-}
-.reminder-btn:hover {
-  color: #ff0000;
-}
-.card-btn img {
-  width: 42px;
-  object-fit: contain;
-  padding: 10px;
-}
-
 /* DropUP Menu */
 .dropup {
   position: relative;

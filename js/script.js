@@ -38,6 +38,10 @@ function filterCard(value) {
 }
 
 //GLOBAL LOCAL TABS
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
 function shiftGrid(pageName, elmnt) {
   // Hide all elements with class="tabcontent" by default */
   var i, tabcontent, tablinks;
@@ -45,25 +49,18 @@ function shiftGrid(pageName, elmnt) {
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-
   // Remove the background color of all tablinks/buttons
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.backgroundColor = "";
     tablinks[i].style.color = "";
   }
-
   // Show the specific tab content
   document.getElementById(pageName).style.display = "block";
-
   // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = "white";
   elmnt.style.color = "black";
 }
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-
 
 //SEARCH CARDS // search through titles 
 function searchCards() {
@@ -82,47 +79,30 @@ function searchCards() {
 }
 }
 
-// function attachmentMenu() {
-//   document.getElementById("dropUpAttachment").classList.add("show");
-// }
-// function attachmentMenuClose() {
-//   document.getElementById("dropUpAttachment").classList.remove("show");
-// }
-// function moreMenu() {
-//   document.getElementById("dropUpWishlist").classList.add("show");
-// }
-// function moreMenuClose() {
-//   document.getElementById("dropUpWishlist").classList.remove("show");
-// }
-// function attachmentMenu(x){
-// var menu2 = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
-// menu2[4].classList.add("show");
-// // console.log(menu2[4]);
-// }
-
+//CARD BUTTONS MENUS// 
 function attachmentMenu(x){
-  var parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
+  const parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
   parent["dropUpAttachment"].classList.add("show");
 }
 function attachmentMenuClose(x) {
-  var parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
+  const parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
   parent["dropUpAttachment"].classList.remove("show");
 }
 function moreMenu(x) {
-  var parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
+  const parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
   parent["dropUpWishlist"].classList.add("show");
 }
 function moreMenuClose(x) {
-  var parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
+  const parent = document.getElementById(x.parentNode.parentNode.parentNode.id).children;
   parent["dropUpWishlist"].classList.remove("show");
 }
 
 
+//POPUP// 
 function openPopup(x) {
-  var parent = document.getElementById(x.parentNode.id).children;
+  const parent = document.getElementById(x.parentNode.id).children;
   parent["reminder-popup"].classList.add("active");
 }
-
 function closePopup() {
   document.getElementById("reminder-popup").classList.remove("active");
 }

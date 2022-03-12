@@ -20,7 +20,7 @@
           <p>Welcome to Husse</p>
         </div>
         <div class="notification">
-            <img src="img/bell-outline.svg" alt="">
+            <img src="img/bell-red.svg" alt="">
             <p>Next Training scaduled in: <strong>3 days 5 h 12 min</strong></p>
         </div>
         </div>
@@ -39,7 +39,7 @@
           <form class="search-box" action="">
             <input type="text" placeholder="Search Trainings & Courses" id="searchInput"
             onkeyup="searchCards()">
-            <button type="submit"><img src="img/magnify.svg" alt="">
+            <button type="submit"><img src="img/loupe.svg" alt="">
             </button>
           </form>
           </div>
@@ -47,7 +47,7 @@
 
         <div class="filter-container">
           <div class="filter-by">
-            <img src="img/filter-svgrepo-com.svg" alt="">
+            <img src="img/filter.svg" alt="">
             <select class="filter-drop" id="subjects">
               <option id="ops0" value="" selected="selected">Filter by category</option>
               <option id="ops1" value="IT & Web">IT & Web</option>
@@ -87,7 +87,7 @@
             <!-- Video Card - START -->
             <div class="col hide cat upcoming">
               <div class="img-wrap">
-              <img src="img/beagle.jpg" alt="" />
+              <img class="img-placeholder" src="img/beagle.jpg" alt="" />
               <div class="upcoming-notification">
                 <p>UPCOMING<br />TRAINING</p>
               </div>
@@ -109,28 +109,32 @@
                     <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/paperclip.svg" alt="" /></button>
                   </div>
-
-
-
                   <div class="reminder-btn-wrap" id="reminder">
                     <div class="reminder-popup" id="reminder-popup">
-                      <div class="overlay"></div>
+                      <div class="overlay" onclick="closePopup()"></div>
                       <div class="content">
                           <div class="close-btn" onclick="closePopup()">&times;</div>
-                          <div class="reminder-title"><img src="img/bell-outline.svg" alt=""><p>Set Reminder</p></div>
-                          <div class="category-text">TRAINING DESCRIPTION</div>
+                          <div class="reminder-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>
+                          <div class="card-content">
+                            <div class="card-category">
+                            <div class="category-text">TRAINING DESCRIPTION</div>
+                          </div>
                           <div class="card-title">Test test test</div>
                           <div class="video-description">Cats diet and Husse wet food for cats short description Cats
                             diet</div>
-                            <div class="video-date">222</div>
-                            <div class="video-time">333</div>
+                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                            <div class="calendar-text">CHOSE CALENDAR</div>
+                            <button class="card-btn">Google</button>
+                            <button class="card-btn">Outlook</button>
+
+
 
                       </div>
+                    </div>
                   </div>
                   <button onclick="openPopup(this)" class="card-btn reminder-btn">Set Reminder</button>
-                  </div>
-
-                  
+                  </div>                  
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/3dot-vertical.svg" alt="" />
@@ -151,7 +155,7 @@
             <!-- Video Card - END -->
             <!-- Video Card - START -->
             <div class="col hide wetfood">
-              <img src="img/german-shepard.jpg" alt="" />
+              <img class="img-placeholder" src="img/german-shepard.jpg" alt="" />
               <div class="card-content" id="card1">
                 <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
@@ -193,7 +197,7 @@
             <!-- Video Card - END -->
             <!-- Video Card - START -->
             <div class="col hide wetfood">
-              <img src="img/german-shepard.jpg" alt="" />
+              <img class="img-placeholder" src="img/german-shepard.jpg" alt="" />
               <div class="card-content" id="card2">
                 <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
@@ -235,7 +239,7 @@
             <!-- Video Card - END -->
             <!-- Video Card - START -->
             <div class="col hide wetfood">
-              <img src="img/german-shepard.jpg" alt="" />
+              <img class="img-placeholder" src="img/german-shepard.jpg" alt="" />
               <div class="card-content" id="card3">
                 <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
@@ -276,7 +280,7 @@
             <!-- Video Card - END -->
             <!-- Video Card - START -->
             <div class="col hide wetfood">
-              <img src="img/german-shepard.jpg" alt="" />
+              <img class="img-placeholder" src="img/german-shepard.jpg" alt="" />
               <div class="card-content" id="card4">
                 <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
@@ -318,7 +322,7 @@
             <!-- Video Card - END -->
             <!-- Video Card - START -->
             <div class="col hide wetfood">
-              <img src="img/german-shepard.jpg" alt="" />
+              <img class="img-placeholder" src="img/german-shepard.jpg" alt="" />
               <div class="card-content" id="card5">
                 <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
@@ -360,7 +364,7 @@
             <!-- Video Card - END -->
             <!-- Video Card - START -->
             <div class="col hide wetfood">
-              <img src="img/german-shepard.jpg" alt="" />
+              <img class="img-placeholder" src="img/german-shepard.jpg" alt="" />
               <div class="card-content" id="card6">
                 <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
@@ -402,7 +406,7 @@
             <!-- Video Card - END -->
             <!-- Video Card - START -->
             <div class="col hide wetfood">
-              <img src="img/german-shepard.jpg" alt="" />
+              <img class="img-placeholder" src="img/german-shepard.jpg" alt="" />
               <div class="card-content" id="card7">
                 <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
@@ -444,7 +448,7 @@
             <!-- Video Card - END -->
             <!-- Video Card - START -->
             <div class="col hide wetfood">
-              <img src="img/german-shepard.jpg" alt="" />
+              <img class="img-placeholder" src="img/german-shepard.jpg" alt="" />
               <div class="card-content" id="card8">
                 <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
@@ -492,7 +496,7 @@
           <div class="grid-container">
              <!-- Video Card - START -->
              <div class="col hide wetfood">
-              <img src="img/german-shepard.jpg" alt="" />
+              <img class="img-placeholder" src="img/german-shepard.jpg" alt="" />
               <div class="card-content" id="card8">
                 <!-- the ID of the "card-content" should be dynamic -->
                 <div class="card-category">
