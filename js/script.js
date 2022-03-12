@@ -97,7 +97,6 @@ function moreMenuClose(x) {
   parent["dropUpWishlist"].classList.remove("show");
 }
 
-
 //POPUP// 
 function openPopup(x) {
   const parent = document.getElementById(x.parentNode.id).children;
