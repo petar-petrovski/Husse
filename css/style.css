@@ -259,6 +259,7 @@ select:focus {
   padding: 0;
   border: none;
   border-radius: 0.3rem;
+  height: fit-content;
 }
 .upcoming {
   outline: 0.2rem solid #ff0000;
