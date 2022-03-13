@@ -7,6 +7,79 @@ body {
   background-color: #f2f1f0;
   font-family: "Roboto Slab", serif;
 }
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  background: white;
+  top: 0;
+  height: auto;
+  /* line-height: 60px; */
+  /* width: 100vw; */
+  z-index: 10;
+}
+.nav-bar .home-logo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 5px;
+
+}
+.nav-bar .campus {
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #FF0000;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+.mid-nav {
+  display: flex;
+  align-items: flex-end;
+
+}
+.navlink {
+  /* display: inline-block; */
+  border: none;
+  border-radius: 0.3rem 0.3rem 0 0;
+  color: #ff0000;
+  background-color: #f2f1f0;
+  margin-left: 0.6rem;
+  padding: 0.6rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Roboto Slab", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.nav-admin {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 5px 10px;
+
+}
+.admin-panel {
+  position: relative;
+  background-color: #F2F1F0;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+}
+.admin-panel img {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.admin-panel .profile  {
+  border-radius: 50%;
+}
 .wrapper {
   /* display: flex; */
   /* margin: 2rem; */
@@ -50,10 +123,7 @@ body {
 .notification img {
   height: 20px;
 }
-.notification svg {
-  fill: #FF0000;
 
-}
 /* Filter */
 .title-bar {
   display: flex;
@@ -281,12 +351,29 @@ select:focus {
   border-radius: 0.3rem 0.3rem 0 0;
   z-index: 1;
 }
-.upcoming-notification p {
+.upcoming-notification .upcoming-left p {
   color: #ffffff;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  padding-right: 10px;
+} 
+.upcoming-notification .upcoming-right p {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 300;
+} 
+.upcoming-notification .upcoming-left {
+  width: 25%;
+}
+.upcoming-notification .vertical-line {
   border-right: 1px solid white;
+  margin: 0 10px;
+}
+.upcoming-notification .upcoming-right {
+  width: 74%;
+}
+.upcoming-notification .upcoming-right .video-date-time{
+  display: flex;
+  column-gap: 10px;
 }
 .col .img-placeholder {
   display: block;
@@ -481,8 +568,6 @@ select:focus {
 }
 .reminder-popup.active .overlay {
   display: block;
-
-
 }
 .reminder-popup.active .content {
   transition:all 300ms ease-in-out;
