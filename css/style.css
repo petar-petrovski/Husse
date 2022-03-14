@@ -14,12 +14,11 @@ body {
   background: white;
   top: 0;
   height: auto;
-  /* line-height: 60px; */
-  /* width: 100vw; */
   z-index: 10;
 }
 .nav-bar .home-logo {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   column-gap: 10px;
   padding: 5px;
@@ -517,11 +516,6 @@ select:focus {
   font-size: 16px;
   color: #8F8884;
 }
-.reminder-popup .popup-set-reminder{
-  justify-content: flex-end;
-  margin-bottom: 20px;
-  padding: 0 20px;
-}
 .reminder-popup .calendar-text{
   font-size: 0.7rem;
   color: #8F8884;
@@ -561,6 +555,11 @@ select:focus {
 }
 .reminder-popup .popup-my-calendar{
   justify-content: flex-start;
+}
+.reminder-popup .popup-set-reminder{
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  padding: 0 20px;
 }
 .reminder-popup .underline {
   margin: 20px 0;
@@ -641,6 +640,9 @@ select:focus {
     }
 }
 @media only screen and (max-width: 768px) {
+  .navlink {
+    font-size: 2vw;
+  }
   .top-container {
    flex-flow: column;
   }
@@ -656,4 +658,17 @@ select:focus {
   .grid-container {
     grid-template-columns: repeat(1, 1fr);
     }
+  .reminder-popup .video-date-time p {
+    font-size: 2vw;
+  }
+  .reminder-popup .popup-buttons {
+    justify-content: center;
+  }
+  .reminder-popup .card-btn {
+    font-size: 2vw;
+    padding: 2vh 4vw;
+  }
+  .video-description {
+    font-size: 3vw;
+  }
 }
