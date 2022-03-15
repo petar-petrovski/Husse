@@ -229,36 +229,98 @@ form.search-box::placeholder {
   row-gap: 10px;
   flex-wrap: wrap;
   padding: 0.3rem 0.6rem;
-  margin-bottom: 0.6rem;
+  /* margin-bottom: 0.6rem; */
   font-size: 1rem;
   height: auto;
   color: #8f8884;
 }
 .filter-container img {
-  height: 20px;
+  height: 15px;
 }
 .filter-by {
   display: flex;
   position: relative;
-
+  column-gap: 10px;
   justify-content: space-between;
   align-items: center;
-  /* width: 14rem; */
   padding: 0.5rem 0.5rem 0.5rem 0.6rem;
-  border-bottom: 0.125rem solid #dedbd9;
 }
-select {
-  margin-left: 20px;
-  padding: 3px;
-  font-family: "Roboto Slab", serif;
-  font-size: 16px;
-  border: none;
-  background: transparent;
-  color: #8f8884;
+.select-box {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: #ffffff;
+  color: #8F8884;
+  border: 1px solid #DEDBD9;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s;
+  overflow: hidden;
+  position: absolute;
+  top: 54px;
+  box-shadow: 0 0 0.43rem 0.125rem #00000026;
+  order: 1;
+  z-index: 98;
+}
+
+.selected {
+  background: #f2f1f0;
+  width: 300px;
+
+  color: #8F8884;
+  border-bottom: 1px solid #DEDBD9;
+  position: relative;
+  order: 0;
+}
+
+.selected.active {
+  padding: 12px 24px;
+  border: 1px solid #DEDBD9;
+  width: 300px;
+
+  background: #ffffff;
+  color: #000000;
+  z-index: 99;
+}
+.selected::after {
+  content: "";
+  background: url("../img/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  width: 14px;
+  right: 10px;
+  top: 21px;
+  transition: all 0.4s;
+}
+.select-box .options-container.active {
+  width: 300px;
+  max-height: 500px;
+  opacity: 1;
+}
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -16px;
+}
+.select-box .option,
+.selected {
+  padding: 12px 24px;
   cursor: pointer;
 }
-select:focus {
-  outline: none;
+.select-box .option:hover {
+  background: #F2F1F0;
+  color: #ff0000;
+}
+.select-box label {
+  cursor: pointer;
+}
+.select-box .option .radio {
+  display: none;
 }
 .tag-filter {
   align-self: center;
@@ -669,6 +731,6 @@ select:focus {
     padding: 2vh 4vw;
   }
   .video-description {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 }

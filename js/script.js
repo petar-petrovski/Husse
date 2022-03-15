@@ -105,3 +105,44 @@ function openPopup(x) {
 function closePopup() {
   document.getElementById("reminder-popup").classList.remove("active");
 }
+
+// Close the dropdown if the user clicks outside of it
+window.addEventListener("mouseup", function(event){
+	var menu = document.getElementById("dropUpAttachment");
+	if (event.target != menu && event.target.parentNode != menu){
+    menu.classList.remove("show");
+  }
+});
+window.addEventListener("mouseup", function(event){
+	var menu = document.getElementById("dropUpWishlist");
+	if (event.target != menu && event.target.parentNode != menu){
+    menu.classList.remove("show");
+  }
+});
+//POPUP - END// 
+
+
+//FILTER BY CATEGORY
+const selected = document.querySelector(".selected");
+const optionsContainer = document.querySelector(".options-container");
+const optionsList = document.querySelectorAll(".option");
+
+selected.addEventListener("click", () => {
+  optionsContainer.classList.toggle("active");
+  selected.classList.toggle("active");
+});
+
+optionsList.forEach(o => {
+  o.addEventListener("click", () => {
+    selected.innerHTML = o.querySelector("label").innerHTML;
+    optionsContainer.classList.remove("active");
+  });
+});
+//close the dropdown with outside click
+window.addEventListener("mouseup", function(event){
+	if (event.target != optionsContainer && event.target != selected){
+    optionsContainer.classList.remove("active");
+    selected.classList.remove("active");
+    }
+});
+//FILTER BY CATEGORY - END//

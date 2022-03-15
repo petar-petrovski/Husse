@@ -12,14 +12,13 @@
     <title>Husse Campus</title>
   </head>
   <body>
+    <!-- NAVIGATION MENU -->
     <nav class="nav-bar">
       <div class="home-logo">
       <div class="dashboard-logo">
-        <!-- Logo Placeholder for Inlustration -->
         <a href="#home"><img src="img/dashboard-icon.svg" alt=""></a>
       </div>
       <div class="dashboard-logo">
-        <!-- Logo Placeholder for Inlustration -->
         <a href="#home"><img src="img/husse.svg" alt=""></a>
       </div>
       <div class="campus">
@@ -40,6 +39,7 @@
       <div class="admin-panel"><img class="profile" src="img/profile.png" alt=""></div>
     </div>
     </nav>
+     <!-- NAVIGATION MENU END-->
     <div class="wrapper">
       <div class="content">
         <div class="top-container">
@@ -52,6 +52,7 @@
             <p>Next Training scaduled in: <strong>3 days 5 h 12 min</strong></p>
         </div>
         </div>
+    
         <div class="title-bar">
           <div class="title" id="title">
             <p>TRAININGS <br />& COURSES</p>
@@ -62,7 +63,6 @@
               Local
             </button>
           </div>
-
           <div class="search">
           <form class="search-box" action="">
             <input type="text" placeholder="Search Trainings & Courses" id="searchInput"
@@ -72,21 +72,48 @@
           </form>
           </div>
         </div>
-
+      <!-- FILTER SECTION -->
         <div class="filter-container">
-          <div class="filter-by">
+          <!-- Category filter -->
+          <div class="filter-by" >
             <img src="img/filter.svg" alt="">
-            <select class="filter-drop" id="subjects">
-              <option id="ops0" value="" selected="selected">Filter by category</option>
-              <option id="ops1" value="IT & Web">IT & Web</option>
-              <option id="ops2" value="Management">Management</option>
-              <option id="ops3" value="Nutrition">Nutrition</option>
-              <option id="ops4" value="Products">Products</option>
-              <option id="ops4" value="Sales & Marketing">Sales & Marketing</option>
-              <option id="ops4" value="Recruiting">Recruiting</option>
-              <option id="ops4" value="Q & A">Q & A</option>
-          </select>
+            <div class="select-box">
+              <div class="options-container" id="category-drop">
+                <div class="option">
+                  <input type="radio" class="radio" id="it-web" name="category"/>
+                  <label for="it-web">IT & Web</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="management" name="category" />
+                  <label for="management">Management</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="nutrition" name="category" />
+                  <label for="nutrition">Nutrition</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="products" name="category" />
+                  <label for="products">Products</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="sales-marketing" name="category" />
+                  <label for="sales-marketing">Sales & Marketing</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="recruiting" name="category" />
+                  <label for="recruiting">Recruiting</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="q-a" name="category" />
+                  <label for="q-a">Q & A</label>
+                </div>
+              </div>
+              <div class="selected">
+                Filter by category
+              </div>
+            </div>
           </div>
+          <!-- Tag filters -->
           <div class="tag-filter">
             <button class="tag-btn active" onclick="filterCard('all')">
               All
@@ -100,17 +127,30 @@
             </button>
             <button class="tag-btn" onclick="filterCard('dog')">Dog</button>
           </div>
-          <div class="sort-by">
-            <select class="filter-drop" id="sort">
-              <option id="ops0" value="" selected="selected">Sort By</option>
-              <option id="ops1" value="Date">Date</option>
-              <option id="ops1" value="Name">Name</option>
-              </select>
+          <!-- Sort By -->
+          <div class="filter-by">
+            <div class="select-box">
+              <div class="options-container">
+                <div class="option">
+                  <input type="radio" class="radio" id="date" name="category"/>
+                  <label for="date">Date</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="name" name="category" />
+                  <label for="name">Name</label>
+                </div>
+              </div>
+      
+              <div class="selected">
+                Sort By
+              </div>
+            </div>
           </div>
         </div>
+      <!-- FILTER SECTION END-->
 
+      <!-- GRID -->
         <div id="Global" class="tabcontent">
-          <!-- Gird -->
           <div class="grid-container">
             <!-- Video Card - START -->
             <div class="col hide cat upcoming">
@@ -207,12 +247,38 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/paperclip.svg" alt="" /></button>
                   </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  <div class="reminder-btn-wrap" id="reminder">
+                    <div class="reminder-popup" id="reminder-popup">
+                      <div class="overlay" onclick="closePopup()"></div>
+                      <div class="content">
+                          <div class="close-btn" onclick="closePopup()">&times;</div>
+                          <div class="reminder-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
+                            <div class="card-content">
+                            <div class="card-category">
+                            <div class="category-text">TRAINING DESCRIPTION</div>
+                          </div>
+                          <div class="card-title">Test test test</div>
+                          <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
+                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                            <div class="calendar-text">CHOSE CALENDAR</div>
+                            <div class="popup-buttons popup-my-calendar">
+                            <button class="card-btn">Google</button>
+                            <button class="card-btn">Outlook</button>
+                            </div>
+                          </div>
+                            <div class="underline"></div>
+                            <div class="popup-buttons popup-set-reminder">
+                            <button class="card-btn">Cancel</button>
+                            <button class="card-btn">Set Reminder</button>
+                          </div>
+                    </div>
                   </div>
+                  <button onclick="openPopup(this)" class="card-btn reminder-btn">Set Reminder</button>
+                  </div>                  
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/3dot-vertical.svg" alt="" />
