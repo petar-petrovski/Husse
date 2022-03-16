@@ -108,8 +108,10 @@ function closePopup() {
 
 // Close the dropdown if the user clicks outside of it
 window.addEventListener("mouseup", function(event){
-	var menu = document.getElementById("dropUpAttachment");
-	if (event.target != menu && event.target.parentNode != menu){
+	// var menu = document.getElementsByClassName(".dropup-content.show");
+  var menu = document.querySelector("div.dropup-content.show");
+  // console.log(menu);
+	if (menu !== null && event.target != menu){
     menu.classList.remove("show");
   }
 });
