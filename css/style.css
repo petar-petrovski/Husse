@@ -24,6 +24,20 @@ body {
   padding: 5px;
 
 }
+.dashboard-logo::before {
+  content: "";
+  background: url("../img/dashboard-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  /* left: 10px; */
+  width: 48px;
+}
+.dashboard-logo a {
+  padding-left: 54px;
+}
 .nav-bar .campus {
   font-size: 16px;
   font-weight: 700;
@@ -116,8 +130,19 @@ body {
   background-color: white;
 }
 .notification p {
-    margin-left: 1.25rem;
+    margin-left: 1.5rem;
     color: #FF0000;
+}
+.notification-wrap::before {
+  content: "";
+  background: url("../img/bell-red.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  /* left: 10px; */
+  width: 16px;
 }
 .notification img {
   height: 20px;
