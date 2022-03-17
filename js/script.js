@@ -1,3 +1,10 @@
+//DASHBOARD
+const dashboard = document.querySelector(".dashboard-logo");
+
+dashboard.addEventListener("click", () => {
+  location.href = '#home';
+});
+
 filterCard("all"); //Default view to be all cards
 
 // FILTER BY TAGS
