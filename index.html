@@ -15,8 +15,8 @@
     <!-- NAVIGATION MENU -->
     <nav class="nav-bar">
       <div class="home-logo">
-      <div class="dashboard-logo">
-        <a href="#home"><img src="img/dashboard-icon.svg" alt=""></a>
+      <div class="dashboard-logo2">
+        <!-- <a href="#home"><img src="img/dashboard-icon.svg" alt=""></a> -->
       </div>
       <div class="dashboard-logo">
         <a href="#home"><img src="img/husse.svg" alt=""></a>
@@ -48,8 +48,8 @@
           <p>Welcome to Husse</p>
         </div>
         <div class="notification">
-            <img src="img/bell-red.svg" alt="">
-            <p>Next Training scaduled in: <strong>3 days 5 h 12 min</strong></p>
+            <!-- <img src="img/bell-red.svg" alt=""> -->
+            <div class="notification-wrap"><p>Next Training scaduled in: <strong>3 days 5 h 12 min</strong></p></div>
         </div>
         </div>
     
@@ -230,9 +230,9 @@
                   <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
                 <div class="mylist-popup" id="mylist-popup">
-                  <div class="overlay" onclick="closeMylist()"></div>
+                  <div class="overlay" onclick="closeMylist(this)"></div>
                   <div class="content">
-                    <div class="close-btn" onclick="closeMylist()">&times;</div>
+                    <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
                     <div class="popup-title"><img src="img/wishlist.svg" alt=""><p>Add to my wishlist</p></div>
                     <div class="card-title"><p>Video/Course was addet to your list.</p></div>
                 </div>
@@ -338,12 +338,38 @@
                 </p></div>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/paperclip.svg" alt="" /></button>
                   </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  <div class="reminder-btn-wrap" id="reminder">
+                    <div class="reminder-popup" id="reminder-popup">
+                      <div class="overlay" onclick="closePopup()"></div>
+                      <div class="content">
+                          <div class="close-btn" onclick="closePopup()">&times;</div>
+                          <div class="popup-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
+                            <div class="card-content">
+                            <div class="card-category">
+                            <div class="category-text">TRAINING DESCRIPTION</div>
+                          </div>
+                          <div class="card-title">Test test test</div>
+                          <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
+                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                            <div class="calendar-text">CHOSE CALENDAR</div>
+                            <div class="popup-buttons popup-my-calendar">
+                            <button class="card-btn">Google</button>
+                            <button class="card-btn">Outlook</button>
+                            </div>
+                          </div>
+                            <div class="underline"></div>
+                            <div class="popup-buttons popup-set-reminder">
+                            <button class="card-btn">Cancel</button>
+                            <button class="card-btn">Set Reminder</button>
+                          </div>
+                    </div>
                   </div>
+                  <button onclick="openPopup(this)" class="card-btn reminder-btn">Set Reminder</button>
+                  </div>                  
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/3dot-vertical.svg" alt="" />
@@ -355,10 +381,22 @@
                     <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <div class="whish-list"><a href="#">Add to my list</a></div>
-                    <div class="republish-list"><a href="#">Republish</a></div>
+                  <div class="dropup-title">CHOOSE
+                    <span onclick="moreMenuClose(this)" class="dropup-close">&times;</span>
+                  </div>
+                    <div class="mylist-list"  id="mylist">
+                      <a onclick="openMylist(this)" href="#">Add to my list</a>
+                  </div>
+                  <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
+                <div class="mylist-popup" id="mylist-popup">
+                  <div class="overlay" onclick="closeMylist(this)"></div>
+                  <div class="content">
+                    <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
+                    <div class="popup-title"><img src="img/wishlist.svg" alt=""><p>Add to my wishlist</p></div>
+                    <div class="card-title"><p>Video/Course was addet to your list.</p></div>
+                </div>
+              </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -380,12 +418,38 @@
                 </p></div>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/paperclip.svg" alt="" /></button>
                   </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  <div class="reminder-btn-wrap" id="reminder">
+                    <div class="reminder-popup" id="reminder-popup">
+                      <div class="overlay" onclick="closePopup()"></div>
+                      <div class="content">
+                          <div class="close-btn" onclick="closePopup()">&times;</div>
+                          <div class="popup-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
+                            <div class="card-content">
+                            <div class="card-category">
+                            <div class="category-text">TRAINING DESCRIPTION</div>
+                          </div>
+                          <div class="card-title">Test test test</div>
+                          <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
+                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                            <div class="calendar-text">CHOSE CALENDAR</div>
+                            <div class="popup-buttons popup-my-calendar">
+                            <button class="card-btn">Google</button>
+                            <button class="card-btn">Outlook</button>
+                            </div>
+                          </div>
+                            <div class="underline"></div>
+                            <div class="popup-buttons popup-set-reminder">
+                            <button class="card-btn">Cancel</button>
+                            <button class="card-btn">Set Reminder</button>
+                          </div>
+                    </div>
                   </div>
+                  <button onclick="openPopup(this)" class="card-btn reminder-btn">Set Reminder</button>
+                  </div>                  
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/3dot-vertical.svg" alt="" />
@@ -397,10 +461,22 @@
                     <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <div class="whish-list"><a href="#">Add to my list</a></div>
-                    <div class="republish-list"><a href="#">Republish</a></div>
+                  <div class="dropup-title">CHOOSE
+                    <span onclick="moreMenuClose(this)" class="dropup-close">&times;</span>
+                  </div>
+                    <div class="mylist-list"  id="mylist">
+                      <a onclick="openMylist(this)" href="#">Add to my list</a>
+                  </div>
+                  <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
+                <div class="mylist-popup" id="mylist-popup">
+                  <div class="overlay" onclick="closeMylist(this)"></div>
+                  <div class="content">
+                    <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
+                    <div class="popup-title"><img src="img/wishlist.svg" alt=""><p>Add to my wishlist</p></div>
+                    <div class="card-title"><p>Video/Course was addet to your list.</p></div>
+                </div>
+              </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -422,12 +498,38 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/paperclip.svg" alt="" /></button>
                   </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  <div class="reminder-btn-wrap" id="reminder">
+                    <div class="reminder-popup" id="reminder-popup">
+                      <div class="overlay" onclick="closePopup()"></div>
+                      <div class="content">
+                          <div class="close-btn" onclick="closePopup()">&times;</div>
+                          <div class="popup-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
+                            <div class="card-content">
+                            <div class="card-category">
+                            <div class="category-text">TRAINING DESCRIPTION</div>
+                          </div>
+                          <div class="card-title">Test test test</div>
+                          <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
+                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                            <div class="calendar-text">CHOSE CALENDAR</div>
+                            <div class="popup-buttons popup-my-calendar">
+                            <button class="card-btn">Google</button>
+                            <button class="card-btn">Outlook</button>
+                            </div>
+                          </div>
+                            <div class="underline"></div>
+                            <div class="popup-buttons popup-set-reminder">
+                            <button class="card-btn">Cancel</button>
+                            <button class="card-btn">Set Reminder</button>
+                          </div>
+                    </div>
                   </div>
+                  <button onclick="openPopup(this)" class="card-btn reminder-btn">Set Reminder</button>
+                  </div>                  
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/3dot-vertical.svg" alt="" />
@@ -439,10 +541,22 @@
                     <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <div class="whish-list"><a href="#">Add to my list</a></div>
-                    <div class="republish-list"><a href="#">Republish</a></div>
+                  <div class="dropup-title">CHOOSE
+                    <span onclick="moreMenuClose(this)" class="dropup-close">&times;</span>
+                  </div>
+                    <div class="mylist-list"  id="mylist">
+                      <a onclick="openMylist(this)" href="#">Add to my list</a>
+                  </div>
+                  <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
+                <div class="mylist-popup" id="mylist-popup">
+                  <div class="overlay" onclick="closeMylist(this)"></div>
+                  <div class="content">
+                    <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
+                    <div class="popup-title"><img src="img/wishlist.svg" alt=""><p>Add to my wishlist</p></div>
+                    <div class="card-title"><p>Video/Course was addet to your list.</p></div>
+                </div>
+              </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -464,12 +578,38 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/paperclip.svg" alt="" /></button>
                   </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  <div class="reminder-btn-wrap" id="reminder">
+                    <div class="reminder-popup" id="reminder-popup">
+                      <div class="overlay" onclick="closePopup()"></div>
+                      <div class="content">
+                          <div class="close-btn" onclick="closePopup()">&times;</div>
+                          <div class="popup-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
+                            <div class="card-content">
+                            <div class="card-category">
+                            <div class="category-text">TRAINING DESCRIPTION</div>
+                          </div>
+                          <div class="card-title">Test test test</div>
+                          <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
+                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                            <div class="calendar-text">CHOSE CALENDAR</div>
+                            <div class="popup-buttons popup-my-calendar">
+                            <button class="card-btn">Google</button>
+                            <button class="card-btn">Outlook</button>
+                            </div>
+                          </div>
+                            <div class="underline"></div>
+                            <div class="popup-buttons popup-set-reminder">
+                            <button class="card-btn">Cancel</button>
+                            <button class="card-btn">Set Reminder</button>
+                          </div>
+                    </div>
                   </div>
+                  <button onclick="openPopup(this)" class="card-btn reminder-btn">Set Reminder</button>
+                  </div>                  
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/3dot-vertical.svg" alt="" />
@@ -481,10 +621,22 @@
                     <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <div class="whish-list"><a href="#">Add to my list</a></div>
-                    <div class="republish-list"><a href="#">Republish</a></div>
+                  <div class="dropup-title">CHOOSE
+                    <span onclick="moreMenuClose(this)" class="dropup-close">&times;</span>
+                  </div>
+                    <div class="mylist-list"  id="mylist">
+                      <a onclick="openMylist(this)" href="#">Add to my list</a>
+                  </div>
+                  <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
+                <div class="mylist-popup" id="mylist-popup">
+                  <div class="overlay" onclick="closeMylist(this)"></div>
+                  <div class="content">
+                    <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
+                    <div class="popup-title"><img src="img/wishlist.svg" alt=""><p>Add to my wishlist</p></div>
+                    <div class="card-title"><p>Video/Course was addet to your list.</p></div>
+                </div>
+              </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -506,12 +658,38 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/paperclip.svg" alt="" /></button>
                   </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  <div class="reminder-btn-wrap" id="reminder">
+                    <div class="reminder-popup" id="reminder-popup">
+                      <div class="overlay" onclick="closePopup()"></div>
+                      <div class="content">
+                          <div class="close-btn" onclick="closePopup()">&times;</div>
+                          <div class="popup-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
+                            <div class="card-content">
+                            <div class="card-category">
+                            <div class="category-text">TRAINING DESCRIPTION</div>
+                          </div>
+                          <div class="card-title">Test test test</div>
+                          <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
+                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                            <div class="calendar-text">CHOSE CALENDAR</div>
+                            <div class="popup-buttons popup-my-calendar">
+                            <button class="card-btn">Google</button>
+                            <button class="card-btn">Outlook</button>
+                            </div>
+                          </div>
+                            <div class="underline"></div>
+                            <div class="popup-buttons popup-set-reminder">
+                            <button class="card-btn">Cancel</button>
+                            <button class="card-btn">Set Reminder</button>
+                          </div>
+                    </div>
                   </div>
+                  <button onclick="openPopup(this)" class="card-btn reminder-btn">Set Reminder</button>
+                  </div>                  
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/3dot-vertical.svg" alt="" />
@@ -523,10 +701,22 @@
                     <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <div class="whish-list"><a href="#">Add to my list</a></div>
-                    <div class="republish-list"><a href="#">Republish</a></div>
+                  <div class="dropup-title">CHOOSE
+                    <span onclick="moreMenuClose(this)" class="dropup-close">&times;</span>
+                  </div>
+                    <div class="mylist-list"  id="mylist">
+                      <a onclick="openMylist(this)" href="#">Add to my list</a>
+                  </div>
+                  <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
+                <div class="mylist-popup" id="mylist-popup">
+                  <div class="overlay" onclick="closeMylist(this)"></div>
+                  <div class="content">
+                    <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
+                    <div class="popup-title"><img src="img/wishlist.svg" alt=""><p>Add to my wishlist</p></div>
+                    <div class="card-title"><p>Video/Course was addet to your list.</p></div>
+                </div>
+              </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -548,12 +738,38 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/paperclip.svg" alt="" /></button>
                   </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  <div class="reminder-btn-wrap" id="reminder">
+                    <div class="reminder-popup" id="reminder-popup">
+                      <div class="overlay" onclick="closePopup()"></div>
+                      <div class="content">
+                          <div class="close-btn" onclick="closePopup()">&times;</div>
+                          <div class="popup-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
+                            <div class="card-content">
+                            <div class="card-category">
+                            <div class="category-text">TRAINING DESCRIPTION</div>
+                          </div>
+                          <div class="card-title">Test test test</div>
+                          <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
+                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                            <div class="calendar-text">CHOSE CALENDAR</div>
+                            <div class="popup-buttons popup-my-calendar">
+                            <button class="card-btn">Google</button>
+                            <button class="card-btn">Outlook</button>
+                            </div>
+                          </div>
+                            <div class="underline"></div>
+                            <div class="popup-buttons popup-set-reminder">
+                            <button class="card-btn">Cancel</button>
+                            <button class="card-btn">Set Reminder</button>
+                          </div>
+                    </div>
                   </div>
+                  <button onclick="openPopup(this)" class="card-btn reminder-btn">Set Reminder</button>
+                  </div>                  
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/3dot-vertical.svg" alt="" />
@@ -565,10 +781,22 @@
                     <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <div class="whish-list"><a href="#">Add to my list</a></div>
-                    <div class="republish-list"><a href="#">Republish</a></div>
+                  <div class="dropup-title">CHOOSE
+                    <span onclick="moreMenuClose(this)" class="dropup-close">&times;</span>
+                  </div>
+                    <div class="mylist-list"  id="mylist">
+                      <a onclick="openMylist(this)" href="#">Add to my list</a>
+                  </div>
+                  <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
+                <div class="mylist-popup" id="mylist-popup">
+                  <div class="overlay" onclick="closeMylist(this)"></div>
+                  <div class="content">
+                    <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
+                    <div class="popup-title"><img src="img/wishlist.svg" alt=""><p>Add to my wishlist</p></div>
+                    <div class="card-title"><p>Video/Course was addet to your list.</p></div>
+                </div>
+              </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -590,12 +818,38 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/paperclip.svg" alt="" /></button>
                   </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  <div class="reminder-btn-wrap" id="reminder">
+                    <div class="reminder-popup" id="reminder-popup">
+                      <div class="overlay" onclick="closePopup()"></div>
+                      <div class="content">
+                          <div class="close-btn" onclick="closePopup()">&times;</div>
+                          <div class="popup-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
+                            <div class="card-content">
+                            <div class="card-category">
+                            <div class="category-text">TRAINING DESCRIPTION</div>
+                          </div>
+                          <div class="card-title">Test test test</div>
+                          <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
+                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                            <div class="calendar-text">CHOSE CALENDAR</div>
+                            <div class="popup-buttons popup-my-calendar">
+                            <button class="card-btn">Google</button>
+                            <button class="card-btn">Outlook</button>
+                            </div>
+                          </div>
+                            <div class="underline"></div>
+                            <div class="popup-buttons popup-set-reminder">
+                            <button class="card-btn">Cancel</button>
+                            <button class="card-btn">Set Reminder</button>
+                          </div>
+                    </div>
                   </div>
+                  <button onclick="openPopup(this)" class="card-btn reminder-btn">Set Reminder</button>
+                  </div>                  
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/3dot-vertical.svg" alt="" />
@@ -607,10 +861,22 @@
                     <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <div class="whish-list"><a href="#">Add to my list</a></div>
-                    <div class="republish-list"><a href="#">Republish</a></div>
+                  <div class="dropup-title">CHOOSE
+                    <span onclick="moreMenuClose(this)" class="dropup-close">&times;</span>
+                  </div>
+                    <div class="mylist-list"  id="mylist">
+                      <a onclick="openMylist(this)" href="#">Add to my list</a>
+                  </div>
+                  <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
+                <div class="mylist-popup" id="mylist-popup">
+                  <div class="overlay" onclick="closeMylist(this)"></div>
+                  <div class="content">
+                    <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
+                    <div class="popup-title"><img src="img/wishlist.svg" alt=""><p>Add to my wishlist</p></div>
+                    <div class="card-title"><p>Video/Course was addet to your list.</p></div>
+                </div>
+              </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -638,12 +904,38 @@
                 </p>
                 <div class="card-buttons">
                   <div class="dropup">
-                  <button onclick="attachmentMenu(this)" class="card-btn icon">
+                    <button onclick="attachmentMenu(this)" class="card-btn icon">
                     <img src="img/paperclip.svg" alt="" /></button>
                   </div>
-                  <div class="reminder-btn-wrap">
-                    <button class="card-btn reminder-btn">Set Reminder</button>
+                  <div class="reminder-btn-wrap" id="reminder">
+                    <div class="reminder-popup" id="reminder-popup">
+                      <div class="overlay" onclick="closePopup()"></div>
+                      <div class="content">
+                          <div class="close-btn" onclick="closePopup()">&times;</div>
+                          <div class="popup-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
+                            <div class="card-content">
+                            <div class="card-category">
+                            <div class="category-text">TRAINING DESCRIPTION</div>
+                          </div>
+                          <div class="card-title">Test test test</div>
+                          <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
+                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                            <div class="calendar-text">CHOSE CALENDAR</div>
+                            <div class="popup-buttons popup-my-calendar">
+                            <button class="card-btn">Google</button>
+                            <button class="card-btn">Outlook</button>
+                            </div>
+                          </div>
+                            <div class="underline"></div>
+                            <div class="popup-buttons popup-set-reminder">
+                            <button class="card-btn">Cancel</button>
+                            <button class="card-btn">Set Reminder</button>
+                          </div>
+                    </div>
                   </div>
+                  <button onclick="openPopup(this)" class="card-btn reminder-btn">Set Reminder</button>
+                  </div>                  
                     <div class="dropup">
                       <button onclick="moreMenu(this)" class="card-btn icon">
                     <img src="img/3dot-vertical.svg" alt="" />
@@ -655,10 +947,22 @@
                     <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <div class="whish-list"><a href="#">Add to my list</a></div>
-                    <div class="republish-list"><a href="#">Republish</a></div>
+                  <div class="dropup-title">CHOOSE
+                    <span onclick="moreMenuClose(this)" class="dropup-close">&times;</span>
+                  </div>
+                    <div class="mylist-list"  id="mylist">
+                      <a onclick="openMylist(this)" href="#">Add to my list</a>
+                  </div>
+                  <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
+                <div class="mylist-popup" id="mylist-popup">
+                  <div class="overlay" onclick="closeMylist(this)"></div>
+                  <div class="content">
+                    <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
+                    <div class="popup-title"><img src="img/wishlist.svg" alt=""><p>Add to my wishlist</p></div>
+                    <div class="card-title"><p>Video/Course was addet to your list.</p></div>
+                </div>
+              </div>
               </div>
             </div>
             <!-- Video Card - END -->
