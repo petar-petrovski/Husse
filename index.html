@@ -76,7 +76,6 @@
         <div class="filter-container">
           <!-- Category filter -->
           <div class="filter-by" >
-            <img src="img/filter.svg" alt="">
             <div class="select-box">
               <div class="options-container" id="category-drop">
                 <div class="option">
@@ -187,7 +186,7 @@
                       <div class="overlay" onclick="closePopup()"></div>
                       <div class="content">
                           <div class="close-btn" onclick="closePopup()">&times;</div>
-                          <div class="reminder-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
+                          <div class="popup-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
                             <div class="card-content">
                             <div class="card-category">
                             <div class="category-text">TRAINING DESCRIPTION</div>
@@ -218,14 +217,26 @@
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
                   <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
+                    <div class="attach-list"><a href="#">Attachment name 1.pdf</a></div>
+                    <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
+                  <div class="dropup-title">CHOOSE
+                    <span onclick="moreMenuClose(this)" class="dropup-close">&times;</span>
+                  </div>
+                    <div class="mylist-list"  id="mylist">
+                      <a onclick="openMylist(this)" href="#">Add to my list</a>
+                  </div>
+                  <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
+                <div class="mylist-popup" id="mylist-popup">
+                  <div class="overlay" onclick="closeMylist()"></div>
+                  <div class="content">
+                    <div class="close-btn" onclick="closeMylist()">&times;</div>
+                    <div class="popup-title"><img src="img/wishlist.svg" alt=""><p>Add to my wishlist</p></div>
+                    <div class="card-title"><p>Video/Course was addet to your list.</p></div>
+                </div>
+              </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -255,7 +266,7 @@
                       <div class="overlay" onclick="closePopup()"></div>
                       <div class="content">
                           <div class="close-btn" onclick="closePopup()">&times;</div>
-                          <div class="reminder-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
+                          <div class="popup-title"><img src="img/bell.svg" alt=""><p>Set Reminder</p></div>                
                             <div class="card-content">
                             <div class="card-category">
                             <div class="category-text">TRAINING DESCRIPTION</div>
@@ -286,14 +297,26 @@
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
                   <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
+                    <div class="attach-list"><a href="#">Attachment name 1.pdf</a></div>
+                    <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
-                  <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
+                  <div class="dropup-title">CHOOSE
+                    <span onclick="moreMenuClose(this)" class="dropup-close">&times;</span>
+                  </div>
+                    <div class="mylist-list"  id="mylist">
+                      <a onclick="openMylist(this)" href="#">Add to my list</a>
+                  </div>
+                  <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
+                <div class="mylist-popup" id="mylist-popup">
+                  <div class="overlay" onclick="closeMylist(this)"></div>
+                  <div class="content">
+                    <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
+                    <div class="popup-title"><img src="img/wishlist.svg" alt=""><p>Add to my wishlist</p></div>
+                    <div class="card-title"><p>Video/Course was addet to your list.</p></div>
+                </div>
+              </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -328,13 +351,13 @@
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
                   <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
+                    <div class="attach-list"><a href="#">Attachment name 1.pdf</a></div>
+                    <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
                   <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
+                    <div class="whish-list"><a href="#">Add to my list</a></div>
+                    <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
               </div>
             </div>
@@ -370,13 +393,13 @@
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
                   <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
+                    <div class="attach-list"><a href="#">Attachment name 1.pdf</a></div>
+                    <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
                   <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
+                    <div class="whish-list"><a href="#">Add to my list</a></div>
+                    <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
               </div>
             </div>
@@ -412,13 +435,13 @@
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
                   <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
+                    <div class="attach-list"><a href="#">Attachment name 1.pdf</a></div>
+                    <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
                   <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
+                    <div class="whish-list"><a href="#">Add to my list</a></div>
+                    <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
               </div>
             </div>
@@ -454,13 +477,13 @@
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
                   <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
+                    <div class="attach-list"><a href="#">Attachment name 1.pdf</a></div>
+                    <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
                   <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
+                    <div class="whish-list"><a href="#">Add to my list</a></div>
+                    <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
               </div>
             </div>
@@ -496,13 +519,13 @@
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
                   <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
+                    <div class="attach-list"><a href="#">Attachment name 1.pdf</a></div>
+                    <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
                   <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
+                    <div class="whish-list"><a href="#">Add to my list</a></div>
+                    <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
               </div>
             </div>
@@ -538,13 +561,13 @@
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
                   <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
+                    <div class="attach-list"><a href="#">Attachment name 1.pdf</a></div>
+                    <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
                   <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
+                    <div class="whish-list"><a href="#">Add to my list</a></div>
+                    <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
               </div>
             </div>
@@ -580,13 +603,13 @@
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
                   <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
+                    <div class="attach-list"><a href="#">Attachment name 1.pdf</a></div>
+                    <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
                   <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
+                    <div class="whish-list"><a href="#">Add to my list</a></div>
+                    <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
               </div>
             </div>
@@ -628,13 +651,13 @@
                 </div>
                 <div id="dropUpAttachment" class="dropup-content">
                   <div class="dropup-title">ATTACHMENTS<span onclick="attachmentMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Attachment name 1.pdf</a>
-                    <a href="#">Atachment name 2.jpg</a>
+                    <div class="attach-list"><a href="#">Attachment name 1.pdf</a></div>
+                    <div class="attach-list"><a href="#">Attachment name 2.pdf</a></div>
                 </div>
                 <div id="dropUpWishlist" class="dropup-content">
                   <div class="dropup-title">CHOOSE<span onclick="moreMenuClose(this)" class="dropup-close">&times;</span></div>
-                    <a href="#">Add to my list</a>
-                    <a href="#">Republish</a>
+                    <div class="whish-list"><a href="#">Add to my list</a></div>
+                    <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
               </div>
             </div>

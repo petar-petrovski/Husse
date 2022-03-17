@@ -97,7 +97,7 @@ function moreMenuClose(x) {
   parent["dropUpWishlist"].classList.remove("show");
 }
 
-//POPUP// 
+//POPUP SET REMINDER// 
 function openPopup(x) {
   const parent = document.getElementById(x.parentNode.id).children;
   parent["reminder-popup"].classList.add("active");
@@ -106,11 +106,22 @@ function closePopup() {
   document.getElementById("reminder-popup").classList.remove("active");
 }
 
+//POPUP MY LIST// 
+function openMylist(y) {
+  const parent = document.getElementById(y.parentNode.parentNode.parentNode.id).children;
+  parent["mylist-popup"].classList.add("active");
+}
+function closeMylist(y) {
+  const parent = document.getElementById(y.parentNode.parentNode.id).children;
+  parent["mylist-popup"].classList.remove("active");
+}
+function closeMylist2(z) {
+  const parent = document.getElementById(z.parentNode.parentNode.parentNode.id).children;
+  parent["mylist-popup"].classList.remove("active");
+}
 // Close the dropdown if the user clicks outside of it
 window.addEventListener("mouseup", function(event){
-	// var menu = document.getElementsByClassName(".dropup-content.show");
   var menu = document.querySelector("div.dropup-content.show");
-  // console.log(menu);
 	if (menu !== null && event.target != menu){
     menu.classList.remove("show");
   }

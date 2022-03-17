@@ -170,6 +170,7 @@ body {
     margin-left: 10px;
     display: inline-block;  
 } */
+/* this should be done with pseudo ::after */
 .search {
   margin-bottom: 6px;
 }
@@ -234,9 +235,6 @@ form.search-box::placeholder {
   height: auto;
   color: #8f8884;
 }
-.filter-container img {
-  height: 15px;
-}
 .filter-by {
   display: flex;
   position: relative;
@@ -250,7 +248,6 @@ form.search-box::placeholder {
   width: 300px;
   flex-direction: column;
 }
-
 .select-box .options-container {
   background: #ffffff;
   color: #8F8884;
@@ -269,7 +266,6 @@ form.search-box::placeholder {
 .selected {
   background: #f2f1f0;
   width: 300px;
-
   color: #8F8884;
   border-bottom: 1px solid #DEDBD9;
   position: relative;
@@ -280,10 +276,22 @@ form.search-box::placeholder {
   padding: 12px 24px;
   border: 1px solid #DEDBD9;
   width: 300px;
-
+  padding-left: 50px;
   background: #ffffff;
   color: #000000;
   z-index: 99;
+}
+.selected::before {
+  content: " ";
+  background: url("../img/filter.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  width: 16px;
+  left: 10px;
+  top: 17px;
 }
 .selected::after {
   content: "";
@@ -311,6 +319,7 @@ form.search-box::placeholder {
 .selected {
   padding: 12px 24px;
   cursor: pointer;
+  padding-left: 50px;
 }
 .select-box .option:hover {
   background: #F2F1F0;
@@ -408,7 +417,6 @@ form.search-box::placeholder {
   padding: 0.5rem 1.25rem;
   margin: 0 auto;
   background-color: #ff0000;
-  /* text-align: center; */
   border-radius: 0.3rem 0.3rem 0 0;
   z-index: 1;
 }
@@ -510,7 +518,47 @@ form.search-box::placeholder {
 .reminder-btn-wrap {
   width: 60%;
 }
-.reminder-btn-wrap .overlay {
+.reminder-btn {
+  padding: 0.6rem 1.5rem;
+  width: 100%;
+}
+.reminder-btn:hover {
+  color: #ff0000;
+}
+/* POP UP -> MUTUAL STYLING */
+.close-btn {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  color: #8F8884;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: black;
+}
+.popup-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 15px;
+  padding: 15px;
+  width: 100%;
+  border-bottom: 2px solid #ff0000;
+}
+.popup-title img {
+  height: 20px;
+  width: 20px;
+}
+.popup-title p {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #8F8884;
+}
+.overlay {
   position:fixed;
   top:0;
   left:0;
@@ -523,13 +571,6 @@ form.search-box::placeholder {
   -moz-filter: blur(1px);
   z-index:1;
   display: none;
-}
-.reminder-btn {
-  padding: 0.6rem 1.5rem;
-  width: 100%;
-}
-.reminder-btn:hover {
-  color: #ff0000;
 }
 /* SET REMINDER POPUP */
 .reminder-popup .content {
@@ -545,38 +586,6 @@ form.search-box::placeholder {
   padding:20px;
   box-shadow: 0 0 0.43rem 0.125rem #00000026;
   z-index: 2;
-}
-.reminder-popup .close-btn {
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  width: 30px;
-  height: 30px;
-  color: #8F8884;
-  font-size: 20px;
-  text-align: center;
-  cursor: pointer;
-}
-.reminder-popup .close-btn:hover {
-  color: black;
-}
-.reminder-popup .reminder-title {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  margin-top: 15px;
-  padding: 15px;
-  width: 100%;
-  border-bottom: 2px solid #ff0000;
-}
-.reminder-popup .reminder-title img {
-  height: 20px;
-  width: 20px;
-}
-.reminder-popup .reminder-title p {
-  margin-left: 10px;
-  font-size: 16px;
-  color: #8F8884;
 }
 .reminder-popup .calendar-text{
   font-size: 0.7rem;
@@ -634,6 +643,32 @@ form.search-box::placeholder {
   transition:all 300ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);
 }
+/* ADD TO MY LIST POPUP */
+.mylist-popup .content {
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition:all 300ms ease-in-out;
+  background: #fff;
+  width: 40%;
+  height: auto;
+  text-align: left;
+  padding:20px;
+  box-shadow: 0 0 0.43rem 0.125rem #00000026;
+  z-index: 2;
+}
+.mylist-popup .card-title  {
+  padding: 15px;
+  margin: 20px 0;
+}
+.mylist-popup.active .overlay {
+  display: block;
+}
+.mylist-popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
 /* DropUP Menu */
 .dropup {
   position: relative;
@@ -641,9 +676,6 @@ form.search-box::placeholder {
 }
 .dropup-close {
   position: absolute;
-  padding: 5px;
-  /* top: 0;  */
-  /* right: 0;  */
   transition: all 200ms;
   text-decoration: none;
   cursor: pointer;
@@ -652,7 +684,6 @@ form.search-box::placeholder {
   padding: 12px 16px;
   transform: translate(0%, -50%);
   }
-
 .dropup-title {
   padding: 12px 16px;
   color: #8F8884;
@@ -673,9 +704,57 @@ form.search-box::placeholder {
 .dropup-content a {
   font-size: 14px;
   color: #8F8884;
-  padding: 12px 16px;
+  padding: 12px 16px 12px 45px;
   text-decoration: none;
   display: block;
+}
+.attach-list a::before {
+  content: "";
+  background: url("../img/paperclip.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  left: 10px;
+  width: 21px;
+}
+.attach-list a::after {
+  content: "";
+  background: url("../img/download_icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  right: 10px;
+  width: 21px;
+  display: none;
+}
+.attach-list:hover a::after {
+  display: inline;
+}
+.mylist-list a::before {
+  content: "";
+  background: url("../img/wishlist.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  left: 10px;
+  width: 21px;
+}
+.republish-list a::before {
+  content: "";
+  background: url("../img/republish.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  left: 10px;
+  width: 21px;
 }
 .dropup-content a:hover, .dropup-content span:hover{
   background-color: #F2F1F0;
