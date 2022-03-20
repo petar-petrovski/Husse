@@ -78,6 +78,7 @@ function searchCards() {
   filter = input.value.toUpperCase();
   cardContainer = document.getElementById("items");
   cards = cardContainer.getElementsByClassName("col");
+
   for (i = 0; i < cards.length; i++) {
       title = cards[i].querySelector("h3.card-title");
       if (title.innerText.toUpperCase().indexOf(filter) > -1) {
