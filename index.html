@@ -53,7 +53,7 @@
         <div class="title-bar">
           <div class="title" id="title">
             <p>TRAININGS <br />& COURSES</p>
-            <button class="tablink" onclick="shiftGrid('Global', this)"  id="defaultOpen"> 
+            <button class="tablink global-btn" onclick="shiftGrid('Global', this)"  id="defaultOpen"> 
               Global
             </button>
             <button class="tablink" onclick="shiftGrid('Local', this)">
@@ -74,37 +74,37 @@
           <!-- Category filter -->
           <div class="filter-by" >
             <div class="select-box">
-              <div class="options-container" id="category-drop">
-                <div class="option">
+              <div class="options-container cat-container" id="category-drop">
+                <div class="option cat-option">
                   <input type="radio" class="radio" id="it-web" name="category"/>
                   <label for="it-web">IT & Web</label>
                 </div>
-                <div class="option">
+                <div class="option cat-option">
                   <input type="radio" class="radio" id="management" name="category" />
                   <label for="management">Management</label>
                 </div>
-                <div class="option">
+                <div class="option cat-option">
                   <input type="radio" class="radio" id="nutrition" name="category" />
                   <label for="nutrition">Nutrition</label>
                 </div>
-                <div class="option">
+                <div class="option cat-option">
                   <input type="radio" class="radio" id="products" name="category" />
                   <label for="products">Products</label>
                 </div>
-                <div class="option">
+                <div class="option cat-option">
                   <input type="radio" class="radio" id="sales-marketing" name="category" />
                   <label for="sales-marketing">Sales & Marketing</label>
                 </div>
-                <div class="option">
+                <div class="option cat-option">
                   <input type="radio" class="radio" id="recruiting" name="category" />
                   <label for="recruiting">Recruiting</label>
                 </div>
-                <div class="option">
+                <div class="option cat-option">
                   <input type="radio" class="radio" id="q-a" name="category" />
                   <label for="q-a">Q & A</label>
                 </div>
               </div>
-              <div class="selected">
+              <div class="selected slctd-cat">
                 Filter by category
               </div>
             </div>
@@ -126,18 +126,18 @@
           <!-- Sort By -->
           <div class="filter-by">
             <div class="select-box">
-              <div class="options-container">
-                <div class="option">
+              <div class="options-container sort-container">
+                <div class="option sort-option">
                   <input type="radio" class="radio" id="date" name="category"/>
                   <label for="date">Date</label>
                 </div>
-                <div class="option">
+                <div class="option sort-option">
                   <input type="radio" class="radio" id="name" name="category" />
                   <label for="name">Name</label>
                 </div>
               </div>
       
-              <div class="selected">
+              <div class="selected slctd-sort">
                 Sort By
               </div>
             </div>
@@ -189,8 +189,8 @@
                           </div>
                           <div class="card-title">Test test test</div>
                           <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
-                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
-                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                            <div class="video-date"><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                            <div class="video-time"><p>1 h 15 min</p></div>
                             <div class="calendar-text">CHOSE CALENDAR</div>
                             <div class="popup-buttons popup-my-calendar">
                             <button class="card-btn">Google</button>
@@ -269,8 +269,8 @@
                           </div>
                           <div class="card-title">Test test test</div>
                           <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
-                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
-                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                          <div class="video-date"><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                          <div class="video-time"><p>1 h 15 min</p></div>
                             <div class="calendar-text">CHOSE CALENDAR</div>
                             <div class="popup-buttons popup-my-calendar">
                             <button class="card-btn">Google</button>
@@ -349,8 +349,8 @@
                           </div>
                           <div class="card-title">Test test test</div>
                           <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
-                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
-                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                          <div class="video-date"><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                          <div class="video-time"><p>1 h 15 min</p></div>
                             <div class="calendar-text">CHOSE CALENDAR</div>
                             <div class="popup-buttons popup-my-calendar">
                             <button class="card-btn">Google</button>
@@ -429,8 +429,8 @@
                           </div>
                           <div class="card-title">Test test test</div>
                           <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
-                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
-                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                          <div class="video-date"><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                          <div class="video-time"><p>1 h 15 min</p></div>
                             <div class="calendar-text">CHOSE CALENDAR</div>
                             <div class="popup-buttons popup-my-calendar">
                             <button class="card-btn">Google</button>
@@ -509,8 +509,8 @@
                           </div>
                           <div class="card-title">Test test test</div>
                           <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
-                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
-                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                          <div class="video-date"><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                          <div class="video-time"><p>1 h 15 min</p></div>
                             <div class="calendar-text">CHOSE CALENDAR</div>
                             <div class="popup-buttons popup-my-calendar">
                             <button class="card-btn">Google</button>
@@ -589,8 +589,8 @@
                           </div>
                           <div class="card-title">Test test test</div>
                           <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
-                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
-                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                          <div class="video-date"><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                          <div class="video-time"><p>1 h 15 min</p></div>
                             <div class="calendar-text">CHOSE CALENDAR</div>
                             <div class="popup-buttons popup-my-calendar">
                             <button class="card-btn">Google</button>
@@ -669,8 +669,8 @@
                           </div>
                           <div class="card-title">Test test test</div>
                           <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
-                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
-                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                          <div class="video-date"><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                          <div class="video-time"><p>1 h 15 min</p></div>
                             <div class="calendar-text">CHOSE CALENDAR</div>
                             <div class="popup-buttons popup-my-calendar">
                             <button class="card-btn">Google</button>
@@ -749,8 +749,8 @@
                           </div>
                           <div class="card-title">Test test test</div>
                           <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
-                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
-                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                          <div class="video-date"><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                          <div class="video-time"><p>1 h 15 min</p></div>
                             <div class="calendar-text">CHOSE CALENDAR</div>
                             <div class="popup-buttons popup-my-calendar">
                             <button class="card-btn">Google</button>
@@ -829,8 +829,8 @@
                           </div>
                           <div class="card-title">Test test test</div>
                           <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
-                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
-                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                          <div class="video-date"><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                          <div class="video-time"><p>1 h 15 min</p></div>
                             <div class="calendar-text">CHOSE CALENDAR</div>
                             <div class="popup-buttons popup-my-calendar">
                             <button class="card-btn">Google</button>
@@ -915,8 +915,8 @@
                           </div>
                           <div class="card-title">Test test test</div>
                           <div class="video-description">Cats diet and Husse wet food for cats short description Cats diet</div>
-                            <div class="video-date-time"><img src="img/date-icon.svg" alt=""><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
-                            <div class="video-date-time"><img src="img/time-icon.svg" alt=""><p>1 h 15 min</p></div>
+                          <div class="video-date"><p>28. 1. 2022, 13.00 (GMT +1)</p></div>
+                          <div class="video-time"><p>1 h 15 min</p></div>
                             <div class="calendar-text">CHOSE CALENDAR</div>
                             <div class="popup-buttons popup-my-calendar">
                             <button class="card-btn">Google</button>

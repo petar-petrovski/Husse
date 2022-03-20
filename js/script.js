@@ -67,6 +67,8 @@ function shiftGrid(pageName, elmnt) {
   // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = "white";
   elmnt.style.color = "black";
+  elmnt.style.paddingRight = "50px";
+
 }
 
 //SEARCH CARDS // search through titles 
@@ -143,26 +145,51 @@ window.addEventListener("mouseup", function(event){
 
 
 //FILTER BY CATEGORY
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
-const optionsList = document.querySelectorAll(".option");
+const selectedCategory = document.querySelector(".slctd-cat");
+const categoryContainer = document.querySelector(".cat-container");
+const categoryList = document.querySelectorAll(".cat-option");
 
-selected.addEventListener("click", () => {
-  optionsContainer.classList.toggle("active");
-  selected.classList.toggle("active");
+selectedCategory.addEventListener("click", () => {
+  categoryContainer.classList.toggle("active");
+  selectedCategory.classList.toggle("active");
 });
 
-optionsList.forEach(o => {
+categoryList.forEach(o => {
   o.addEventListener("click", () => {
-    selected.innerHTML = o.querySelector("label").innerHTML;
-    optionsContainer.classList.remove("active");
+    selectedCategory.innerHTML = o.querySelector("label").innerHTML;
+    categoryContainer.classList.remove("active");
   });
 });
 //close the dropdown with outside click
 window.addEventListener("mouseup", function(event){
-	if (event.target != optionsContainer && event.target != selected){
-    optionsContainer.classList.remove("active");
-    selected.classList.remove("active");
+	if (event.target != categoryContainer && event.target != selectedCategory){
+    categoryContainer.classList.remove("active");
+    selectedCategory.classList.remove("active");
+    }
+});
+//FILTER BY CATEGORY - END//
+
+//FILTER BY CATEGORY
+const selectedSort = document.querySelector(".slctd-sort");
+const sortContainer = document.querySelector(".sort-container");
+const sortList = document.querySelectorAll(".sort-option");
+
+selectedSort.addEventListener("click", () => {
+  sortContainer.classList.toggle("active");
+  selectedSort.classList.toggle("active");
+});
+
+sortList.forEach(o => {
+  o.addEventListener("click", () => {
+    selectedSort.innerHTML = o.querySelector("label").innerHTML;
+    sortContainer.classList.remove("active");
+  });
+});
+//close the dropdown with outside click
+window.addEventListener("mouseup", function(event){
+	if (event.target != sortContainer && event.target != selectedSort){
+    sortContainer.classList.remove("active");
+    selectedSort.classList.remove("active");
     }
 });
 //FILTER BY CATEGORY - END//

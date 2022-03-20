@@ -189,15 +189,17 @@ body {
 .tabcontent {
   display: none;
 }
-/* .notification-circle {
+ .global-btn::after {
+    content: "2"; 
     height: 20px;
     width: 20px;
-    background-color: #FFCB05;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 14px;
     border-radius: 50%;
     margin-left: 10px;
-    display: inline-block;  
-} */
-/* this should be done with pseudo ::after */
+    position: absolute;
+ }
 .search {
   margin-bottom: 6px;
 }
@@ -301,12 +303,15 @@ form.search-box::placeholder {
   padding: 12px 24px;
   border: 1px solid #DEDBD9;
   width: 300px;
-  padding-left: 50px;
   background: #ffffff;
   color: #000000;
   z-index: 99;
 }
-.selected::before {
+.slctd-cat.active {
+  padding-left: 50px;
+
+}
+.slctd-cat::before {
   content: " ";
   background: url("../img/filter.svg");
   background-size: contain;
@@ -344,7 +349,10 @@ form.search-box::placeholder {
 .selected {
   padding: 12px 24px;
   cursor: pointer;
-  padding-left: 50px;
+}
+.select-box .cat-option,
+.slctd-cat {
+padding-left: 50px;
 }
 .select-box .option:hover {
   background: #F2F1F0;
@@ -440,7 +448,7 @@ form.search-box::placeholder {
   bottom: 0;
   right: 1.25rem;
   left: 1.25rem;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem;
   margin: 0 auto;
   background-color: #ff0000;
   border-radius: 0.3rem 0.3rem 0 0;
@@ -448,8 +456,9 @@ form.search-box::placeholder {
 }
 .upcoming-notification .upcoming-left p {
   color: #ffffff;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
+  border-right: 1px solid #ffffff;
 } 
 .video-date::before {
   content: "";
@@ -461,6 +470,21 @@ form.search-box::placeholder {
   height: 100%;
   width: 14px;
 }
+.reminder-popup .video-date::before {
+  content: "";
+  background: url("../img/date-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  width: 16px;
+}
+.reminder-popup .video-date p, .reminder-popup .video-time p{
+  padding-left: 25px;
+  color: #FF0000;
+  margin: 5px;
+}
 .video-time::before {
   content: "";
   background: url("../img/time-icon-white.svg");
@@ -471,19 +495,30 @@ form.search-box::placeholder {
   height: 100%;
   width: 14px;
 }
+.reminder-popup .video-time::before {
+  content: "";
+  background: url("../img/time-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  width: 16px;
+}
 .upcoming-notification .upcoming-right p {
   margin: 5px;
   padding-left: 15px;
   color: #ffffff;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 300;
 } 
 .upcoming-notification .upcoming-left {
   /* border-right: 1 solid #ffffff; */
-  width: 25%;
+  width: 30%;
 }
 .upcoming-notification .upcoming-right {
-  width: 74%;
+  width: 70%;
+  margin-left: 10px;
 }
 /* .upcoming-notification .upcoming-right .video-date-time{
   display: flex;
