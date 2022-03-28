@@ -25,7 +25,11 @@ function filterCard(value) {
     }
   });
   //select all cards
+  // cardContainer = document.getElementById("items");
+  // elements = cardContainer.getElementsByClassName("col");
   let elements = document.querySelectorAll(".col");
+
+
   //loop through all cards
   elements.forEach((element) => {
     //display all cards on 'all' button click
@@ -194,3 +198,47 @@ window.addEventListener("mouseup", function(event){
     }
 });
 //FILTER BY CATEGORY - END//
+const productContainers = [...document.querySelectorAll('.carousel-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+productContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += 700;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= 700;
+    })
+});
+
+// const productContainers = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+productContainers.addEventListener('mousedown', (e) => {
+  isDown = true;
+  productContainers.classList.add('active');
+  startX = e.pageX - productContainers.offsetLeft;
+  scrollLeft = productContainers.scrollLeft;
+});
+productContainers.addEventListener('mouseleave', () => {
+  isDown = false;
+  productContainers.classList.remove('active');
+});
+productContainers.addEventListener('mouseup', () => {
+  isDown = false;
+  productContainers.classList.remove('active');
+});
+productContainers.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - productContainers.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  productContainers.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});
