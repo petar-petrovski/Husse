@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;  
   scroll-behavior: smooth;
-
 }
 body {
   background-color: #f2f1f0;
@@ -71,7 +70,6 @@ body {
   font-weight: 400;
   cursor: pointer;
 }
-
 .nav-admin {
   display: flex;
   align-items: center;
@@ -151,11 +149,31 @@ body {
 .notification img {
   height: 20px;
 }
+
 /* CAROUSEL */
 .carousel-title {
   font-size: 32px;
   color: #8F8884;
-  margin: 5px;
+  padding: 5px;
+}
+.collaps-block {
+  position: relative;
+}
+.collaps-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.collaps-btn img{
+  transition: all 0.8s;
+}
+.rotate {
+  transform: rotateX(180deg);
 }
 .carousel-wrapper {
   position: relative;
@@ -266,9 +284,10 @@ body {
   flex-wrap: wrap;
   margin-top: 1.9rem;
   min-height: 1.9rem;
-  padding: 0 0.6rem;
+  padding-left:0.6rem;
   border-bottom: 0.125rem solid;
   border-color: white;
+  position: relative;
 }
 .title {
   display: flex;

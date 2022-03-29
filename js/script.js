@@ -198,6 +198,8 @@ window.addEventListener("mouseup", function(event){
     }
 });
 //FILTER BY CATEGORY - END//
+
+//CAROUSEL LEFT - RIGHT NAVIGATION
 const productContainers = [...document.querySelectorAll('.carousel-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
@@ -215,30 +217,8 @@ productContainers.forEach((item, i) => {
     })
 });
 
-// const productContainers = document.querySelector('.items');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-productContainers.addEventListener('mousedown', (e) => {
-  isDown = true;
-  productContainers.classList.add('active');
-  startX = e.pageX - productContainers.offsetLeft;
-  scrollLeft = productContainers.scrollLeft;
-});
-productContainers.addEventListener('mouseleave', () => {
-  isDown = false;
-  productContainers.classList.remove('active');
-});
-productContainers.addEventListener('mouseup', () => {
-  isDown = false;
-  productContainers.classList.remove('active');
-});
-productContainers.addEventListener('mousemove', (e) => {
-  if(!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - productContainers.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
-  productContainers.scrollLeft = scrollLeft - walk;
-  console.log(walk);
+//CAROUSEL COLLAPSE TOGGLE
+$('.collaps-btn').click(function() {
+  $('#hide-carousel').slideToggle('slow');
+  $("#imgFlip").toggleClass('rotate');
 });
