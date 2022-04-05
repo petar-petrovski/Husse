@@ -317,17 +317,20 @@ body {
 .tabcontent {
   display: none;
 }
- .global-btn::after {
-    content: "2"; 
-    height: 20px;
-    width: 20px;
-    background-color: #000000;
-    color: #FFFFFF;
-    font-size: 14px;
-    border-radius: 50%;
-    margin-left: 10px;
-    position: absolute;
- }
+
+.not-circle::after{
+  height: 20px;
+  width: 20px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 14px;
+  border-radius: 50%;
+  margin-left: 10px;
+  position: absolute;
+}
+.global-btn::after {
+  content: "2";
+}
 .search {
   margin-bottom: 6px;
 }
@@ -696,7 +699,7 @@ padding-left: 50px;
 .card-buttons {
   display: flex;
   justify-content: space-between;
-  /* column-gap: 10px; */
+  column-gap: 10px;
 }
 .card-btn {
   background-color: #f2f1f0;
@@ -724,7 +727,7 @@ padding-left: 50px;
   padding: 10px;
 }
 .reminder-btn-wrap {
-  width: 60%;
+  width: 100%;
 }
 .reminder-btn {
   padding: 0.6rem 1.5rem;
@@ -956,6 +959,28 @@ padding-left: 50px;
 .republish-list a::before {
   content: "";
   background: url("../img/republish.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  left: 10px;
+  width: 21px;
+}
+.course-list a::before {
+  content: "";
+  background: url("../img/add-to-course.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  left: 10px;
+  width: 21px;
+}
+.edit-course a::before {
+  content: "";
+  background: url("../img/edit_mode_icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
