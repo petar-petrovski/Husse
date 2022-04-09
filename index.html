@@ -46,7 +46,8 @@
     </nav>
     <!-- NAVIGATION MENU END-->
     <div class="wrapper">
-      <div class="top-container">
+      <div class="main-container">
+      <div class="welcome-header">
         <div class="welcome">
           <h3>Hello <span style="font-weight: 700">Master Name</span>,</h3>
           <p>Welcome to Husse</p>
@@ -1550,13 +1551,38 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="sidebar">
-        <div class="top-container">
-          <h1>Hello <span style="font-weight: 700">Master Name</span>,</h1>
-          <p>Welcome to Husse</p>
+    </div>
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <button
+              class="golden-btn"
+              onclick="shiftSidebarList('recommended', this)"
+              id="defaultOpen2"
+            >
+            Recommended
+            </button>
+            <button class="golden-btn" onclick="shiftSidebarList('myList', this)">
+              My List
+            </button>
+            <button class="golden-btn" onclick="shiftSidebarList('history', this)">
+              History
+            </button>
         </div>
-      </div> -->
+        <div id="recommended" class="sidebar-content">
+          Test 1
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="">
+            <div class="sc-content"><h3>Cats diet and Husse wet food for cats</h3></div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="myList" class="sidebar-content">Test 2</div>
+        <div id="history" class="sidebar-content">Test 3</div>
+      </div>
     </div>
 
     <script src="js/script.js"></script>

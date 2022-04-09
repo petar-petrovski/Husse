@@ -96,28 +96,27 @@ body {
   border-radius: 50%;
 }
 .wrapper {
-  /* display: flex; */
-  /* margin: 2rem; */
-  padding: 2rem;
+  display: flex;
 }
-/* .wrapper > *:nth-child(.content) {
+/* .wrapper > *:nth-child(.main-container) {
   flex: 1 1 75%;
-} */
-/* .wrapper > *:nth-child(.sidebar) {
+}
+.wrapper > *:nth-child(.sidebar) {
   flex: 1 1 25%;
 } */
 
-/* .content {
-  min-width: 75vw;
-} */
-.top-container {
+.main-container {
+  padding: 2rem;
+  width: 80vw;
+}
+.welcome-header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-.top-container h3 {
+.welcome-header h3 {
   font-size: 2rem;
   font-weight: 400;
 }
@@ -997,9 +996,73 @@ padding-left: 50px;
   display: block;
 }
 /* End DropUP Menu */
-
 .sidebar {
-  background-color: rgb(240, 219, 204);
+  background-color: #ffffff;
+  width: 20vw;
+  border-top: 1px solid #f2f1f0;
+  /* padding: 2rem; */
+
+}
+.sidebar-header {
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: 2px solid #BC955F;
+}
+.golden-btn {
+  flex: 1;
+  display: inline-block;
+  border: none;
+  color: #8F8884;
+  background-color: transparent;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.golden-btn:hover {
+  background-color: #EEEBE8;
+}
+.sidebar-content {
+  padding: 1rem;
+}
+.side-card {
+  display: flex;
+  height: 110px;
+  border-radius: 4px;
+  box-shadow: 0 0 0.43rem 0.125rem #00000026;
+
+}
+.sc-img{
+  height: 100%;
+  object-fit: cover;
+  width: 140px;
+  border-radius: 4px 0 0 4px;
+
+}
+.sc-content {
+  padding: 1rem;
+}
+.sc-content h3{
+  font-size: 14px;
+  font-weight: 700;
+}
+.sc-btn {
+  background-color: #f2f1f0;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  height: 100%;
+  padding: 5px;
+  /* color: #000000; */
+  text-align: center;
+  /* text-decoration: none; */
+  display: inline-block;
+  /* font-family: "Roboto Slab", serif; */
+  /* font-size: 0.8rem;
+  font-weight: 700; */
+  cursor: pointer;
 }
 /* MEDIA */
 
@@ -1017,7 +1080,7 @@ padding-left: 50px;
   .navlink {
     font-size: 2vw;
   }
-  .top-container {
+  .sidebar-header {
    flex-flow: column;
   }
   .sidebar {
