@@ -122,17 +122,33 @@ function closePopup() {
 
 //POPUP MY LIST// 
 function openMylist(y) {
-  const parent = document.getElementById(y.parentNode.parentNode.parentNode.id).children;
-  parent["mylist-popup"].classList.add("active");
+  const parent = document.getElementById("mylist-popup");
+  parent.classList.add("active");
 }
 function closeMylist(y) {
-  const parent = document.getElementById(y.parentNode.parentNode.id).children;
-  parent["mylist-popup"].classList.remove("active");
+  const parent = document.getElementById("mylist-popup");
+  parent.classList.remove("active");
 }
 function closeMylist2(z) {
-  const parent = document.getElementById(z.parentNode.parentNode.parentNode.id).children;
-  parent["mylist-popup"].classList.remove("active");
+  const parent = document.getElementById("mylist-popup");
+  parent.classList.remove("active");
 }
+//if popup is nested inside of the video card ->
+
+// function openMylist(y) {
+//   const parent = document.getElementById(y.parentNode.parentNode.parentNode.id).children;
+//   parent["mylist-popup"].classList.add("active");
+// }
+// function closeMylist(y) {
+//   const parent = document.getElementById(y.parentNode.parentNode.id).children;
+//   parent["mylist-popup"].classList.remove("active");
+// }
+// function closeMylist2(z) {
+//   const parent = document.getElementById(z.parentNode.parentNode.parentNode.id).children;
+//   parent["mylist-popup"].classList.remove("active");
+// }
+
+
 // Close the dropdown if the user clicks outside of it
 window.addEventListener("mouseup", function(event){
   var menu = document.querySelector("div.dropup-content.show");

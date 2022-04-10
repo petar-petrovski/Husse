@@ -21,12 +21,14 @@
   <body>
     <!-- NAVIGATION MENU -->
     <nav class="nav-bar">
+      <div class="nav-logo">
+      <div class="dashboard-logo not-circle dash-btn"><img src="img/dashboard-icon.svg" alt="" /></div>
       <div class="home-logo">
-        <div class="dashboard-logo">
-          <img src="img/husse.svg" alt="" />
-        </div>
+        <img src="img/husse.svg" alt="" />   
         <div class="campus">C A M P U S</div>
-      </div>
+      </div></div>
+
+
       <div class="mid-nav">
         <button class="navlink">Home</button>
         <button
@@ -37,8 +39,8 @@
         </button>
       </div>
       <div class="nav-admin">
-        <div class="admin-panel"><img src="img/msg-icon.svg" alt="" /></div>
-        <div class="admin-panel"><img src="img/bell.svg" alt="" /></div>
+        <div class="admin-panel not-circle msg-btn"><img class="" src="img/msg-icon.svg" alt="" /></div>
+        <div class="admin-panel not-circle not-btn"><img src="img/bell.svg" alt="" /></div>
         <div class="admin-panel">
           <img class="profile" src="img/profile.png" alt="" />
         </div>
@@ -376,12 +378,17 @@
                         </div>
                       </div>
                     </div>
+                    <!-- THIS 2 BUTTONS WILL BE TOGGLED, DEPENDS ON THE CASE (SET REMINDER OR WATCH NOW) -->
                     <button
                       onclick="openPopup(this)"
-                      class="card-btn reminder-btn"
-                    >
+                      class="card-btn reminder-btn">
                       Set Reminder
                     </button>
+                    
+                    <button class="card-btn reminder-btn hide">
+                        Watch Now
+                    </button>
+                    <!-- TOGGLE BUTTONS CODE END -->
                   </div>
                   <div class="dropup">
                     <button onclick="moreMenu(this)" class="card-btn icon">
@@ -415,20 +422,11 @@
                     <a onclick="openMylist(this)" href="#">Add to my list</a>
                   </div>
                   <div class="republish-list"><a href="#">Republish</a></div>
-                </div>
-                <div class="mylist-popup" id="mylist-popup">
-                  <div class="overlay" onclick="closeMylist(this)"></div>
-                  <div class="content">
-                    <div class="close-btn" onclick="closeMylist2(this)">
-                      &times;
-                    </div>
-                    <div class="popup-title">
-                      <img src="img/wishlist.svg" alt="" />
-                      <p>Add to my wishlist</p>
-                    </div>
-                    <div class="card-title">
-                      <p>Video/Course was addet to your list.</p>
-                    </div>
+                  <div class="course-list"><a href="#">
+                    Add to Course</a>
+                  </div>
+                  <div class="edit-course"><a href="#">
+                    Edit</a>
                   </div>
                 </div>
               </div>
@@ -542,21 +540,6 @@
                   </div>
                   <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
-                <div class="mylist-popup" id="mylist-popup">
-                  <div class="overlay" onclick="closeMylist(this)"></div>
-                  <div class="content">
-                    <div class="close-btn" onclick="closeMylist2(this)">
-                      &times;
-                    </div>
-                    <div class="popup-title">
-                      <img src="img/wishlist.svg" alt="" />
-                      <p>Add to my wishlist</p>
-                    </div>
-                    <div class="card-title">
-                      <p>Video/Course was addet to your list.</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -633,21 +616,6 @@
                   </div>
                   <div class="edit-course"><a href="#">
                     Edit</a>
-                  </div>
-                </div>
-                <div class="mylist-popup" id="mylist-popup">
-                  <div class="overlay" onclick="closeMylist(this)"></div>
-                  <div class="content">
-                    <div class="close-btn" onclick="closeMylist2(this)">
-                      &times;
-                    </div>
-                    <div class="popup-title">
-                      <img src="img/wishlist.svg" alt="" />
-                      <p>Add to my wishlist</p>
-                    </div>
-                    <div class="card-title">
-                      <p>Video/Course was addet to your list.</p>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -768,21 +736,6 @@
                   </div>
                   <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
-                <div class="mylist-popup" id="mylist-popup">
-                  <div class="overlay" onclick="closeMylist(this)"></div>
-                  <div class="content">
-                    <div class="close-btn" onclick="closeMylist2(this)">
-                      &times;
-                    </div>
-                    <div class="popup-title">
-                      <img src="img/wishlist.svg" alt="" />
-                      <p>Add to my wishlist</p>
-                    </div>
-                    <div class="card-title">
-                      <p>Video/Course was addet to your list.</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -893,21 +846,6 @@
                     <a onclick="openMylist(this)" href="#">Add to my list</a>
                   </div>
                   <div class="republish-list"><a href="#">Republish</a></div>
-                </div>
-                <div class="mylist-popup" id="mylist-popup">
-                  <div class="overlay" onclick="closeMylist(this)"></div>
-                  <div class="content">
-                    <div class="close-btn" onclick="closeMylist2(this)">
-                      &times;
-                    </div>
-                    <div class="popup-title">
-                      <img src="img/wishlist.svg" alt="" />
-                      <p>Add to my wishlist</p>
-                    </div>
-                    <div class="card-title">
-                      <p>Video/Course was addet to your list.</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -1020,21 +958,6 @@
                   </div>
                   <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
-                <div class="mylist-popup" id="mylist-popup">
-                  <div class="overlay" onclick="closeMylist(this)"></div>
-                  <div class="content">
-                    <div class="close-btn" onclick="closeMylist2(this)">
-                      &times;
-                    </div>
-                    <div class="popup-title">
-                      <img src="img/wishlist.svg" alt="" />
-                      <p>Add to my wishlist</p>
-                    </div>
-                    <div class="card-title">
-                      <p>Video/Course was addet to your list.</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -1145,21 +1068,6 @@
                     <a onclick="openMylist(this)" href="#">Add to my list</a>
                   </div>
                   <div class="republish-list"><a href="#">Republish</a></div>
-                </div>
-                <div class="mylist-popup" id="mylist-popup">
-                  <div class="overlay" onclick="closeMylist(this)"></div>
-                  <div class="content">
-                    <div class="close-btn" onclick="closeMylist2(this)">
-                      &times;
-                    </div>
-                    <div class="popup-title">
-                      <img src="img/wishlist.svg" alt="" />
-                      <p>Add to my wishlist</p>
-                    </div>
-                    <div class="card-title">
-                      <p>Video/Course was addet to your list.</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -1272,21 +1180,6 @@
                   </div>
                   <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
-                <div class="mylist-popup" id="mylist-popup">
-                  <div class="overlay" onclick="closeMylist(this)"></div>
-                  <div class="content">
-                    <div class="close-btn" onclick="closeMylist2(this)">
-                      &times;
-                    </div>
-                    <div class="popup-title">
-                      <img src="img/wishlist.svg" alt="" />
-                      <p>Add to my wishlist</p>
-                    </div>
-                    <div class="card-title">
-                      <p>Video/Course was addet to your list.</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -1398,25 +1291,12 @@
                   </div>
                   <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
-                <div class="mylist-popup" id="mylist-popup">
-                  <div class="overlay" onclick="closeMylist(this)"></div>
-                  <div class="content">
-                    <div class="close-btn" onclick="closeMylist2(this)">
-                      &times;
-                    </div>
-                    <div class="popup-title">
-                      <img src="img/wishlist.svg" alt="" />
-                      <p>Add to my wishlist</p>
-                    </div>
-                    <div class="card-title">
-                      <p>Video/Course was addet to your list.</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <!-- Video Card - END -->
           </div>
+          <!-- PAGE NUMBERING -->
+
         </div>
 
         <div id="Local" class="tabcontent">
@@ -1530,21 +1410,6 @@
                   </div>
                   <div class="republish-list"><a href="#">Republish</a></div>
                 </div>
-                <div class="mylist-popup" id="mylist-popup">
-                  <div class="overlay" onclick="closeMylist(this)"></div>
-                  <div class="content">
-                    <div class="close-btn" onclick="closeMylist2(this)">
-                      &times;
-                    </div>
-                    <div class="popup-title">
-                      <img src="img/wishlist.svg" alt="" />
-                      <p>Add to my wishlist</p>
-                    </div>
-                    <div class="card-title">
-                      <p>Video/Course was addet to your list.</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <!-- Video Card - END -->
@@ -1569,20 +1434,227 @@
             </button>
         </div>
         <div id="recommended" class="sidebar-content">
-          Test 1
+          <!-- SIDE CARD START -->
           <div class="side-card" id="side-card">
             <img class="sc-img" src="img/beagle.jpg" alt="">
-            <div class="sc-content"><h3>Cats diet and Husse wet food for cats</h3></div>
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
             <div class="dropup">
               <button onclick="openMylist(this)" class="sc-btn icon">
                 <img src="img/wishlist.svg" alt="" />
               </button>
             </div>
           </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="">
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="">
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="">
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="">
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="">
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="">
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="">
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
         </div>
-        <div id="myList" class="sidebar-content">Test 2</div>
-        <div id="history" class="sidebar-content">Test 3</div>
+        <div id="myList" class="sidebar-content">      
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/german-shepard.jpg" alt="">
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/german-shepard.jpg" alt="">
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/german-shepard.jpg" alt="">
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+        </div>
+        <div id="history" class="sidebar-content">Test</div>
       </div>
+      <!-- ADD TO WISHLIST - POPUP -->
+      <div class="mylist-popup" id="mylist-popup">
+        <div class="overlay" onclick="closeMylist(this)"></div>
+        <div class="content">
+          <div class="close-btn" onclick="closeMylist2(this)">
+            &times;
+          </div>
+          <div class="popup-title">
+            <img src="img/wishlist.svg" alt="" />
+            <p>Add to my wishlist</p>
+          </div>
+          <div class="card-title">
+            <p>Video/Course was addet to your list.</p>
+          </div>
+        </div>
+      </div>
+      <!-- ADD TO WISHLIST - POPUP END-->
+    <!-- END WRAPPER -->
     </div>
 
     <script src="js/script.js"></script>

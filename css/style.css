@@ -17,35 +17,34 @@ body {
   height: auto;
   z-index: 10;
 }
+.nav-logo {
+  display: flex ;
+}
 .nav-bar .home-logo {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 5px;
+  padding: 5px 0;
+}
+.nav-bar .home-logo img {
+  margin: 0 10px 0 70px;
 }
 .dashboard-logo {
-  margin: 10px;
+  padding: 6px;
+  position: absolute;
+  border-right: 1px solid #F2F1F0;
+  align-items: center;
   cursor: pointer;
 }
-.dashboard-logo::before {
-  content: "";
-  background: url("../img/dashboard-icon.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  align-items: center;
-  height: 100%;
-  width: 34px;
-}
-.dashboard-logo img {
-  padding-left: 45px;
+.dashboard-logo img{
+margin: auto 0;
 }
 .nav-bar .campus {
   font-size: 16px;
   font-weight: 700;
   background-color: #FF0000;
   color: #ffffff;
-  margin: 10px;
+  margin: 10px 0;
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
@@ -53,7 +52,6 @@ body {
 .mid-nav {
   display: flex;
   align-items: flex-end;
-
 }
 .navlink {
   /* display: inline-block; */
@@ -325,10 +323,26 @@ body {
   font-size: 14px;
   border-radius: 50%;
   margin-left: 10px;
+  text-align: center;
   position: absolute;
 }
 .global-btn::after {
   content: "2";
+}
+.msg-btn::after {
+  content: "3";
+  right: 0;
+  top: 0;
+}
+.dash-btn::after {
+  content: "8";
+  right: 0;
+  top: 0;
+}
+.not-btn::after {
+  content: "1";
+  right: 0;
+  top: 0;
 }
 .search {
   margin-bottom: 6px;
@@ -779,7 +793,7 @@ padding-left: 50px;
   backdrop-filter: blur(1px);
   -webkit-filter: blur(1px);
   -moz-filter: blur(1px);
-  z-index:1;
+  z-index:11;
   display: none;
 }
 /* SET REMINDER POPUP */
@@ -795,7 +809,7 @@ padding-left: 50px;
   text-align: left;
   padding:20px;
   box-shadow: 0 0 0.43rem 0.125rem #00000026;
-  z-index: 2;
+  z-index: 13;
 }
 .reminder-popup .calendar-text{
   font-size: 0.7rem;
@@ -866,7 +880,7 @@ padding-left: 50px;
   text-align: left;
   padding:20px;
   box-shadow: 0 0 0.43rem 0.125rem #00000026;
-  z-index: 2;
+  z-index: 12;
 }
 .mylist-popup .card-title  {
   padding: 15px;
@@ -1030,24 +1044,26 @@ padding-left: 50px;
 }
 .side-card {
   display: flex;
-  height: 110px;
+  height: 7.5rem;
   border-radius: 4px;
+  margin: 20px 0;
+}
+.side-card:hover {
   box-shadow: 0 0 0.43rem 0.125rem #00000026;
-
 }
 .sc-img{
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;
-  width: 140px;
+  width: 7rem;
   border-radius: 4px 0 0 4px;
-
 }
 .sc-content {
-  padding: 1rem;
+  padding: 0.8rem;
 }
 .sc-content h3{
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 700;
+  margin: 0.4rem 0;
 }
 .sc-btn {
   background-color: #f2f1f0;
@@ -1055,33 +1071,92 @@ padding-left: 50px;
   border-radius: 0 4px 4px 0;
   height: 100%;
   padding: 5px;
-  /* color: #000000; */
   text-align: center;
-  /* text-decoration: none; */
   display: inline-block;
-  /* font-family: "Roboto Slab", serif; */
-  /* font-size: 0.8rem;
-  font-weight: 700; */
   cursor: pointer;
+}
+.side-card .dropup img {
+  width: 0.8rem;
+}
+.sc-lan {
+  background-color: #F2F1F0;
+  color: #8F8884;
+  padding: 3px;
+  font-size: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+.sc-subtitle {
+  color: #8F8884;
+  font-size: 0.6rem;
 }
 /* MEDIA */
 
+@media only screen and (max-width: 1600px) {
+  .golden-btn {
+    font-size: 11px;  
+  }
+  .sc-content h3{
+    font-size: 0.75rem;
+  }
+  .sc-img{
+    width: 6rem;
+  }
+  .sc-subtitle {
+    font-size: 0.5rem;
+  }
+  .side-card {
+    height: 8rem;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .grid-container {
   grid-template-columns: repeat(3, 1fr);
+  }
+  .side-card {
+    height: 9rem;
+  }
+  .golden-btn {
+    font-size: 9px;  
+  }
+  .side-card .dropup img {
+    width: 10px;
+  }
+  .sc-content h3{
+    font-size: 0.7rem;
+  }
+  .sc-subtitle {
+    font-size: 0.4rem;
+  }
+  .sc-img{
+    width: 5rem;
   }
 }
 @media only screen and (max-width: 960px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     }
+    .sc-subtitle {
+      font-size: 0.3rem;
+    }
+    .sc-img{
+      width: 4rem;
+    }
+
 }
+
 @media only screen and (max-width: 768px) {
   .navlink {
     font-size: 2vw;
   }
+  .campus {
+    display: none;
+  }
   .sidebar-header {
    flex-flow: column;
+  }
+  .main-container {
+    width: 100vw;
   }
   .sidebar {
     display: none;
