@@ -37,7 +37,7 @@ body {
   cursor: pointer;
 }
 .dashboard-logo img{
-margin: auto 0;
+padding: 3px;
 }
 .nav-bar .campus {
   font-size: 16px;
@@ -336,8 +336,8 @@ margin: auto 0;
 }
 .dash-btn::after {
   content: "8";
-  right: 0;
-  top: 0;
+  right: 5px;
+  top: 5px;
 }
 .not-btn::after {
   content: "1";
@@ -1010,12 +1010,38 @@ padding-left: 50px;
   display: block;
 }
 /* End DropUP Menu */
+/* PAGINATION */
+#page_navigation {
+  /* clear:both; */
+  margin-top: 20px;
+  padding: 10px 0;
+  position: relative;
+  float: right;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+#page_navigation a{
+	padding:6px 12px;
+  border-radius: 4px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+	margin:4px;
+	color:#8F8884;
+	text-decoration:none
+} 
+.previous_link img {
+  transform: rotate(180deg);
+}
+.active_page{
+	background:#FF0000;
+	color:white !important;
+}
+/* SIDEBAR */
 .sidebar {
   background-color: #ffffff;
   width: 20vw;
   border-top: 1px solid #f2f1f0;
   /* padding: 2rem; */
-
 }
 .sidebar-header {
   display: flex;
@@ -1090,6 +1116,8 @@ padding-left: 50px;
   color: #8F8884;
   font-size: 0.6rem;
 }
+
+
 /* MEDIA */
 
 @media only screen and (max-width: 1600px) {
