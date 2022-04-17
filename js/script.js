@@ -29,7 +29,6 @@ function filterCard(value) {
   // elements = cardContainer.getElementsByClassName("col");
   let elements = document.querySelectorAll(".col");
 
-
   //loop through all cards
   elements.forEach((element) => {
     //display all cards on 'all' button click
@@ -49,7 +48,6 @@ function filterCard(value) {
 }
 
 //GLOBAL LOCAL TABS
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
@@ -71,8 +69,6 @@ function shiftGrid(pageName, elmnt) {
   // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = "white";
   elmnt.style.color = "black";
-  elmnt.style.paddingRight = "50px";
-
 }
 
 //SEARCH CARDS // search through titles 
@@ -133,21 +129,6 @@ function closeMylist2(z) {
   const parent = document.getElementById("mylist-popup");
   parent.classList.remove("active");
 }
-//if popup is nested inside of the video card ->
-
-// function openMylist(y) {
-//   const parent = document.getElementById(y.parentNode.parentNode.parentNode.id).children;
-//   parent["mylist-popup"].classList.add("active");
-// }
-// function closeMylist(y) {
-//   const parent = document.getElementById(y.parentNode.parentNode.id).children;
-//   parent["mylist-popup"].classList.remove("active");
-// }
-// function closeMylist2(z) {
-//   const parent = document.getElementById(z.parentNode.parentNode.parentNode.id).children;
-//   parent["mylist-popup"].classList.remove("active");
-// }
-
 
 // Close the dropdown if the user clicks outside of it
 window.addEventListener("mouseup", function(event){
@@ -163,32 +144,6 @@ window.addEventListener("mouseup", function(event){
   }
 });
 //POPUP - END// 
-
-
-//FILTER BY CATEGORY
-// const selectedCategory = document.querySelector(".slctd-cat");
-// const categoryContainer = document.querySelector(".cat-container");
-// const categoryList = document.querySelectorAll(".cat-option");
-
-// selectedCategory.addEventListener("click", () => {
-//   categoryContainer.classList.toggle("active");
-//   selectedCategory.classList.toggle("active");
-// });
-
-// categoryList.forEach(o => {
-//   o.addEventListener("click", () => {
-//     selectedCategory.innerHTML = o.querySelector("label").innerHTML;
-//     categoryContainer.classList.remove("active");
-//   });
-// });
-// //close the dropdown with outside click
-// window.addEventListener("mouseup", function(event){
-// 	if (event.target != categoryContainer && event.target != selectedCategory){
-//     categoryContainer.classList.remove("active");
-//     selectedCategory.classList.remove("active");
-//     }
-// });
-//FILTER BY CATEGORY - END//
 
 //DROP MENU FOR FILTER BY CATEGORY, SORT BY, LANGUAGE MENU
 
@@ -239,7 +194,6 @@ $('.collaps-btn').click(function() {
 });
 
 //SIDEBAR CONTENT
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen2").click();
 
@@ -263,7 +217,6 @@ function shiftSidebarList(pageName, elmnt) {
   elmnt.style.color = "#ffffff";
   // elmnt.style.paddingRight = "50px";
 }
-
 
 //GRID PAGINATION
 jQuery(document).ready(function () {

@@ -286,8 +286,12 @@ padding: 3px;
   border-color: white;
   position: relative;
 }
+.item-center {
+  align-items: center;
+}
 .title {
   display: flex;
+  align-items: center;
   font-size: 0.9rem;
   color: #8f8884;
   padding-left: 0.6rem;
@@ -299,8 +303,9 @@ padding: 3px;
   border-radius: 0.3rem 0.3rem 0 0;
   color: #8f8884;
   background-color: transparent;
+  height: 55px;
   margin-left: 0.6rem;
-  padding: 0.6rem 1.25rem;
+  padding: 0.3rem 1.25rem;
   text-align: center;
   text-decoration: none;
   font-family: "Roboto Slab", serif;
@@ -314,7 +319,9 @@ padding: 3px;
 .tabcontent {
   display: none;
 }
-
+.tablink.not-circle {
+  padding-right: 50px;
+}
 .not-circle::after{
   height: 20px;
   width: 20px;
@@ -344,9 +351,7 @@ padding: 3px;
   right: 0;
   top: 0;
 }
-.search {
-  margin-bottom: 6px;
-}
+
 form.search-box {
   display: flex;
   margin:auto;
@@ -408,6 +413,7 @@ form.search-box::placeholder {
   height: auto;
   color: #8f8884;
 }
+
 .filter-by {
   display: flex;
   position: relative;
@@ -418,8 +424,13 @@ form.search-box::placeholder {
 }
 .select-box {
   display: flex;
-  width: 300px;
   flex-direction: column;
+}
+.width300 {
+  width: 300px;
+}
+.width300.active {
+  width: 300px;
 }
 .select-box .options-container {
   background: #ffffff;
@@ -430,30 +441,31 @@ form.search-box::placeholder {
   transition: all 0.4s;
   overflow: hidden;
   position: absolute;
-  top: 54px;
+  top: 46px;
   box-shadow: 0 0 0.43rem 0.125rem #00000026;
   order: 1;
   z-index: 98;
 }
 .selected {
-  background: #f2f1f0;
-  width: 300px;
+  background: transparent;
   color: #8F8884;
+  border: 1px solid transparent;
   border-bottom: 1px solid #DEDBD9;
   position: relative;
   order: 0;
 }
 .selected.active {
-  padding: 12px 24px;
+  padding: 9px 24px;
   border: 1px solid #DEDBD9;
-  width: 300px;
   background: #ffffff;
   color: #000000;
   z-index: 99;
 }
+.lang-drop .selected.active {
+  padding: 9px 24px 9px 12px;
+}
 .slctd-cat.active {
   padding-left: 50px;
-
 }
 .slctd-cat::before {
   content: " ";
@@ -465,7 +477,7 @@ form.search-box::placeholder {
   height: 100%;
   width: 16px;
   left: 10px;
-  top: 17px;
+  top: 14px;
 }
 .selected::after {
   content: "";
@@ -476,24 +488,29 @@ form.search-box::placeholder {
   align-items: center;
   height: 100%;
   width: 14px;
-  right: 10px;
-  top: 21px;
+  right: 5px;
+  top: 17px;
   transition: all 0.4s;
 }
 .select-box .options-container.active {
-  width: 300px;
   max-height: 500px;
   opacity: 1;
 }
 .select-box .options-container.active + .selected::after {
   transform: rotateX(180deg);
-  top: -16px;
+  top: -14px;
 }
 .select-box .option,
 .selected {
-  padding: 12px 24px;
+  padding: 9px 24px;
   cursor: pointer;
 }
+.lang-drop .option,
+.selected {
+  padding: 9px 24px 9px 12px;
+  cursor: pointer;
+}
+
 .select-box .cat-option,
 .slctd-cat {
 padding-left: 50px;
@@ -508,6 +525,15 @@ padding-left: 50px;
 .select-box .option .radio {
   display: none;
 }
+
+.local {
+  display: inline-block;
+  margin-right: 10px;
+}
+.lang-drop {
+  display: inline-block;
+}
+
 .tag-filter {
   align-self: center;
   /* when block will be hidden --> 

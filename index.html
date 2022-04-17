@@ -173,7 +173,7 @@
         </div>
       </div>
       <div class="content">
-        <div class="title-bar">
+        <div class="title-bar item-center">
           <div class="title" id="title">
             <p>TRAININGS <br />& COURSES</p>
             <button
@@ -184,7 +184,36 @@
               Global
             </button>
             <button class="tablink" onclick="shiftGrid('Local', this)">
-              Local
+              <div class="local">Local</div>
+              <div class="lang-drop">
+              <div class="select-box">
+                <div class="options-container">
+                  <div class="option drop-option">
+                    <input type="radio" class="radio" id="date" name="category" />
+                    <label for="date">EN</label>
+                  </div>
+                  <div class="option drop-option">
+                    <input type="radio" class="radio" id="name" name="category" />
+                    <label for="name">PL</label>
+                  </div>
+                  <div class="option drop-option">
+                    <input type="radio" class="radio" id="name" name="category" />
+                    <label for="name">FR</label>
+                  </div>
+                  <div class="option drop-option">
+                    <input type="radio" class="radio" id="name" name="category" />
+                    <label for="name">SE</label>
+                  </div>
+                  <div class="option drop-option">
+                    <input type="radio" class="radio" id="name" name="category" />
+                    <label for="name">ES</label>
+                  </div>
+                  
+                </div>
+
+                <div class="selected" onclick="dropOptionMenu(this)">EN</div>
+              </div>
+          </div>
             </button>
           </div>
           <div class="search">
@@ -203,8 +232,8 @@
         <div class="filter-container">
           <!-- Category filter -->
           <div class="filter-by">
-            <div class="select-box">
-              <div class="options-container cat-container" id="category-drop">
+            <div class="select-box width300">
+              <div class="options-container width300 cat-container" id="category-drop">
                 <div class="option drop-option">
                   <input
                     type="radio"
@@ -264,7 +293,7 @@
                   <label for="q-a">Q & A</label>
                 </div>
               </div>
-              <div class="selected slctd-cat" onclick="dropOptionMenu(this)">Filter by category</div>
+              <div class="selected width300 slctd-cat" onclick="dropOptionMenu(this)">Filter by category</div>
             </div>
           </div>
           <!-- Tag filters -->
@@ -283,8 +312,8 @@
           </div>
           <!-- Sort By -->
           <div class="filter-by">
-            <div class="select-box">
-              <div class="options-container sort-container">
+            <div class="select-box width300">
+              <div class="options-container width300">
                 <div class="option drop-option">
                   <input type="radio" class="radio" id="date" name="category" />
                   <label for="date">Date</label>
@@ -295,7 +324,7 @@
                 </div>
               </div>
 
-              <div class="selected slctd-sort" onclick="dropOptionMenu(this)">Sort By</div>
+              <div class="selected width300" onclick="dropOptionMenu(this)">Sort By</div>
             </div>
           </div>
         </div>
