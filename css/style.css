@@ -506,7 +506,7 @@ form.search-box::placeholder {
   cursor: pointer;
 }
 .lang-drop .option,
-.selected {
+.lang-drop .selected {
   padding: 9px 24px 9px 12px;
   cursor: pointer;
 }
