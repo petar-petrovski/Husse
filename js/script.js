@@ -109,13 +109,29 @@ function moreMenuClose(x) {
 
 //POPUP SET REMINDER// 
 function openPopup(x) {
-  const parent = document.getElementById(x.parentNode.id).children;
-  parent["reminder-popup"].classList.add("active");
+  const parent = document.getElementById("reminder-popup");
+  parent.classList.add("active");
 }
 function closePopup() {
   document.getElementById("reminder-popup").classList.remove("active");
 }
-
+//POPUP REPUBLISH// 
+function republishPopup(x) {
+  console.log(x);
+  const parent = document.getElementById("republish-popup");
+  parent.classList.add("active");
+}
+function republishClose() {
+  document.getElementById("republish-popup").classList.remove("active");
+}
+//POPUP ADD TO COURSE// 
+function addCoursePopup() {
+  const parent = document.getElementById("course-popup");
+  parent.classList.add("active");
+}
+function addCourseClose() {
+  document.getElementById("course-popup").classList.remove("active");
+}
 //POPUP MY LIST// 
 function openMylist(y) {
   const parent = document.getElementById("mylist-popup");

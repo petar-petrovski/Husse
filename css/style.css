@@ -919,6 +919,18 @@ padding-left: 50px;
   transition:all 300ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);
 }
+/* REPUBLISH POPUP (most of the classes are taken from "Set Reminder" popup */
+.embed-video {
+  /* width: 100%; */
+  height: 400px;
+  background-color: #F2F1F0;
+  margin: 20px;
+}
+/* ADD TO COURSE POPUP */
+.width-auto {
+  width: auto !important; 
+}
+
 /* DropUP Menu */
 .dropup {
   position: relative;
