@@ -1048,6 +1048,7 @@ padding-left: 50px;
   display: block;
 }
 /* End DropUP Menu */
+
 /* PAGINATION */
 #page_navigation {
   /* clear:both; */
@@ -1066,7 +1067,10 @@ padding-left: 50px;
 	margin:4px;
 	color:#8F8884;
 	text-decoration:none
-} 
+}
+#page_navigation a:hover{
+  box-shadow: 0 0 0.43rem 0.125rem #00000026;
+}
 .previous_link img {
   transform: rotate(180deg);
 }
