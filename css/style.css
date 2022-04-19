@@ -148,8 +148,8 @@ padding: 3px;
 }
 
 /* CAROUSEL */
-.carousel-title {
-  font-size: 32px;
+.section-title {
+  font-size: 28px;
   color: #8F8884;
   padding: 5px;
 }
@@ -292,7 +292,6 @@ padding: 3px;
 .title {
   display: flex;
   align-items: center;
-  font-size: 0.9rem;
   color: #8f8884;
   padding-left: 0.6rem;
 }
@@ -351,7 +350,10 @@ padding: 3px;
   right: 0;
   top: 0;
 }
-
+.carousel-title::after {
+  content: "9";
+  top: 17px;
+}
 form.search-box {
   display: flex;
   margin:auto;
@@ -1142,6 +1144,12 @@ padding-left: 50px;
   text-align: center;
   display: inline-block;
   cursor: pointer;
+}
+.card-action {
+  opacity: 0;
+}
+.side-card:hover .card-action{
+  opacity: 100;
 }
 .side-card .dropup img {
   width: 0.8rem;
