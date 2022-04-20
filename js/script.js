@@ -214,24 +214,26 @@ $('.collaps-btn').click(function() {
 document.getElementById("defaultOpen2").click();
 
 function shiftSidebarList(pageName, elmnt) {
+
+  tabClass = document.getElementById(pageName).className;
+  btnClass = elmnt.className;
+
   // Hide all elements with class="sidebarContent" by default */
   var i, sidebarContent, goldenBtn;
-  sidebarContent = document.getElementsByClassName("sidebar-content");
+  sidebarContent = document.getElementsByClassName(tabClass);
+
   for (i = 0; i < sidebarContent.length; i++) {
     sidebarContent[i].style.display = "none";
   }
   // Remove the background color of all goldenBtn/buttons
-  goldenBtn = document.getElementsByClassName("golden-btn");
+  goldenBtn = document.getElementsByClassName(btnClass);
   for (i = 0; i < goldenBtn.length; i++) {
-    goldenBtn[i].style.backgroundColor = "";
-    goldenBtn[i].style.color = "";
+    goldenBtn[i].classList.remove("selected-btn");
   }
   // Show the specific tab content
   document.getElementById(pageName).style.display = "block";
   // Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = "#BC955F";
-  elmnt.style.color = "#ffffff";
-  // elmnt.style.paddingRight = "50px";
+  elmnt.classList.add("selected-btn");
 }
 
 //GRID PAGINATION

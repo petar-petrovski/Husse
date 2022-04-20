@@ -1173,8 +1173,9 @@ padding-left: 50px;
   font-weight: 400;
   cursor: pointer;
 }
-.golden-btn:hover {
-  background-color: #EEEBE8;
+.selected-btn {
+  background-color: #BC955F;
+  color: #ffffff;
 }
 .sidebar-content {
   padding: 1rem;
