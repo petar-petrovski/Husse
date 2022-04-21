@@ -47,30 +47,6 @@ function filterCard(value) {
   });
 }
 
-//GLOBAL LOCAL TABS
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-function shiftGrid(pageName, elmnt) {
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  // Remove the background color of all tablinks/buttons
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-    tablinks[i].style.color = "";
-  }
-  // Show the specific tab content
-  document.getElementById(pageName).style.display = "block";
-  // Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = "white";
-  elmnt.style.color = "black";
-}
-
 //SEARCH CARDS // search through titles 
 function searchCards() {
   var input, filter, cards, cardContainer, h3, title, i;
@@ -117,7 +93,6 @@ function closePopup() {
 }
 //POPUP REPUBLISH// 
 function republishPopup(x) {
-  console.log(x);
   const parent = document.getElementById("republish-popup");
   parent.classList.add("active");
 }
@@ -209,29 +184,39 @@ $('.collaps-btn').click(function() {
   $("#imgFlip").toggleClass('rotate');
 });
 
-//SIDEBAR CONTENT
+
+//GLOBAL-LOCAL and SIDEBAR tabs + content
+
 // Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 document.getElementById("defaultOpen2").click();
 
-function shiftSidebarList(pageName, elmnt) {
-  // Hide all elements with class="sidebarContent" by default */
-  var i, sidebarContent, goldenBtn;
-  sidebarContent = document.getElementsByClassName("sidebar-content");
-  for (i = 0; i < sidebarContent.length; i++) {
-    sidebarContent[i].style.display = "none";
+function shiftTabs(pageName, elmnt) {
+  tabClass = document.getElementById(pageName).className;
+  btnClass = elmnt.classList;
+
+  if (btnClass.contains("golden-btn")) {
+      selectedBtn = "selected-golden";
+    } else if (btnClass.contains("tablink")) {
+      btnClass = "tablink";
+      selectedBtn = "selected-tablink";
+  }
+  // Hide all elements with class="tabContent" by default */
+  var i, tabContent, goldenBtn;
+  tabContent = document.getElementsByClassName(tabClass);
+
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
   }
   // Remove the background color of all goldenBtn/buttons
-  goldenBtn = document.getElementsByClassName("golden-btn");
+  goldenBtn = document.getElementsByClassName(btnClass);
   for (i = 0; i < goldenBtn.length; i++) {
-    goldenBtn[i].style.backgroundColor = "";
-    goldenBtn[i].style.color = "";
+    goldenBtn[i].classList.remove(selectedBtn);
   }
   // Show the specific tab content
   document.getElementById(pageName).style.display = "block";
   // Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = "#BC955F";
-  elmnt.style.color = "#ffffff";
-  // elmnt.style.paddingRight = "50px";
+  elmnt.classList.add(selectedBtn);
 }
 
 //GRID PAGINATION

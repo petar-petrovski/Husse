@@ -70,8 +70,8 @@
         </div>
         <!-- CAROUSEL -->
         <div class="title-bar">
-          <div class="carousel-title">
-            <p>Courses for you</p>
+          <div class="section-title">
+            <p class="carousel-title not-circle">Courses for you</p>
           </div>
           <div class="collaps-block">
             <button class="collaps-btn">
@@ -196,16 +196,19 @@
         </div>
         <div class="content">
           <div class="title-bar item-center">
+            
             <div class="title" id="title">
-              <p>TRAININGS <br />& COURSES</p>
+              <div class="section-title">
+                <p>Trainings & Courses</p>
+              </div>
               <button
                 class="tablink global-btn not-circle"
-                onclick="shiftGrid('Global', this)"
+                onclick="shiftTabs('Global', this)"
                 id="defaultOpen"
               >
                 Global
               </button>
-              <button class="tablink" onclick="shiftGrid('Local', this)">
+              <button class="tablink" onclick="shiftTabs('Local', this)">
                 <div class="local">Local</div>
                 <div class="lang-drop">
                   <div class="select-box">
@@ -1343,17 +1346,17 @@
         <div class="sidebar-header">
           <button
             class="golden-btn"
-            onclick="shiftSidebarList('recommended', this)"
+            onclick="shiftTabs('recommended', this)"
             id="defaultOpen2"
           >
             Recommended
           </button>
-          <button class="golden-btn" onclick="shiftSidebarList('myList', this)">
+          <button class="golden-btn" onclick="shiftTabs('myList', this)">
             My List
           </button>
           <button
             class="golden-btn"
-            onclick="shiftSidebarList('history', this)"
+            onclick="shiftTabs('history', this)"
           >
             History
           </button>
@@ -1369,10 +1372,13 @@
                 <p class="sc-subtitle">22.12.2021</p>
                 <div class="sc-lan">EN</div>
               </div>
-            </div>
-            <div class="dropup">
-              <button onclick="openMylist(this)" class="sc-btn icon">
+            </div> 
+            <div class="dropup card-action">
+              <button onclick="openMylist(this)" class="sc-btn icon hide">
                 <img src="img/wishlist.svg" alt="" />
+              </button>
+              <button class="sc-btn icon">
+                <img src="img/trash.svg" alt="" />
               </button>
             </div>
           </div>
@@ -1388,9 +1394,12 @@
                 <div class="sc-lan">EN</div>
               </div>
             </div>
-            <div class="dropup">
+            <div class="dropup card-action">
               <button onclick="openMylist(this)" class="sc-btn icon">
                 <img src="img/wishlist.svg" alt="" />
+                <button class="sc-btn icon hide">
+                  <img src="img/trash.svg" alt="" />
+                </button>
               </button>
             </div>
           </div>
@@ -1406,9 +1415,12 @@
                 <div class="sc-lan">EN</div>
               </div>
             </div>
-            <div class="dropup">
+            <div class="dropup card-action">
               <button onclick="openMylist(this)" class="sc-btn icon">
                 <img src="img/wishlist.svg" alt="" />
+                <button class="sc-btn icon hide">
+                  <img src="img/trash.svg" alt="" />
+                </button>
               </button>
             </div>
           </div>
@@ -1424,9 +1436,12 @@
                 <div class="sc-lan">EN</div>
               </div>
             </div>
-            <div class="dropup">
+            <div class="dropup card-action">
               <button onclick="openMylist(this)" class="sc-btn icon">
                 <img src="img/wishlist.svg" alt="" />
+                <button class="sc-btn icon hide">
+                  <img src="img/trash.svg" alt="" />
+                </button>
               </button>
             </div>
           </div>
@@ -1442,9 +1457,12 @@
                 <div class="sc-lan">EN</div>
               </div>
             </div>
-            <div class="dropup">
+            <div class="dropup card-action">
               <button onclick="openMylist(this)" class="sc-btn icon">
                 <img src="img/wishlist.svg" alt="" />
+                <button class="sc-btn icon hide">
+                  <img src="img/trash.svg" alt="" />
+                </button>
               </button>
             </div>
           </div>
@@ -1460,9 +1478,12 @@
                 <div class="sc-lan">EN</div>
               </div>
             </div>
-            <div class="dropup">
+            <div class="dropup card-action">
               <button onclick="openMylist(this)" class="sc-btn icon">
                 <img src="img/wishlist.svg" alt="" />
+                <button class="sc-btn icon hide">
+                  <img src="img/trash.svg" alt="" />
+                </button>
               </button>
             </div>
           </div>
@@ -1478,9 +1499,12 @@
                 <div class="sc-lan">EN</div>
               </div>
             </div>
-            <div class="dropup">
+            <div class="dropup card-action">
               <button onclick="openMylist(this)" class="sc-btn icon">
                 <img src="img/wishlist.svg" alt="" />
+                <button class="sc-btn icon hide">
+                  <img src="img/trash.svg" alt="" />
+                </button>
               </button>
             </div>
           </div>
@@ -1496,9 +1520,12 @@
                 <div class="sc-lan">EN</div>
               </div>
             </div>
-            <div class="dropup">
+            <div class="dropup card-action">
               <button onclick="openMylist(this)" class="sc-btn icon">
                 <img src="img/wishlist.svg" alt="" />
+                <button class="sc-btn icon hide">
+                  <img src="img/trash.svg" alt="" />
+                </button>
               </button>
             </div>
           </div>
@@ -1516,9 +1543,12 @@
                 <div class="sc-lan">EN</div>
               </div>
             </div>
-            <div class="dropup">
-              <button onclick="openMylist(this)" class="sc-btn icon">
+            <div class="dropup card-action">
+              <button onclick="openMylist(this)" class="sc-btn icon hide">
                 <img src="img/wishlist.svg" alt="" />
+                <button class="sc-btn icon">
+                  <img src="img/trash.svg" alt="" />
+                </button>
               </button>
             </div>
           </div>
@@ -1534,9 +1564,12 @@
                 <div class="sc-lan">EN</div>
               </div>
             </div>
-            <div class="dropup">
-              <button onclick="openMylist(this)" class="sc-btn icon">
+            <div class="dropup card-action">
+              <button onclick="openMylist(this)" class="sc-btn icon hide">
                 <img src="img/wishlist.svg" alt="" />
+                <button class="sc-btn icon">
+                  <img src="img/trash.svg" alt="" />
+                </button>
               </button>
             </div>
           </div>
@@ -1552,9 +1585,12 @@
                 <div class="sc-lan">EN</div>
               </div>
             </div>
-            <div class="dropup">
-              <button onclick="openMylist(this)" class="sc-btn icon">
+            <div class="dropup card-action">
+              <button onclick="openMylist(this)" class="sc-btn icon hide">
                 <img src="img/wishlist.svg" alt="" />
+                <button class="sc-btn icon">
+                  <img src="img/trash.svg" alt="" />
+                </button>
               </button>
             </div>
           </div>
@@ -1651,16 +1687,25 @@
               <div class="category-text">ADD TO EXISTING COURSE</div>
             </div>
             <form action="">
-              <input class="checkbox" type="checkbox" id="course1" name="course1" value="course1">
-              <label for="vehicle1">Course name 1</label><br>
-              <input class="checkbox" type="checkbox" id="course2" name="course2" value="course2">
-              <label for="vehicle1">Course name 2</label><br>
-              <input class="checkbox" type="checkbox" id="course3" name="course3" value="course3">
-              <label for="vehicle3">Course name 3</label><br>
-              <input class="checkbox" type="checkbox" id="course4" name="course4" value="course4">
-              <label for="vehicle3">Course name 4</label><br>              
-              <br>
-              <input class="card-btn reminder-btn" type="submit" value="Create New Course">
+              <label class="container">Course name 1
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Course name 2
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Course name 3
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Course name 4
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
             </form>
           </div>
           <div class="underline"></div>
