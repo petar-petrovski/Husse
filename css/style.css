@@ -315,6 +315,10 @@ padding: 3px;
 .tablink:hover {
   background-color: #EEEBE8;
 }
+.selected-tablink {
+  background-color: #ffffff;
+  color: #000000;
+}
 .tabcontent {
   display: none;
 }
@@ -1173,7 +1177,7 @@ padding-left: 50px;
   font-weight: 400;
   cursor: pointer;
 }
-.selected-btn {
+.selected-golden {
   background-color: #BC955F;
   color: #ffffff;
 }

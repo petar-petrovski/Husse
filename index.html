@@ -203,12 +203,12 @@
               </div>
               <button
                 class="tablink global-btn not-circle"
-                onclick="shiftGrid('Global', this)"
+                onclick="shiftTabs('Global', this)"
                 id="defaultOpen"
               >
                 Global
               </button>
-              <button class="tablink" onclick="shiftGrid('Local', this)">
+              <button class="tablink" onclick="shiftTabs('Local', this)">
                 <div class="local">Local</div>
                 <div class="lang-drop">
                   <div class="select-box">
@@ -1346,17 +1346,17 @@
         <div class="sidebar-header">
           <button
             class="golden-btn"
-            onclick="shiftSidebarList('recommended', this)"
+            onclick="shiftTabs('recommended', this)"
             id="defaultOpen2"
           >
             Recommended
           </button>
-          <button class="golden-btn" onclick="shiftSidebarList('myList', this)">
+          <button class="golden-btn" onclick="shiftTabs('myList', this)">
             My List
           </button>
           <button
             class="golden-btn"
-            onclick="shiftSidebarList('history', this)"
+            onclick="shiftTabs('history', this)"
           >
             History
           </button>
