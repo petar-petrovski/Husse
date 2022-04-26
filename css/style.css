@@ -1174,6 +1174,7 @@ video {
   display: flex;
   justify-content: space-between;
   column-gap: 10px;
+  margin-bottom: 10px;
 }
 .description-cat {
   font-size: 0.7rem;
