@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/665e992626.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Husse Campus</title>
+  </head>
+  <body>
+    <!-- NAVIGATION MENU -->
+    <nav class="nav-bar">
+      <div class="nav-logo">
+        <div class="dashboard-logo not-circle dash-btn">
+          <img src="img/dashboard-icon.svg" alt="" />
+        </div>
+        <div class="home-logo">
+          <img src="img/husse.svg" alt="" />
+          <div class="campus">C A M P U S</div>
+        </div>
+      </div>
+
+      <div class="mid-nav">
+        <button class="navlink"  style="background-color: #ffffff; color: #8f8884">Home</button>
+        <button
+          class="navlink"
+         
+        >
+          Management Centre
+        </button>
+      </div>
+      <div class="nav-admin">
+        <div class="admin-panel not-circle msg-btn">
+          <img class="" src="img/msg-icon.svg" alt="" />
+        </div>
+        <div class="admin-panel not-circle not-btn">
+          <img src="img/bell.svg" alt="" />
+        </div>
+        <div class="admin-panel">
+          <img class="profile" src="img/profile.png" alt="" />
+        </div>
+      </div>
+    </nav>
+    <!-- NAVIGATION MENU END-->
+    <div class="wrapper">
+      <div class="main-container">
+        <div class="video-container">
+        <video controls>
+          <source src="video/husse.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <div class="description-box">
+          <div class="align-flex">
+            <div class="align-flex">
+            <p class="description-cat">SALES & MARKETING</p>
+            <p class="description-cat">|</p>
+            <p class="description-cat">22. 12. 2021</p>
+            <div class="sc-lan lan-btn">EN</div>
+          </div>
+            <div class="align-flex">
+              <button onclick="" class="card-btn icon">
+              <img src="img/wishlist.svg" alt="" />
+            </button>
+            <button onclick="" class="card-btn icon">
+              <img src="img/add-to-course.svg" alt="" />
+            </button>
+            <button onclick="" class="card-btn icon">
+              <img src="img/edit_mode_icon.svg" alt="" />
+            </button>
+          </div>
+          </div>
+          <h3 class="card-title">Cats diet and Husse wet food for cats longer title</h3>
+          <p class="video-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to Lorem Ipsum is simply dummy text of the printing and typesetting text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to  ... 
+          </p>
+          <button class="wht-btn">SHOW MORE</button>
+          <div class="vd-attach">
+            <button class="vd-attach-btn">
+              <a href="#">Attachment name 1.pdf</a>
+            </button>
+            <button class="vd-attach-btn">
+              <a href="#">Attachment name 1.pdf</a>
+            </button>
+        </div>
+        </div>
+        
+      </div>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-header-watch">
+            More in this Category
+        </div>
+        <div id="recommended" class="sidebar-content">
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="" />
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="" />
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="" />
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="" />
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="" />
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="" />
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="" />
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+          <!-- SIDE CARD START -->
+          <div class="side-card" id="side-card">
+            <img class="sc-img" src="img/beagle.jpg" alt="" />
+            <div class="sc-content">
+              <p class="sc-subtitle">SALES & MARKETING</p>
+              <h3>Cats diet and Husse wet food for cats</h3>
+              <div class="card-category">
+                <p class="sc-subtitle">22.12.2021</p>
+                <div class="sc-lan">EN</div>
+              </div>
+            </div>
+            <div class="dropup">
+              <button onclick="openMylist(this)" class="sc-btn icon">
+                <img src="img/wishlist.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+        </div>
+      </div>
+
+      <!-- REMINDER POPUP -->
+      <div class="reminder-popup" id="reminder-popup">
+        <div class="overlay" onclick="closePopup()"></div>
+        <div class="content">
+          <div class="close-btn" onclick="closePopup()">&times;</div>
+          <div class="popup-title">
+            <img src="img/bell.svg" alt="" />
+            <p>Set Reminder</p>
+          </div>
+          <div class="card-content">
+            <div class="card-category">
+              <div class="category-text">TRAINING DESCRIPTION</div>
+            </div>
+            <div class="card-title">Test test test</div>
+            <div class="video-description">
+              Cats diet and Husse wet food for cats short description Cats diet
+            </div>
+            <div class="video-date">
+              <p>28. 1. 2022, 13.00 (GMT +1)</p>
+            </div>
+            <div class="video-time"><p>1 h 15 min</p></div>
+            <div class="calendar-text">CHOSE CALENDAR</div>
+            <div class="popup-buttons popup-my-calendar">
+              <button class="card-btn">Google</button>
+              <button class="card-btn">Outlook</button>
+            </div>
+          </div>
+          <div class="underline"></div>
+          <div class="popup-buttons popup-set-reminder">
+            <button class="card-btn">Cancel</button>
+            <button class="card-btn">Set Reminder</button>
+          </div>
+        </div>
+      </div>
+      <!-- REMINDER POPUP END -->
+      <!-- ADD TO WISHLIST - POPUP -->
+      <div class="mylist-popup" id="mylist-popup">
+        <div class="overlay" onclick="closeMylist(this)"></div>
+        <div class="content">
+          <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
+          <div class="popup-title">
+            <img src="img/wishlist.svg" alt="" />
+            <p>Add to my wishlist</p>
+          </div>
+          <div class="card-title">
+            <p>Video/Course was addet to your list.</p>
+          </div>
+        </div>
+      </div>
+      <!-- ADD TO WISHLIST - POPUP END-->
+      <!-- REPUBLISH POPUP -->
+      <div class="reminder-popup" id="republish-popup">
+        <div class="overlay" onclick="republishClose()"></div>
+        <div class="content">
+          <div class="close-btn" onclick="republishClose()">&times;</div>
+          <div class="popup-title">
+            <img src="img/republish.svg" alt="" />
+            <p>Republish</p>
+          </div>
+          <div class="card-content">
+            <div class="card-title">
+              Do you wish to Republish this video/course?
+            </div>
+          </div>
+          <div class="embed-video"></div>
+
+          <div class="underline"></div>
+          <div class="popup-buttons popup-set-reminder">
+            <button class="card-btn">Cancel</button>
+            <button class="card-btn">Republish</button>
+          </div>
+        </div>
+      </div>
+      <!-- REPUBLISH POPUP END -->
+      <!-- ADD TO COURSE POPUP -->
+      <div class="reminder-popup" id="course-popup">
+        <div class="overlay" onclick="addCourseClose()"></div>
+        <div class="content width-auto">
+          <div class="close-btn" onclick="addCourseClose()">&times;</div>
+          <div class="popup-title">
+            <img src="img/add-to-course.svg" alt="" />
+            <p>Add to Course</p>
+          </div>
+          <div class="card-content">
+            <div class="card-category">
+              <div class="category-text">ADD TO EXISTING COURSE</div>
+            </div>
+            <form action="">
+              <input class="checkbox" type="checkbox" id="course1" name="course1" value="course1">
+              <label for="vehicle1">Course name 1</label><br>
+              <input class="checkbox" type="checkbox" id="course2" name="course2" value="course2">
+              <label for="vehicle1">Course name 2</label><br>
+              <input class="checkbox" type="checkbox" id="course3" name="course3" value="course3">
+              <label for="vehicle3">Course name 3</label><br>
+              <input class="checkbox" type="checkbox" id="course4" name="course4" value="course4">
+              <label for="vehicle3">Course name 4</label><br>              
+              <br>
+              <input class="card-btn reminder-btn" type="submit" value="Create New Course">
+            </form>
+          </div>
+          <div class="underline"></div>
+          <div class="popup-buttons popup-set-reminder">
+            <button class="card-btn">Cancel</button>
+            <button class="card-btn">Add</button>
+          </div>
+        </div>
+      </div>
+      <!-- ADD TO COURSE POPUP END -->      
+
+      <!-- END WRAPPER -->
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
