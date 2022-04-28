@@ -1045,74 +1045,32 @@ padding-left: 50px;
   display: block;
 }
 .attach-list a::before {
-  content: "";
   background: url("../img/paperclip.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  align-items: center;
-  height: 100%;
   left: 10px;
-  width: 21px;
 }
 .attach-list a::after {
-  content: "";
   background: url("../img/download_icon.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  align-items: center;
-  height: 100%;
   right: 10px;
-  width: 21px;
   display: none;
 }
 .attach-list:hover a::after {
   display: inline;
 }
 .mylist-list a::before {
-  content: "";
   background: url("../img/wishlist.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  align-items: center;
-  height: 100%;
   left: 10px;
-  width: 21px;
 }
 .republish-list a::before {
-  content: "";
   background: url("../img/republish.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  align-items: center;
-  height: 100%;
   left: 10px;
-  width: 21px;
 }
 .course-list a::before {
-  content: "";
   background: url("../img/add-to-course.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  align-items: center;
-  height: 100%;
   left: 10px;
-  width: 21px;
 }
 .edit-course a::before {
-  content: "";
   background: url("../img/edit_mode_icon.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  align-items: center;
-  height: 100%;
   left: 10px;
-  width: 21px;
 }
 .dropup-content a:hover, .dropup-content span:hover{
   background-color: #F2F1F0;
@@ -1326,29 +1284,26 @@ video {
   position: relative;
 }
 .vd-attach-btn a::before {
-  content: "";
   background: url("../img/paperclip.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  align-items: center;
-  height: 100%;
   left: 10px;
-  width: 21px;
 }
 .vd-attach-btn a::after {
-  content: "";
   background: url("../img/download_icon.svg");
+  right: 10px;
+}
+.btn-icon a::before,.btn-icon a::after {
+  content: "";
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
   align-items: center;
   height: 100%;
-  right: 10px;
   width: 21px;
+}
+.btn-icon a::after {
   display: none;
 }
-.vd-attach-btn:hover a::after {
+.btn-icon:hover a::after {
   display: inline;
 }
 /* MEDIA */
