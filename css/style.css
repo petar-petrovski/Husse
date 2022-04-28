@@ -382,10 +382,8 @@ form.search-box input[type=text] {
   background: transparent;
   border: none;
 }
-form.search-box input:focus {
+input:focus {
   outline: none;
-  /* background-color: white; */
-  /* border-bottom: 1px solid #FFCB05; */
 }
 form.search-box button {
   width: 15%;
@@ -460,6 +458,9 @@ form.search-box::placeholder {
   position: relative;
   order: 0;
 }
+.comment-field .selected.active {
+  border: none;
+}
 .selected.active {
   padding: 9px 24px;
   border: 1px solid #DEDBD9;
@@ -467,13 +468,14 @@ form.search-box::placeholder {
   color: #000000;
   z-index: 99;
 }
+
 .lang-drop .selected.active {
   padding: 9px 24px 9px 12px;
 }
 .slctd-cat.active {
   padding-left: 50px;
 }
-.slctd-cat::before {
+.filter-icon::before {
   content: " ";
   background: url("../img/filter.svg");
   background-size: contain;
@@ -485,7 +487,7 @@ form.search-box::placeholder {
   left: 10px;
   top: 14px;
 }
-.selected::after {
+.slctd-cat::after {
   content: "";
   background: url("../img/arrow-down.svg");
   background-size: contain;
@@ -1044,33 +1046,36 @@ padding-left: 50px;
   text-decoration: none;
   display: block;
 }
-.attach-list a::before {
+.attach-list::before {
   background: url("../img/paperclip.svg");
   left: 10px;
+  width: 21px;
 }
-.attach-list a::after {
+.attach-list::after {
   background: url("../img/download_icon.svg");
+  width: 21px;
   right: 10px;
-  display: none;
 }
-.attach-list:hover a::after {
-  display: inline;
-}
-.mylist-list a::before {
+
+.mylist-list::before {
   background: url("../img/wishlist.svg");
   left: 10px;
+  width: 21px;
 }
-.republish-list a::before {
+.republish-list::before {
   background: url("../img/republish.svg");
   left: 10px;
+  width: 21px;
 }
-.course-list a::before {
+.course-list::before {
   background: url("../img/add-to-course.svg");
   left: 10px;
+  width: 21px;
 }
-.edit-course a::before {
+.edit-course::before {
   background: url("../img/edit_mode_icon.svg");
   left: 10px;
+  width: 21px;
 }
 .dropup-content a:hover, .dropup-content span:hover{
   background-color: #F2F1F0;
@@ -1283,28 +1288,83 @@ video {
   display: block;
   position: relative;
 }
-.vd-attach-btn a::before {
+.vd-attach-icon::before {
   background: url("../img/paperclip.svg");
   left: 10px;
+  width: 21px;
 }
-.vd-attach-btn a::after {
+.vd-attach-icon::after {
   background: url("../img/download_icon.svg");
   right: 10px;
+  width: 21px;
 }
-.btn-icon a::before,.btn-icon a::after {
+.btn-icon::before,.btn-icon::after {
   content: "";
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
   align-items: center;
   height: 100%;
-  width: 21px;
 }
-.btn-icon a::after {
+.btn-icon::after {
   display: none;
 }
-.btn-icon:hover a::after {
+.btn-icon:hover::after {
   display: inline;
+}
+.new-comment {
+  margin: 50px 0;
+  display: flex;
+  align-items: flex-end;
+  column-gap: 10px;
+}
+.comment-field {
+  display: flex;
+  width: 100%;
+}
+.comment-field input {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.comment-input {
+  width: 100%;
+}
+.comment-btn {
+  color: #B4ACA6;
+  background-color: transparent;
+  border: 1px solid #DEDBD9;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.comment-btn:hover{
+  background-color: #EEEBE8;
+}
+.sub-comment {
+  padding: 10px;
+  width: 130px;
+}
+.clear-btn {
+  padding: 10px 20px;
+  width: 40px;
+  height: 100%;
+}
+.count-comments {
+  font-size: 12px;
+  color: #8F8884;
+  
+}
+.list-comment {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 30px;
+}
+.com-head {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 5px;
 }
 /* MEDIA */
 
