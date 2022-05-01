@@ -1204,6 +1204,20 @@ padding-left: 50px;
 }
 
 /*WATCH VIDEO - PAGE */
+.btn-icon::before,.btn-icon::after {
+  content: "";
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+}
+.btn-icon::after {
+  display: none;
+}
+.btn-icon:hover::after {
+  display: inline;
+}
 video {
   width: 100%;
 }
@@ -1216,27 +1230,78 @@ video {
   width: 100%;
   position: relative;
   display: flex;
-justify-content: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.video-container:hover .video-controls {
+  transform: translateY(0);
+
 }
 .video-controls {
   display: flex;
+  flex-direction: column;
+  row-gap: 5px;
   position: absolute;
-  align-items: center;
   bottom: 0;
   width: 100%;
-  height: 30px;
-  flex-wrap: wrap;
-  background-color: rgba(100, 0, 0, 0.4);
-  padding: 2px 5px;
+  /* background-color: rgba(100, 0, 0, 0.4); */
+  padding: 0 20px 10px 20px;
+  transform: translateY(100%) translateY(-16px);
+  transition: all ease 0.3s;
+}
+.control-btns {
+  display: flex;
+  position: relative;
+  height: 35px;
+  color: #ffffff;
 }
 .control-btns button {
   background: none;
   border: 0;
   outline: 0;
   cursor: pointer;
+  width: 35px;
 }
-.play-icon img {
-height: 26px;
+.control-btns .previous-icon::before {
+  background: url("../img/previous.svg");
+  top: 0;
+  width: 35px;
+}
+.control-btns .play-icon::before {
+  /* background: url("../img/play-icon.svg"); */
+  top: 0;
+  width: 35px;
+}
+.control-btns button.play::before {
+  background: url("../img/play-icon.svg");
+}
+.control-btns button.pause::before {
+  background: url("../img/pause.svg");
+}
+.control-btns .next-icon::before {
+  background: url("../img/next.svg");
+  top: 0;
+  width: 35px;
+}
+.control-btns .play-time {
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 150px;
+}
+.time-bar {
+  height: 8px;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 100%;
+}
+.bar-color {
+  height: 8px;
+  width: 0;
+  border-radius: 20px;
+  background-color: #FF0000;
 }
 .description-box {
   background-color: #ffffff;
@@ -1323,20 +1388,6 @@ height: 26px;
   background: url("../img/download_icon.svg");
   right: 10px;
   width: 21px;
-}
-.btn-icon::before,.btn-icon::after {
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  align-items: center;
-  height: 100%;
-}
-.btn-icon::after {
-  display: none;
-}
-.btn-icon:hover::after {
-  display: inline;
 }
 .new-comment {
   margin: 50px 0;

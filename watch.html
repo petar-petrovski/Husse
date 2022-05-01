@@ -16,7 +16,7 @@
       src="https://kit.fontawesome.com/665e992626.js"
       crossorigin="anonymous"
     ></script>
-    <title>Husse Campus</title>
+    <title>Watch course</title>
   </head>
   <body>
     <!-- NAVIGATION MENU -->
@@ -57,7 +57,7 @@
       <div class="main-container">
         <div class="course-container">
           <div class="video-container">
-        <video>
+        <video  id="play-screen">
           <source src="video/husse.mp4" type="video/mp4">
           Your browser does not support HTML video.
         </video>
@@ -66,8 +66,10 @@
             <div class="bar-color"></div>
           </div>
           <div class="control-btns">
-            <button class="play-icon" id="play-pause"><img src="img/play-icon.svg" alt="" /></button>
-
+            <button class="previous-icon btn-icon" id="previous-pause"></button>
+            <button class="play-icon btn-icon play" id="play-pause"></button>
+            <button class="next-icon btn-icon" id="next-pause"></button>
+            <p class="play-time"><span id='play-time'>00:00</span> / <span id='full-time' onload="fullTime()"></span></p>
           </div>
         </div>
       </div>
@@ -451,6 +453,7 @@
       <!-- END WRAPPER -->
     </div>
 
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/watch-course.js"></script>
   </body>
 </html>
