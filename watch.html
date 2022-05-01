@@ -69,7 +69,12 @@
             <button class="previous-icon btn-icon" id="previous-pause"></button>
             <button class="play-icon btn-icon play" id="play-pause"></button>
             <button class="next-icon btn-icon" id="next-pause"></button>
-            <p class="play-time"><span id='play-time'>00:00</span> / <span id='full-time' onload="fullTime()"></span></p>
+            <button class="sound-icon btn-icon" id="sound" onclick="showVolume()"></button>
+            <input class="volume hide" id="vol-control" type="range" value="90" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+
+            <div><p class="play-time"><span id='play-time'>00:00</span> / <span id='full-time'></span></p></div>
+            <div class="full-screen" onclick="fullscreen()"><img src="img/full-screen-video.svg" alt=""></div>
+            
           </div>
         </div>
       </div>
