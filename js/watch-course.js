@@ -3,7 +3,9 @@ var timeBar = document.querySelector('.bar-color');
 var playBtn = document.getElementById('play-pause');
 var playScreen = document.getElementById('play-screen');
 
+//VIDEO CONTROL BUTTONS
 
+//Play
 function togglePlay() {
     if (video.paused) {
         playBtn.classList.add('pause');
@@ -14,13 +16,18 @@ function togglePlay() {
         playBtn.classList.remove('pause');
         video.pause();    }
 }
-
+//Play button
 playBtn.onclick = function () {
     togglePlay();
 };
+//Play screen
 playScreen.onclick = function () {
     togglePlay();
 };
+
+//VIDEO DURATION
+
+//current play time
 video.addEventListener ('timeupdate', function(){
     var playTime = video.currentTime;
     var minutes = Math.floor(playTime / 60);   
@@ -36,6 +43,7 @@ video.addEventListener ('timeupdate', function(){
     }
     document.getElementById('play-time').innerHTML=x + ":" + y;
 })
+//video length
 window.addEventListener('load', function() {
     var fullTime = video.duration; 
     var minutes = Math.floor(fullTime / 60);   
@@ -45,39 +53,36 @@ window.addEventListener('load', function() {
     document.getElementById('full-time').innerHTML=x + ":" + y;
 });
 
+//VOLUME CONTROL
 window.SetVolume = function(val) {
     var player = document.getElementById('play-screen');
     player.volume = val / 100;
 };
 
-
+//VOLUME BAR FUNCTIONALITY
 const rangeInputs = document.querySelectorAll('input[type="range"]')
-
 function handleInputChange(e) {
   let target = e.target
   if (e.target.type !== 'vol-control') {
-    target = document.getElementById('vol-control')
-  } 
+    target = document.getElementById('vol-control')} 
   const min = target.min
   const max = target.max
   const val = target.value
-  
   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
 }
 
 rangeInputs.forEach(input => {
   input.addEventListener('input', handleInputChange)
 })
+
+//SHOW - HIDE VOLUME BAR
 function showVolume() {
     var volumeBtn = document.querySelector('.volume');
     volumeBtn.classList.toggle("hide");
     document.querySelector('.play-time').classList.toggle("move-right");
 }
-// $(document).ready(function(){
-//     $("#sound").click(function(){
-//       $("#vol-control").toggleClass("hide");
-//     });
-//   });
+
+//FULL SCREEN
 function fullscreen() {
     var element = document.getElementById("play-screen");       
     if (element.mozRequestFullScreen) {

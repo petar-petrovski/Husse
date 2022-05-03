@@ -560,6 +560,21 @@ padding-left: 50px;
   color: #000000;
   box-shadow: 0 0 0.43rem 0.125rem #00000026;
 }
+.close-tag {
+
+}
+.close-tag img{
+  transition: all 200ms;
+  /* text-decoration: none; */
+  cursor: pointer;
+  /* font-size: 12px; */
+  height: 14px;
+  visibility: hidden;
+}
+.tag-btn:hover .close-tag img{
+  background-color: grey;
+  visibility: visible;
+}
 .active-btn {
     background-color: #ffffff;
     color: #000000;
@@ -749,8 +764,13 @@ padding-left: 50px;
   justify-content: space-between;
   column-gap: 10px;
 }
-.card-btn {
+.white-btn {
+  background-color: #ffffff;
+}
+.grey-btn {
   background-color: #f2f1f0;
+}
+.card-btn {
   border: none;
   border-radius: 0.19rem;
   height: 42px;
@@ -943,16 +963,16 @@ padding-left: 50px;
 .container {
   display: block;
   position: relative;
-  padding-left: 30px;
   margin-bottom: 8px;
   cursor: pointer;
-  font-size: 18px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
-
+.checkbox-label {
+  padding-left: 30px;
+}
 /* Hide the browser's default checkbox */
 .container input {
   position: absolute;
@@ -982,6 +1002,11 @@ padding-left: 50px;
 .container input:checked ~ .checkmark {
   background-color: #FF0000;
 }
+/* When the checkbox is checked, add a Husse red background */
+.container input:checked ~ .tag-btn {
+  background-color: #FF0000;
+  color: #ffffff;
+}
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
@@ -1006,6 +1031,13 @@ padding-left: 50px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+/* SELECT TAGS POPUP*/
+.tag-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
 }
 /* DropUP Menu */
 .dropup {
@@ -1284,11 +1316,14 @@ video {
 }
 .control-btns .full-screen {
   background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+  border-radius: 2px;
   right: 25px;
   position: absolute;
   padding: 5px;
   cursor: pointer;
+}
+.control-btns .full-screen:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .control-btns .full-screen img {
   width: 16px;

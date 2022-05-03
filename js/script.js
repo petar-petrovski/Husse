@@ -10,13 +10,16 @@ filterCard("all"); //Default view to be all cards
 // FILTER BY TAGS
 function filterCard(value) {
   //Button class code
-  let buttons = document.querySelectorAll(".tag-btn");
+    let buttons = document.querySelectorAll("#filter-tags");
+    // console.log(buttons);
+
   buttons.forEach((button) => {
-    convertedBtn = button.innerHTML
+    // console.log(button);
+    convertedBtn = button.innerText
       .toLowerCase()
       .trim()
-      .replace(/[\n\t ]+/g, "");
-    // alert(convertedBtn);
+      // .replace(/[\n\t ]+/g, "");
+    // console.log(convertedBtn);
     //check if value equals innerText
     if (value == convertedBtn) {
       button.classList.add("active-btn");
@@ -46,7 +49,12 @@ function filterCard(value) {
     }
   });
 }
+function removeTag(x) {
+  console.log(x.parentElement);
+  x.parentElement.classList.remove("active-btn");
+  x.parentElement.classList.add("hide");
 
+}
 //SEARCH CARDS // search through titles 
 function searchCards() {
   var input, filter, cards, cardContainer, h3, title, i;
@@ -119,6 +127,14 @@ function closeMylist(y) {
 function closeMylist2(z) {
   const parent = document.getElementById("mylist-popup");
   parent.classList.remove("active");
+}
+//POPUP SELECT TAGS// 
+function selectTagsPopup(x) {
+  const parent = document.getElementById("tags-popup");
+  parent.classList.add("active");
+}
+function selectTagsClose() {
+  document.getElementById("tags-popup").classList.remove("active");
 }
 
 // Close the dropdown if the user clicks outside of it

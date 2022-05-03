@@ -361,20 +361,27 @@
                   Filter by category
                 </div>
               </div>
+              <div class="tag-option">
+                <button onclick="selectTagsPopup(this)" class="white-btn card-btn icon">
+                        <img src="img/tag-ICON.svg" alt="" />
+                      </button>
+              </div>
             </div>
             <!-- Tag filters -->
             <div class="tag-filter">
-              <button class="tag-btn active" onclick="filterCard('all')">
+              <button class="tag-btn active" id="filter-tags" id="filter-tags" onclick="filterCard('all')">
                 All
               </button>
-              <button class="tag-btn" onclick="filterCard('cat')">Cat</button>
-              <button class="tag-btn" onclick="filterCard('wetfood')">
-                Wet Food
+              <button class="tag-btn" id="filter-tags" onclick="filterCard('cat')">
+                Cat
+                <span class="close-tag" onclick="removeTag(this)"><img src="img/close-icon.svg" alt=""></span></button>
+              <button class="tag-btn" id="filter-tags" onclick="filterCard('wetfood')">
+                Wet Food<span class="close-tag" onclick="removeTag(this)">x</span>
               </button>
-              <button class="tag-btn" onclick="filterCard('dryfood')">
+              <button class="tag-btn" id="filter-tags" onclick="filterCard('dryfood')">
                 Dry food
               </button>
-              <button class="tag-btn" onclick="filterCard('dog')">Dog</button>
+              <button class="tag-btn" id="filter-tags" onclick="filterCard('dog')">Dog</button>
             </div>
             <!-- Sort By -->
             <div class="filter-by">
@@ -442,7 +449,7 @@
                     <div class="dropup">
                       <button
                         onclick="attachmentMenu(this)"
-                        class="card-btn icon"
+                        class="card-btn grey-btn icon"
                       >
                         <img src="img/paperclip.svg" alt="" />
                       </button>
@@ -451,18 +458,18 @@
                       <!-- THIS 2 BUTTONS WILL BE TOGGLED, DEPENDS ON THE CASE (SET REMINDER OR WATCH NOW) -->
                       <button
                         onclick="openPopup(this)"
-                        class="card-btn reminder-btn"
+                        class="card-btn grey-btn reminder-btn"
                       >
                         Set Reminder
                       </button>
 
-                      <button class="card-btn reminder-btn hide">
+                      <button class="card-btn grey-btn reminder-btn hide">
                         Watch Now
                       </button>
                       <!-- TOGGLE BUTTONS CODE END -->
                     </div>
                     <div class="dropup">
-                      <button onclick="moreMenu(this)" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn grey-btn icon">
                         <img src="img/3dot-vertical.svg" alt="" />
                       </button>
                     </div>
@@ -534,7 +541,7 @@
                     <div class="dropup">
                       <button
                         onclick="attachmentMenu(this)"
-                        class="card-btn icon"
+                        class="card-btn grey-btn icon"
                       >
                         <img src="img/paperclip.svg" alt="" />
                       </button>
@@ -543,18 +550,18 @@
                       <!-- THIS 2 BUTTONS WILL BE TOGGLED, DEPENDS ON THE CASE (SET REMINDER OR WATCH NOW) -->
                       <button
                         onclick="openPopup(this)"
-                        class="card-btn reminder-btn"
+                        class="card-btn grey-btn reminder-btn"
                       >
                         Set Reminder
                       </button>
 
-                      <button class="card-btn reminder-btn hide">
+                      <button class="card-btn grey-btn reminder-btn hide">
                         Watch Now
                       </button>
                       <!-- TOGGLE BUTTONS CODE END -->
                     </div>
                     <div class="dropup">
-                      <button onclick="moreMenu(this)" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn grey-btn icon">
                         <img src="img/3dot-vertical.svg" alt="" />
                       </button>
                     </div>
@@ -627,10 +634,10 @@
                   </div>
                   <!-- BUTTONS -->
                   <div class="card-buttons">
-                    <div class="dropup">
+                    <div class="dropup hide">
                       <button
                         onclick="attachmentMenu(this)"
-                        class="card-btn icon"
+                        class="card-btn grey-btn icon"
                       >
                         <img src="img/paperclip.svg" alt="" />
                       </button>
@@ -639,18 +646,18 @@
                       <!-- THIS 2 BUTTONS WILL BE TOGGLED, DEPENDS ON THE CASE (SET REMINDER OR WATCH NOW) -->
                       <button
                         onclick="openPopup(this)"
-                        class="card-btn reminder-btn"
+                        class="card-btn grey-btn reminder-btn hide"
                       >
                         Set Reminder
                       </button>
 
-                      <button class="card-btn reminder-btn hide">
+                      <button onclick="location.href = 'watch.html';" class="card-btn grey-btn reminder-btn">
                         Watch Now
                       </button>
                       <!-- TOGGLE BUTTONS CODE END -->
                     </div>
                     <div class="dropup">
-                      <button onclick="moreMenu(this)" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn grey-btn icon">
                         <img src="img/3dot-vertical.svg" alt="" />
                       </button>
                     </div>
@@ -729,7 +736,7 @@
                     <div class="dropup">
                       <button
                         onclick="attachmentMenu(this)"
-                        class="card-btn icon"
+                        class="card-btn grey-btn icon"
                       >
                         <img src="img/paperclip.svg" alt="" />
                       </button>
@@ -738,18 +745,18 @@
                       <!-- THIS 2 BUTTONS WILL BE TOGGLED, DEPENDS ON THE CASE (SET REMINDER OR WATCH NOW) -->
                       <button
                         onclick="openPopup(this)"
-                        class="card-btn reminder-btn"
+                        class="card-btn grey-btn reminder-btn"
                       >
                         Set Reminder
                       </button>
 
-                      <button class="card-btn reminder-btn hide">
+                      <button class="card-btn grey-btn reminder-btn hide">
                         Watch Now
                       </button>
                       <!-- TOGGLE BUTTONS CODE END -->
                     </div>
                     <div class="dropup">
-                      <button onclick="moreMenu(this)" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn grey-btn icon">
                         <img src="img/3dot-vertical.svg" alt="" />
                       </button>
                     </div>
@@ -821,7 +828,7 @@
                     <div class="dropup">
                       <button
                         onclick="attachmentMenu(this)"
-                        class="card-btn icon"
+                        class="card-btn grey-btn icon"
                       >
                         <img src="img/paperclip.svg" alt="" />
                       </button>
@@ -830,18 +837,18 @@
                       <!-- THIS 2 BUTTONS WILL BE TOGGLED, DEPENDS ON THE CASE (SET REMINDER OR WATCH NOW) -->
                       <button
                         onclick="openPopup(this)"
-                        class="card-btn reminder-btn"
+                        class="card-btn grey-btn reminder-btn"
                       >
                         Set Reminder
                       </button>
 
-                      <button class="card-btn reminder-btn hide">
+                      <button class="card-btn grey-btn reminder-btn hide">
                         Watch Now
                       </button>
                       <!-- TOGGLE BUTTONS CODE END -->
                     </div>
                     <div class="dropup">
-                      <button onclick="moreMenu(this)" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn grey-btn icon">
                         <img src="img/3dot-vertical.svg" alt="" />
                       </button>
                     </div>
@@ -913,7 +920,7 @@
                     <div class="dropup">
                       <button
                         onclick="attachmentMenu(this)"
-                        class="card-btn icon"
+                        class="card-btn grey-btn icon"
                       >
                         <img src="img/paperclip.svg" alt="" />
                       </button>
@@ -922,18 +929,18 @@
                       <!-- THIS 2 BUTTONS WILL BE TOGGLED, DEPENDS ON THE CASE (SET REMINDER OR WATCH NOW) -->
                       <button
                         onclick="openPopup(this)"
-                        class="card-btn reminder-btn"
+                        class="card-btn grey-btn reminder-btn"
                       >
                         Set Reminder
                       </button>
 
-                      <button class="card-btn reminder-btn hide">
+                      <button class="card-btn grey-btn reminder-btn hide">
                         Watch Now
                       </button>
                       <!-- TOGGLE BUTTONS CODE END -->
                     </div>
                     <div class="dropup">
-                      <button onclick="moreMenu(this)" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn grey-btn icon">
                         <img src="img/3dot-vertical.svg" alt="" />
                       </button>
                     </div>
@@ -1005,7 +1012,7 @@
                     <div class="dropup">
                       <button
                         onclick="attachmentMenu(this)"
-                        class="card-btn icon"
+                        class="card-btn grey-btn icon"
                       >
                         <img src="img/paperclip.svg" alt="" />
                       </button>
@@ -1014,18 +1021,18 @@
                       <!-- THIS 2 BUTTONS WILL BE TOGGLED, DEPENDS ON THE CASE (SET REMINDER OR WATCH NOW) -->
                       <button
                         onclick="openPopup(this)"
-                        class="card-btn reminder-btn"
+                        class="card-btn grey-btn reminder-btn"
                       >
                         Set Reminder
                       </button>
 
-                      <button class="card-btn reminder-btn hide">
+                      <button class="card-btn grey-btn reminder-btn hide">
                         Watch Now
                       </button>
                       <!-- TOGGLE BUTTONS CODE END -->
                     </div>
                     <div class="dropup">
-                      <button onclick="moreMenu(this)" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn grey-btn icon">
                         <img src="img/3dot-vertical.svg" alt="" />
                       </button>
                     </div>
@@ -1097,7 +1104,7 @@
                     <div class="dropup">
                       <button
                         onclick="attachmentMenu(this)"
-                        class="card-btn icon"
+                        class="card-btn grey-btn icon"
                       >
                         <img src="img/paperclip.svg" alt="" />
                       </button>
@@ -1106,18 +1113,18 @@
                       <!-- THIS 2 BUTTONS WILL BE TOGGLED, DEPENDS ON THE CASE (SET REMINDER OR WATCH NOW) -->
                       <button
                         onclick="openPopup(this)"
-                        class="card-btn reminder-btn"
+                        class="card-btn grey-btn reminder-btn"
                       >
                         Set Reminder
                       </button>
 
-                      <button class="card-btn reminder-btn hide">
+                      <button class="card-btn grey-btn reminder-btn hide">
                         Watch Now
                       </button>
                       <!-- TOGGLE BUTTONS CODE END -->
                     </div>
                     <div class="dropup">
-                      <button onclick="moreMenu(this)" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn grey-btn icon">
                         <img src="img/3dot-vertical.svg" alt="" />
                       </button>
                     </div>
@@ -1189,7 +1196,7 @@
                     <div class="dropup">
                       <button
                         onclick="attachmentMenu(this)"
-                        class="card-btn icon"
+                        class="card-btn grey-btn icon"
                       >
                         <img src="img/paperclip.svg" alt="" />
                       </button>
@@ -1198,18 +1205,18 @@
                       <!-- THIS 2 BUTTONS WILL BE TOGGLED, DEPENDS ON THE CASE (SET REMINDER OR WATCH NOW) -->
                       <button
                         onclick="openPopup(this)"
-                        class="card-btn reminder-btn"
+                        class="card-btn grey-btn reminder-btn"
                       >
                         Set Reminder
                       </button>
 
-                      <button class="card-btn reminder-btn hide">
+                      <button class="card-btn grey-btn reminder-btn hide">
                         Watch Now
                       </button>
                       <!-- TOGGLE BUTTONS CODE END -->
                     </div>
                     <div class="dropup">
-                      <button onclick="moreMenu(this)" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn grey-btn icon">
                         <img src="img/3dot-vertical.svg" alt="" />
                       </button>
                     </div>
@@ -1291,7 +1298,7 @@
                     <div class="dropup">
                       <button
                         onclick="attachmentMenu(this)"
-                        class="card-btn icon"
+                        class="card-btn grey-btn icon"
                       >
                         <img src="img/paperclip.svg" alt="" />
                       </button>
@@ -1300,18 +1307,18 @@
                       <!-- THIS 2 BUTTONS WILL BE TOGGLED, DEPENDS ON THE CASE (SET REMINDER OR WATCH NOW) -->
                       <button
                         onclick="openPopup(this)"
-                        class="card-btn reminder-btn"
+                        class="card-btn grey-btn reminder-btn"
                       >
                         Set Reminder
                       </button>
 
-                      <button class="card-btn reminder-btn hide">
+                      <button class="card-btn grey-btn reminder-btn hide">
                         Watch Now
                       </button>
                       <!-- TOGGLE BUTTONS CODE END -->
                     </div>
                     <div class="dropup">
-                      <button onclick="moreMenu(this)" class="card-btn icon">
+                      <button onclick="moreMenu(this)" class="card-btn grey-btn icon">
                         <img src="img/3dot-vertical.svg" alt="" />
                       </button>
                     </div>
@@ -1642,14 +1649,14 @@
             <div class="video-time"><p>1 h 15 min</p></div>
             <div class="calendar-text">CHOSE CALENDAR</div>
             <div class="popup-buttons popup-my-calendar">
-              <button class="card-btn">Google</button>
-              <button class="card-btn">Outlook</button>
+              <button class="card-btn grey-btn">Google</button>
+              <button class="card-btn grey-btn">Outlook</button>
             </div>
           </div>
           <div class="underline"></div>
           <div class="popup-buttons popup-set-reminder">
-            <button class="card-btn">Cancel</button>
-            <button class="card-btn">Set Reminder</button>
+            <button class="card-btn grey-btn" onclick="closePopup()">Cancel</button>
+            <button class="card-btn grey-btn">Set Reminder</button>
           </div>
         </div>
       </div>
@@ -1687,8 +1694,8 @@
 
           <div class="underline"></div>
           <div class="popup-buttons popup-set-reminder">
-            <button class="card-btn">Cancel</button>
-            <button class="card-btn">Republish</button>
+            <button class="card-btn grey-btn" onclick="republishClose()">Cancel</button>
+            <button class="card-btn grey-btn">Republish</button>
           </div>
         </div>
       </div>
@@ -1707,22 +1714,22 @@
               <div class="category-text">ADD TO EXISTING COURSE</div>
             </div>
             <form action="">
-              <label class="container">Course name 1
+              <label class="container checkbox-label">Course name 1
                 <input type="checkbox" checked="checked">
                 <span class="checkmark"></span>
               </label>
               
-              <label class="container">Course name 2
+              <label class="container checkbox-label">Course name 2
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
               
-              <label class="container">Course name 3
+              <label class="container checkbox-label">Course name 3
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
               
-              <label class="container">Course name 4
+              <label class="container checkbox-label">Course name 4
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
@@ -1730,13 +1737,59 @@
           </div>
           <div class="underline"></div>
           <div class="popup-buttons popup-set-reminder">
-            <button class="card-btn">Cancel</button>
-            <button class="card-btn">Add</button>
+            <button class="card-btn grey-btn" onclick="addCourseClose()">Cancel</button>
+            <button class="card-btn grey-btn">Add</button>
           </div>
         </div>
       </div>
       <!-- ADD TO COURSE POPUP END -->      
+      <!-- SELECT TAGS -->
+      <div class="reminder-popup" id="tags-popup">
+        <div class="overlay" onclick="selectTagsClose()"></div>
+        <div class="content">
+          <div class="close-btn" onclick="selectTagsClose()">&times;</div>
+          <div class="popup-title">
+            <img src="img/tag-ICON.svg" alt="" />
+            <p>Select Tags</p>
+          </div>
+          <div class="card-content">
+            <div class="tag-filter">
+              <form class="tag-horizontal" action="">
+                <label class="container">
+                  <input type="checkbox" checked="checked">
+                  <span class="tag-btn">Advice Instruction</span>
+                </label>
+                
+                <label class="container">
+                  <input type="checkbox">
+                  <span class="tag-btn">Wet Food</span>
+                </label>
+                
+                <label class="container">
+                  <input type="checkbox">
+                  <span class="tag-btn">Dry food</span>
+                </label>
+                
+                <label class="container">
+                  <input type="checkbox">
+                  <span class="tag-btn">Dog</span>
+                </label>
 
+                <label class="container">
+                  <input type="checkbox">
+                  <span class="tag-btn">Cat</span>
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="underline"></div>
+          <div class="popup-buttons popup-set-reminder">
+            <button class="card-btn grey-btn" onclick="selectTagsClose()">Cancel</button>
+            <button class="card-btn grey-btn">Add</button>
+          </div>
+        </div>
+      </div>
+      <!-- SELECT TAGS POPUP END -->
       <!-- END WRAPPER -->
     </div>
 
