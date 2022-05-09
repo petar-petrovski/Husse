@@ -88,10 +88,10 @@
             <div class="sc-lan lan-btn">EN</div>
           </div>
             <div class="align-flex">
-              <button onclick="" class="card-btn grey-btn icon">
+              <button onclick="openMylist(this)" class="card-btn grey-btn icon">
               <img src="img/wishlist.svg" alt="" />
             </button>
-            <button onclick="" class="card-btn grey-btn icon">
+            <button onclick="addCoursePopup(this)" class="card-btn grey-btn icon">
               <img src="img/add-to-course.svg" alt="" />
             </button>
             <button onclick="" class="card-btn grey-btn icon">
@@ -348,7 +348,7 @@
 
       <!-- REMINDER POPUP -->
       <div class="reminder-popup" id="reminder-popup">
-        <div class="overlay" onclick="closePopup()"></div>
+        <div class="overlay fixed" onclick="closePopup()"></div>
         <div class="content">
           <div class="close-btn" onclick="closePopup()">&times;</div>
           <div class="popup-title">
@@ -383,7 +383,7 @@
       <!-- REMINDER POPUP END -->
       <!-- ADD TO WISHLIST - POPUP -->
       <div class="mylist-popup" id="mylist-popup">
-        <div class="overlay" onclick="closeMylist(this)"></div>
+        <div class="overlay fixed" onclick="closeMylist(this)"></div>
         <div class="content">
           <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
           <div class="popup-title">
@@ -398,7 +398,7 @@
       <!-- ADD TO WISHLIST - POPUP END-->
       <!-- REPUBLISH POPUP -->
       <div class="reminder-popup" id="republish-popup">
-        <div class="overlay" onclick="republishClose()"></div>
+        <div class="overlay fixed" onclick="republishClose()"></div>
         <div class="content">
           <div class="close-btn" onclick="republishClose()">&times;</div>
           <div class="popup-title">
@@ -422,7 +422,7 @@
       <!-- REPUBLISH POPUP END -->
       <!-- ADD TO COURSE POPUP -->
       <div class="reminder-popup" id="course-popup">
-        <div class="overlay" onclick="addCourseClose()"></div>
+        <div class="overlay fixed" onclick="addCourseClose()"></div>
         <div class="content width-auto">
           <div class="close-btn" onclick="addCourseClose()">&times;</div>
           <div class="popup-title">
@@ -454,11 +454,22 @@
         </div>
       </div>
       <!-- ADD TO COURSE POPUP END -->      
-
+      <!-- CoURSE DETAILS - POPUP -->
+      <div class="cdetails-popup" id="cdetails-popup">
+        <div class="overlay-slide" id="cdetails-overlay" onclick="closeMylist(this)"></div>
+        <div class="content" id="cdetails-content">
+          <div class="cdetails-toggle">
+            <div class="close-btn" onclick="closeMylist(this)">&times;</div>
+            <div class="title-test">Test</div>
+          </div>
+          <!-- <div class="title relative">zzz</div> -->
+        </div>
+      </div>
+      <!--  CoURSE DETAILS - POPUP END-->
       <!-- END WRAPPER -->
     </div>
 
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
     <script src="js/watch-course.js"></script>
   </body>
 </html>

@@ -91,3 +91,19 @@ function fullscreen() {
       element.webkitRequestFullScreen();
     }  
   }
+
+  
+//COURSE DETAILS LIST// 
+
+window.addEventListener('load', function() {
+  document.getElementById("cdetails-content").style.right = "-40%";
+  document.getElementById("cdetails-popup").style.right = "0";
+  document.getElementById("cdetails-overlay").style.display = "block";
+});
+
+function closeMylist(y) {
+  document.getElementById("cdetails-content").style.right = "-100%";
+  document.getElementById("cdetails-popup").style.right = "-100%";
+  document.getElementById("cdetails-overlay").style.display = "none";
+
+}

@@ -124,10 +124,6 @@ function closeMylist(y) {
   const parent = document.getElementById("mylist-popup");
   parent.classList.remove("active");
 }
-function closeMylist2(z) {
-  const parent = document.getElementById("mylist-popup");
-  parent.classList.remove("active");
-}
 //POPUP SELECT TAGS// 
 function selectTagsPopup(x) {
   const parent = document.getElementById("tags-popup");
@@ -136,7 +132,6 @@ function selectTagsPopup(x) {
 function selectTagsClose() {
   document.getElementById("tags-popup").classList.remove("active");
 }
-
 // Close the dropdown if the user clicks outside of it
 window.addEventListener("mouseup", function(event){
   var menu = document.querySelector("div.dropup-content.show");

@@ -73,7 +73,6 @@ padding: 3px;
   align-items: center;
   column-gap: 10px;
   padding: 5px 10px;
-
 }
 .admin-panel {
   position: relative;
@@ -95,6 +94,7 @@ padding: 3px;
 }
 .wrapper {
   display: flex;
+  position: relative;
 }
 /* .wrapper > *:nth-child(.main-container) {
   flex: 1 1 75%;
@@ -838,7 +838,6 @@ padding-left: 50px;
   color: #8F8884;
 }
 .overlay {
-  position:fixed;
   top:0;
   left:0;
   width:100vw;
@@ -850,6 +849,12 @@ padding-left: 50px;
   -moz-filter: blur(1px);
   z-index:11;
   display: none;
+}
+.fixed {
+  position:fixed;
+}
+.relative {
+  position:relative;
 }
 /* SET REMINDER POPUP */
 .reminder-popup .content {
@@ -958,6 +963,50 @@ padding-left: 50px;
 /* ADD TO COURSE POPUP */
 .width-auto {
   width: auto !important; 
+}
+/* COURSE DETAILS POPUP*/
+.cdetails-popup {
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+}
+.overlay-slide {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  filter: blur(1px);
+  backdrop-filter: blur(1px);
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+}
+.cdetails-popup .content {
+  position: relative;
+  top: 0;
+  right: -100%;
+  background: #fff;
+  width: 60%;
+  height: 100%;
+  box-shadow: 0 0 0.43rem 0.125rem #00000026;
+  transition: all .1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all .1s ease-in-out;
+  z-index: 13;
+}
+.cdetails-toggle {
+  height: 20px;
+  width: 100%;
+  background-color: #ff0000;
 }
 /* Customize the label (the container) */
 .container {
