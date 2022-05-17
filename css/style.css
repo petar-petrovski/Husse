@@ -847,7 +847,7 @@ padding-left: 50px;
   backdrop-filter: blur(1px);
   -webkit-filter: blur(1px);
   -moz-filter: blur(1px);
-  z-index:14;
+  z-index:13;
   display: none;
 }
 .fixed {
@@ -990,7 +990,7 @@ padding-left: 50px;
   -moz-transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
   -ms-transition: all .1s ease-in-out;
-  z-index: 13;
+  z-index: 12;
 }
 .cdetails-toggle {
   display: flex;
