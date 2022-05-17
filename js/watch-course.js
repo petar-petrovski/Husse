@@ -94,16 +94,14 @@ function fullscreen() {
 
   
 //COURSE DETAILS LIST// 
-
-window.addEventListener('load', function() {
-  document.getElementById("cdetails-content").style.right = "-40%";
-  document.getElementById("cdetails-popup").style.right = "0";
-  document.getElementById("cdetails-overlay").style.display = "block";
-});
+document.getElementById("toggleDetails").click();
 
 function closeMylist(y) {
-  document.getElementById("cdetails-content").style.right = "-100%";
-  document.getElementById("cdetails-popup").style.right = "-100%";
   document.getElementById("cdetails-overlay").style.display = "none";
+}
 
+function toggleMylist() {
+  document.getElementById("cdetails-content").classList.toggle("active");
+  document.getElementById("cdetails-overlay").classList.toggle("active");
+  document.querySelector(".collapse-img").classList.toggle("rotate");
 }
