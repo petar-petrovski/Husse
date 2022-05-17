@@ -97,11 +97,14 @@ function fullscreen() {
 document.getElementById("toggleDetails").click();
 
 function closeMylist(y) {
-  document.getElementById("cdetails-overlay").style.display = "none";
+  document.getElementById("cdetails-overlay").classList.remove("active");
+  document.querySelector(".collapse-img").classList.remove("rotate");
+  document.getElementById("cdetails-popup").classList.remove("active");
+
 }
 
 function toggleMylist() {
-  document.getElementById("cdetails-content").classList.toggle("active");
+  document.getElementById("cdetails-popup").classList.toggle("active");
   document.getElementById("cdetails-overlay").classList.toggle("active");
   document.querySelector(".collapse-img").classList.toggle("rotate");
 }
