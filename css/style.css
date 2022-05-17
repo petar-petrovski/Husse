@@ -847,7 +847,7 @@ padding-left: 50px;
   backdrop-filter: blur(1px);
   -webkit-filter: blur(1px);
   -moz-filter: blur(1px);
-  z-index:11;
+  z-index:14;
   display: none;
 }
 .fixed {
@@ -940,7 +940,7 @@ padding-left: 50px;
   text-align: left;
   padding:20px;
   box-shadow: 0 0 0.43rem 0.125rem #00000026;
-  z-index: 12;
+  z-index: 15;
 }
 .mylist-popup .card-title  {
   padding: 15px;

@@ -96,14 +96,14 @@ function fullscreen() {
 //COURSE DETAILS LIST// 
 document.getElementById("toggleDetails").click();
 
-function closeMylist(y) {
+function closeDescriptionList(y) {
   document.getElementById("cdetails-overlay").classList.remove("active");
   document.querySelector(".collapse-img").classList.remove("rotate");
   document.getElementById("cdetails-popup").classList.remove("active");
 
 }
 
-function toggleMylist() {
+function toggleDescriptionList() {
   document.getElementById("cdetails-popup").classList.toggle("active");
   document.getElementById("cdetails-overlay").classList.toggle("active");
   document.querySelector(".collapse-img").classList.toggle("rotate");

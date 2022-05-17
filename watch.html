@@ -230,9 +230,9 @@
       <!-- REMINDER POPUP END -->
       <!-- ADD TO WISHLIST - POPUP -->
       <div class="mylist-popup" id="mylist-popup">
-        <div class="overlay fixed" onclick="closeMylist(this)"></div>
+        <div class="overlay fixed" onclick="closeMylist()"></div>
         <div class="content">
-          <div class="close-btn" onclick="closeMylist2(this)">&times;</div>
+          <div class="close-btn" onclick="closeMylist()">&times;</div>
           <div class="popup-title">
             <img src="img/wishlist.svg" alt="" />
             <p>Add to my wishlist</p>
@@ -305,7 +305,7 @@
       <div class="cdetails-popup" id="cdetails-popup">
         <div class="content" id="cdetails-content">
           <div class="cdetails-toggle">
-            <div class="collapse-btn" id="toggleDetails" onclick="toggleMylist(this)">
+            <div class="collapse-btn" id="toggleDetails" onclick="toggleDescriptionList(this)">
               <img class="collapse-img" src="img/arrow-icon.svg" alt="">
             </div>
             <div class="cdetails">COURSE DETALS</div>
@@ -354,7 +354,7 @@
                 <a class="vd-attach-icon btn-icon" href="#">Attachment name 1.pdf</a>
               </button>
             </div>
-            <button class="close-details cd-linespace" onclick="closeMylist(this)">Close details & start course</button>
+            <button class="close-details cd-linespace" onclick="closeDescriptionList(this)">Close details & start course</button>
             </div>
             <div class="cd-videos">
               <div class="sidebar-header-watch">
@@ -511,7 +511,7 @@
         </div>
         </div>
         <!-- Backgroun Overlay (Sidebar Popup) -->
-        <div class="overlay-slide" id="cdetails-overlay" onclick="closeMylist(this)"></div>
+        <div class="overlay-slide" id="cdetails-overlay" onclick="closeDescriptionList(this)"></div>
       </div>
       <!--  CoURSE DETAILS - POPUP END-->
       <!-- END WRAPPER -->
