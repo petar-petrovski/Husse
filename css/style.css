@@ -64,7 +64,7 @@ padding: 3px;
   text-align: center;
   text-decoration: none;
   font-family: "Roboto Slab", serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
   cursor: pointer;
 }
@@ -105,7 +105,7 @@ padding: 3px;
 
 .main-container {
   padding: 2rem;
-  width: 80vw;
+  width: 78vw;
 }
 .welcome-header {
   display: flex;
@@ -115,7 +115,7 @@ padding: 3px;
   padding-right: 1.25rem;
 }
 .welcome-header h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 .notification {
@@ -131,6 +131,7 @@ padding: 3px;
 .notification p {
     margin-left: 1.5rem;
     color: #FF0000;
+    font-size: 14px;
 }
 .notification-wrap::before {
   content: "";
@@ -141,7 +142,7 @@ padding: 3px;
   align-items: center;
   height: 100%;
   /* left: 10px; */
-  width: 16px;
+  width: 14px;
 }
 .notification img {
   height: 20px;
@@ -149,7 +150,7 @@ padding: 3px;
 
 /* CAROUSEL */
 .section-title {
-  font-size: 28px;
+  font-size: 21px;
   color: #8F8884;
   padding: 5px;
 }
@@ -183,8 +184,8 @@ padding: 3px;
 .card {
   position: relative;
   border: none;
-  min-width: 320px;
-  height: 330px;
+  min-width: 270px;
+  /* height: 330px; */
   padding: 0;
   margin: 15px 10px;
   transition: transform .4s;
@@ -222,17 +223,19 @@ padding: 3px;
 }
 .carousel-card-text {
   position: absolute;
-  top: 235px;
   left: 20px;
+  top: 190px;
+  /* bottom: 20px; */
 }
 .carousel-card-title {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #FFFFFF;
 }
 .carousel-card-category {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   color: #ffffff;
+  margin-bottom: 5px;
 }
 .card .img-placeholder {
   display: block;
@@ -302,13 +305,13 @@ padding: 3px;
   border-radius: 0.3rem 0.3rem 0 0;
   color: #8f8884;
   background-color: transparent;
-  height: 55px;
+  height: 42px;
   margin-left: 0.6rem;
-  padding: 0.3rem 1.25rem;
+  padding: 0.3rem 1rem;
   text-align: center;
   text-decoration: none;
   font-family: "Roboto Slab", serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
   cursor: pointer;
 }
@@ -326,11 +329,11 @@ padding: 3px;
   padding-right: 50px;
 }
 .not-circle::after{
-  height: 20px;
-  width: 20px;
+  height: 17px;
+  width: 17px;
   background-color: #000000;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 11px;
   border-radius: 50%;
   margin-left: 10px;
   text-align: center;
@@ -353,6 +356,9 @@ padding: 3px;
   content: "1";
   right: 0;
   top: 0;
+}
+.carousel-title {
+  /* display: flex; */
 }
 .carousel-title::after {
   content: "9";
@@ -377,10 +383,11 @@ form.search-box input[type=text] {
   padding: 10px;
   font-family: "Roboto Slab", serif;
   color: #8f8884;
-  font-size: 14px;
+  font-size: 12px;
   width: 85%;
   background: transparent;
   border: none;
+  text-align: right;
 }
 input:focus {
   outline: none;
@@ -409,11 +416,11 @@ form.search-box::placeholder {
 .filter-container {
   display: flex;
   justify-content: space-between;
-  row-gap: 10px;
+  /* row-gap: 10px; */
   flex-wrap: wrap;
-  padding: 0.3rem 0.6rem;
+  padding: 0.3rem 0;
   /* margin-bottom: 0.6rem; */
-  font-size: 1rem;
+  font-size: 0.8rem;
   height: auto;
   color: #8f8884;
 }
@@ -424,17 +431,17 @@ form.search-box::placeholder {
   column-gap: 10px;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0.5rem 0.5rem 0.6rem;
+  /* padding: 0.5rem 0.5rem 0.5rem 0.6rem; */
 }
 .select-box {
   display: flex;
   flex-direction: column;
 }
 .width300 {
-  width: 300px;
+  width: 220px;
 }
 .width300.active {
-  width: 300px;
+  width: 220px;
 }
 .select-box .options-container {
   background: #ffffff;
@@ -445,7 +452,7 @@ form.search-box::placeholder {
   transition: all 0.4s;
   overflow: hidden;
   position: absolute;
-  top: 46px;
+  top: 36px;
   box-shadow: 0 0 0.43rem 0.125rem #00000026;
   order: 1;
   z-index: 98;
@@ -470,7 +477,7 @@ form.search-box::placeholder {
 }
 
 .lang-drop .selected.active {
-  padding: 9px 24px 9px 12px;
+  padding: 9px 12px;
 }
 .slctd-cat.active {
   padding-left: 50px;
@@ -518,7 +525,10 @@ form.search-box::placeholder {
   padding: 9px 24px 9px 12px;
   cursor: pointer;
 }
-
+.lang-width {
+  width: 44px;
+  padding-top: 6px;
+}
 .select-box .cat-option,
 .slctd-cat {
 padding-left: 50px;
@@ -554,6 +564,7 @@ padding-left: 50px;
   padding: 0.3rem 0.6rem;
   border-radius: 1.25rem;
   cursor: pointer;
+  font-size: 0.7rem;
 }
 .tag-btn:hover {
   background-color: white;
@@ -595,9 +606,9 @@ padding-left: 50px;
   grid-template-columns: repeat(4, 1fr);
   justify-content:flex-start;
   padding-top: 0.6rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  grid-gap: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  grid-gap: 1rem;
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -730,7 +741,7 @@ padding-left: 50px;
 }
 .video-description {
   margin: 1.25rem 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
   color: #4f4f4f;
   text-overflow: ellipsis;
@@ -746,7 +757,8 @@ padding-left: 50px;
   display: flex;
   align-content: center;
   justify-content: space-between;
-  margin-bottom: 1.9rem;
+  /* margin-bottom: 1.9rem; */
+  height: 40px;
 }
 .category-text {
   font-size: 0.7rem;
@@ -754,7 +766,7 @@ padding-left: 50px;
   color: #8F8884;
 }
 .col .card-title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #333333;
   height: 3.75rem;
@@ -773,13 +785,13 @@ padding-left: 50px;
 .card-btn {
   border: none;
   border-radius: 0.19rem;
-  height: 42px;
+  height: 34px;
   color: #000000;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-family: "Roboto Slab", serif;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -790,15 +802,15 @@ padding-left: 50px;
   box-shadow: none;
 }
 .card-btn img {
-  width: 42px;
+  width: 34px;
   object-fit: contain;
-  padding: 10px;
+  padding: 8px;
 }
 .reminder-btn-wrap {
   width: 100%;
 }
 .reminder-btn {
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1rem;
   width: 100%;
 }
 .reminder-btn:hover {
@@ -1313,7 +1325,7 @@ padding-left: 50px;
 /* SIDEBAR */
 .sidebar {
   background-color: #ffffff;
-  width: 20vw;
+  width: 22vw;
   border-top: 1px solid #f2f1f0;
   /* padding: 2rem; */
 }
