@@ -34,7 +34,6 @@ body {
   padding: 6px;
   position: absolute;
   border-right: 1px solid #F2F1F0;
-  /* align-items: center; */
   cursor: pointer;
 }
 .dashboard-logo img{
@@ -88,7 +87,6 @@ height: 45px;
   display: flex;
   position: relative;
 }
-
 .main-container {
   padding: 2rem;
   width: 78vw;
@@ -100,8 +98,10 @@ height: 45px;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-.welcome-header p {
-  font-size: 0.8rem;
+.description-text {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 .title-typo {
   font-size: 1.6rem;
@@ -253,7 +253,6 @@ height: 45px;
 .nxt-btn {
   right: 0;
   transform: rotate(180deg);
-
 }
 .pre-btn img,
 .nxt-btn img {
@@ -405,10 +404,8 @@ form.search-box::placeholder {
 .filter-container {
   display: flex;
   justify-content: space-between;
-  /* row-gap: 10px; */
   flex-wrap: wrap;
   padding: 0.4rem 0;
-  /* margin-bottom: 0.6rem; */
   font-size: 0.8rem;
   height: auto;
   color: #8f8884;
@@ -420,7 +417,6 @@ form.search-box::placeholder {
   column-gap: 10px;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0.5rem 0.5rem 0.5rem 0.6rem; */
 }
 .select-box {
   display: flex;
@@ -545,13 +541,11 @@ form.search-box::placeholder {
     display: none; */
 }
 .tag-btn {
-  color: #8f8884;
   background-color: transparent;
   border: 0.06rem solid #dedbd9;
   padding: 0.3rem 0.6rem;
   border-radius: 1.25rem;
   cursor: pointer;
-  font-size: 0.7rem;
 }
 .tag-btn:hover {
   background-color: white;
@@ -560,9 +554,7 @@ form.search-box::placeholder {
 }
 .close-tag img{
   transition: all 200ms;
-  /* text-decoration: none; */
   cursor: pointer;
-  /* font-size: 12px; */
   height: 14px;
   visibility: hidden;
 }
@@ -736,8 +728,6 @@ form.search-box::placeholder {
 }
 .video-description {
   margin: 1.25rem 0;
-  font-size: 0.8rem;
-  font-weight: 400;
   color: #4f4f4f;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -752,15 +742,12 @@ form.search-box::placeholder {
   display: flex;
   align-content: center;
   justify-content: space-between;
-  /* margin-bottom: 1.9rem; */
 }
 .card-h {
   height: 40px;
 }
 .category-text {
-  font-size: 0.7rem;
   min-width: 5rem;
-  color: #8F8884;
 }
 .card-title {
   font-size: 16px;
@@ -883,8 +870,6 @@ form.search-box::placeholder {
   z-index: 13;
 }
 .reminder-popup .calendar-text{
-  font-size: 0.7rem;
-  color: #8F8884;
   margin: 20px 0;
 }
 .reminder-popup .card-title {
@@ -1029,8 +1014,6 @@ form.search-box::placeholder {
   -ms-transition: all .1s ease-in-out;
 }
 .cdetails {
-  font-size: 14px;
-  font-weight: 700;
   padding-left: 20px;
   color: #ffffff;
 }
@@ -1051,20 +1034,6 @@ form.search-box::placeholder {
   object-fit: cover;
   width: 7rem;
   border-radius: 4px;
-}
-.cd-main-title h3 {
-  font-size: 16px;
-}
-.cdetails-popup.active .cd-main-title h3 {
-  font-size: 24px;
-}
-.cd-subtitle {
-  color: #8F8884;
-  font-size: 0.6rem;
-  padding-right: 10px;
-}
-.cdetails-popup.active .cd-subtitle {
-  font-size: 0.8rem;
 }
 .cd-line {
   border-bottom: 1px solid #EEEBE8;
@@ -1089,23 +1058,16 @@ form.search-box::placeholder {
   padding: 20px;
   border-radius: 4px;
 }
-.gray-title {
-  font-size: 20px;
-  font-weight: 700;
-}
 .gray-description {
   margin-left: 20px;
   margin-top: 20px;
-}
-.gray-description li {
-  font-size: 14px;
 }
 .close-details {
   text-decoration: none;
   border: none;
   padding: 10px 20px;
   font-family: "Roboto Slab", serif;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-weight: 700;
   color: #ff0000;
   border-radius: 4px;
@@ -1622,7 +1584,7 @@ input[type="range"]::-ms-track {
   background-color: #ffffff;
   border: 1px solid #F2F1F0;
   border-radius: 0.19rem;
-  padding: 5px;
+  padding: 10px;
   color: #8F8884;
   text-align: center;
   text-decoration: none;
@@ -1637,16 +1599,16 @@ input[type="range"]::-ms-track {
 }
 .sidebar-header-watch {
   padding: 20px 20px 0 20px;
-  font-size: 16px;
+}
+.gray-title {
+  font-size: 14px;
   color: #8F8884;
 }
 .vd-attach {
   display: flex;
   flex-wrap: wrap;
   column-gap: 20px;
-  /* margin-top: 20px; */
   padding-top: 20px;
-  /* border-top: 1px solid #F2F1F0; */
 }
 .vd-attach-btn {
   background-color: #FFFFFF;
@@ -1654,7 +1616,6 @@ input[type="range"]::-ms-track {
   border: none;
   border-radius: 4px;
   padding: 5px;
-  color: #8F8884;
   display: inline-block;
   cursor: pointer;
 }
@@ -1664,10 +1625,7 @@ input[type="range"]::-ms-track {
 }
 .vd-attach a {
   font-family: "Roboto Slab", serif;
-  font-weight: 700;
   text-align: center;
-  font-size: 14px;
-  color: #8F8884;
   padding: 12px 45px 12px 45px;
   text-decoration: none;
   display: block;
