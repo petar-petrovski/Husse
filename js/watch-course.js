@@ -94,7 +94,7 @@ function fullscreen() {
 
   
 //COURSE DETAILS LIST// 
-document.getElementById("toggleDetails").click();
+// document.getElementById("toggleDetails").click();
 
 function closeDescriptionList(y) {
   document.getElementById("cdetails-overlay").classList.remove("active");
