@@ -744,6 +744,9 @@ form.search-box::placeholder {
 .vd-height {
   height: 5.5rem;
 }
+.vd-extend {
+  display: none;
+}
 .card-category {
   display: flex;
   align-content: center;
