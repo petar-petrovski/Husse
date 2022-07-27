@@ -158,6 +158,9 @@ productContainers.forEach((item, i) => {
 $('.collaps-btn').click(function() {
   $('#hide-carousel').slideToggle('slow');
   $("#imgFlip").toggleClass('rotate');
+  $("#close-sct").toggle();
+  $("#open-sct").toggle();
+
 });
 
 
