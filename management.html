@@ -47,8 +47,53 @@
             </div>
         </nav>
         <!-- NAVIGATION MENU END-->
+        <div class="mg-wrapper">
+            <div class="new-course"><button class="new-course-btn">Create New Course</button></div>
+            <div class="mg-tabs">
+              <button class="tablink tab-style global-btn not-circle" onclick="shiftTabs('Global', this)" id="defaultOpen">Global</button>
+              <button class="tablink tab-style" onclick="shiftTabs('Local', this)">
+                <div class="local">Local</div>
+                <div class="lang-drop">
+                  <div class="select-box">
+                    <div class="options-container lang-width">
+                      <div class="option drop-option">
+                        <input type="radio" class="radio" id="date" name="category"/>
+                        <label for="date">EN</label>
+                      </div>
+                      <div class="option drop-option">
+                        <input type="radio" class="radio" id="name" name="category"/>
+                        <label for="name">PL</label>
+                      </div>
+                      <div class="option drop-option">
+                        <input type="radio" class="radio" id="name" name="category"/>
+                        <label for="name">FR</label>
+                      </div>
+                      <div class="option drop-option">
+                        <input type="radio" class="radio" id="name" name="category"/>
+                        <label for="name">SE</label>
+                      </div>
+                      <div class="option drop-option">
+                        <input type="radio" class="radio" id="name" name="category"/>
+                        <label for="name">ES</label>
+                      </div>
+                    </div>
+                    <div class="selected" onclick="dropOptionMenu(this)">EN</div>
+                  </div>
+                </div>
+              </button>
+            </div>
+            <div class="mg-subtabs">
+                <button class="mg-subtab-btn" onclick="courseContent()">Courses</button>
+                <button class="mg-subtab-btn" onclick="trainingContent()">Trainings</button>
+                <button class="mg-subtab-btn" onclick="attachmentContent()">Attachments</button>
+                <button class="mg-subtab-btn" onclick="categoryContent()">Categories & Tabs</button>
+            </div>
+        </div>
+        <div class="mg-content" id="mg-content"></div>
+
     <script src="js/script.js"></script>
-    <script src="js/dashboard.js"></script>
+    <!-- <script src="js/dashboard.js"></script> -->
+    <script src="js/management.js"></script>
 
     </body>
 </html>
