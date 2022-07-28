@@ -1334,6 +1334,9 @@ form.search-box::placeholder {
 .side-card:hover {
   box-shadow: 0 0 0.43rem 0.125rem #00000026;
 }
+.sc-bck:hover {
+  background: #ffffff;
+}
 .sc-img{
   /* height: 100%; */
   object-fit: cover;

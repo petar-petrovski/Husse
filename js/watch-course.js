@@ -100,7 +100,7 @@ function closeDescriptionList(y) {
   document.getElementById("cdetails-overlay").classList.remove("active");
   document.querySelector(".collapse-img").classList.remove("rotate");
   document.getElementById("cdetails-popup").classList.remove("active");
-
+  togglePlay();
 }
 
 function toggleDescriptionList() {
