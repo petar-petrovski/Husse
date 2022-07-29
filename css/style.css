@@ -55,9 +55,13 @@ height: 45px;
   align-items: flex-end;
 }
 .navlink {
-  color: #ff0000;
-  background-color: #f2f1f0;
+  background-color: transparent;
+  color: #8f8884;
   padding: 0.6rem 1.25rem;
+}
+.navlink-slctd {
+  color: #ff0000;
+  background: #f2f1f0;
 }
 .nav-admin {
   display: flex;
@@ -744,6 +748,9 @@ form.search-box::placeholder {
 .vd-height {
   height: 5.5rem;
 }
+.vd-extend {
+  display: none;
+}
 .card-category {
   display: flex;
   align-content: center;
@@ -1331,6 +1338,9 @@ form.search-box::placeholder {
 .side-card:hover {
   box-shadow: 0 0 0.43rem 0.125rem #00000026;
 }
+.sc-bck:hover {
+  background: #ffffff;
+}
 .sc-img{
   /* height: 100%; */
   object-fit: cover;
@@ -1707,6 +1717,60 @@ input[type="range"]::-ms-track {
   display: flex;
   column-gap: 10px;
   margin-bottom: 5px;
+}
+/* MANAGEMENT CENTER */
+.mg-wrapper {
+  padding: 2rem;
+}
+.new-course {
+  display: flex;
+  justify-content: flex-end;
+}
+.new-course-btn {
+  background: #ff0000;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 700;
+  width: 200px;
+  height: auto;
+  border: none;
+  cursor: pointer;
+}
+.mg-tabs {
+  display: flex;
+  min-height: 2.5rem;
+  /* border-bottom: 0.125rem solid;
+  border-color: white; */
+  position: relative;
+}
+.mg-subtabs {
+  display: flex;
+  background: #ffffff;
+  border-radius: 0.3rem 0.3rem 0 0;
+  min-height: 2.5rem;
+  position: relative;
+}
+.mg-subtab-btn {
+  color: #B4ACA6;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 700;
+  width: 200px;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.mg-content {
+  padding: 2rem;
+  background: #ffffff;
 }
 /* MEDIA */
 
