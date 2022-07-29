@@ -1,10 +1,3 @@
-//DASHBOARD
-const dashboard = document.querySelector(".dashboard-logo");
-
-dashboard.addEventListener("click", () => {
-  location.href = '#home';
-});
-
 filterCard("all"); //Default view to be all cards
 
 // FILTER BY TAGS
@@ -137,9 +130,12 @@ function dropOptionMenu(sort) {
 //FILTER BY CATEGORY - END//
 
 //CAROUSEL LEFT - RIGHT NAVIGATION
-const productContainers = [...document.querySelectorAll('.carousel-container')];
-const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-const preBtn = [...document.querySelectorAll('.pre-btn')];
+$(document).ready(carouselNav()); 
+
+function carouselNav(){
+const productContainers = [...document.querySelectorAll('.carousel-container')]; //const
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')]; //const
+const preBtn = [...document.querySelectorAll('.pre-btn')]; //const
 
 productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
@@ -153,6 +149,7 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= 700;
     })
 });
+}
 
 //CAROUSEL COLLAPSE TOGGLE
 $('.collaps-btn').click(function() {

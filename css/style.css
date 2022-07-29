@@ -55,9 +55,13 @@ height: 45px;
   align-items: flex-end;
 }
 .navlink {
-  color: #ff0000;
-  background-color: #f2f1f0;
+  background-color: transparent;
+  color: #8f8884;
   padding: 0.6rem 1.25rem;
+}
+.navlink-slctd {
+  color: #ff0000;
+  background: #f2f1f0;
 }
 .nav-admin {
   display: flex;
