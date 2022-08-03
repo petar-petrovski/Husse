@@ -14,7 +14,7 @@ function dashboardContent(styl) {
 
   // styl.classList.add(selectedBtn);
     $(styl).addClass("navlink-slctd")
-    $.ajax({url: "dashboard.html", success: function(result){
+    $.ajax({url: "includes/ds/dashboard.html", success: function(result){
       $("#main-wrapper").html(result);
     }});
 }
@@ -29,7 +29,8 @@ function managementContent(styl) {
 
   // styl.classList.add(selectedBtn);
     $(styl).addClass("navlink-slctd")
-    $.ajax({url: "management.html", success: function(result){
+    $.ajax({url: "includes/mg/management.html", success: function(result){
       $("#main-wrapper").html(result);
     }});
 }
+
