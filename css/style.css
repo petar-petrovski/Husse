@@ -146,9 +146,6 @@ height: 45px;
   color: #8F8884;
   padding: 5px;
 }
-.collaps-block {
-  /* position: relative; */
-}
 .close-block {
   position: absolute;
   right: 55px;
@@ -1771,6 +1768,21 @@ input[type="range"]::-ms-track {
 .mg-content {
   padding: 2rem;
   background: #ffffff;
+}
+
+/* Managment card*/
+.course-wrap {
+  display: flex;
+  column-gap: 50px;
+}
+.mg-tag-filter {
+  width: 250px;
+  vertical-align: top;
+}
+.mg-tag-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 /* MEDIA */
 
