@@ -82,16 +82,15 @@ $('.collaps-btn').click(function() {
 document.getElementById("global").click();
 
 function mainGrid(styl) {
-  btnClass = styl.classList;
   // Remove the background color of all goldenBtn/buttons
-  // goldenBtn = document.getElementsByClassName(btnClass);
-
-  // for (i = 0; i < goldenBtn.length; i++) {
-  //   goldenBtn[i].classList.remove("navlink-slctd");
-  // }
+  tabBtns = document.getElementById("tab-btns");
+  selectedBtn = tabBtns.getElementsByClassName("selected-tablink");
+  for (i = 0; i < selectedBtn.length; i++) {
+    selectedBtn[i].classList.remove("selected-tablink");
+  }
 
   // styl.classList.add(selectedBtn);
-    $(styl).addClass("navlink-slctd")
+    $(styl).addClass("selected-tablink")
     $.ajax({url: "includes/ds/" + styl.id + ".html", success: function(result){
       $("#courses-grid").html(result);
     }});
