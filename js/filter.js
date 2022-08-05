@@ -140,16 +140,29 @@ function selectTagsClose() {
   document.getElementById("tags-popup").classList.remove("active");
 }
 // Close the dropdown if the user clicks outside of it
-window.addEventListener("mouseup", function(event){
+document.addEventListener("mouseup", function(event){
   var menu = document.querySelector("div.dropup-content.show");
 	if (menu !== null && event.target != menu){
     menu.classList.remove("show");
   }
 });
-window.addEventListener("mouseup", function(event){
+
+
+var dropupBtn = document.getElementsByClassName("card-content");
+function closeDropUp(event){
 	var menu = document.getElementById("dropUpWishlist");
 	if (event.target != menu && event.target.parentNode != menu){
     menu.classList.remove("show");
-  }
-});
+  }};
+
+for (var i = 0 ; i < dropupBtn.length; i++) {
+  dropupBtn[i].addEventListener('mouseup' , closeDropUp , false ) ; 
+}
+
+// document.addEventListener("mouseup", function(event){
+// 	var menu = document.getElementById("dropUpWishlist");
+// 	if (event.target != menu && event.target.parentNode != menu){
+//     menu.classList.remove("show");
+//   }
+// });
 //POPUP - END// 
